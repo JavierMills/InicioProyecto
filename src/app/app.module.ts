@@ -6,9 +6,13 @@ import { AppComponent } from './app.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from './shared/shared.module';
 
+
+import { ComponentsComponent } from './Operacion_Internacional/components/components.component';
+
 @NgModule({
   declarations: [
     AppComponent,
+    ComponentsComponent,
 
   ],
   imports: [

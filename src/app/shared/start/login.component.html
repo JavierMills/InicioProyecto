@@ -16,15 +16,25 @@
   <div class="modal-body">
     <form action="#">
       <label for="lang">Seleccione el Tipo de Acceso</label>
-      <select name="languages" id="lang">
-        <option value="internacional">Negocio internacional</option>
+      <ul class="list-group">
+        <li class="list-group-item" style="cursor: pointer;" routerLink="negocio" (click)="modal.close('Save click')">Negocio Internacional</li>
+        <li class="list-group-item" style="cursor: pointer;" routerLink="asesor" (click)="modal.close('Save click')">Asesor Comex</li>
+        <li class="list-group-item" style="cursor: pointer;" routerLink="cartera" (click)="modal.close('Save click')">Cartera</li>
+        <li class="list-group-item" style="cursor: pointer;" routerLink="especialista" (click)="modal.close('Save click')">Especilalista Comex</li>
+        <li class="list-group-item" style="cursor: pointer;" routerLink="contraloria" (click)="modal.close('Save click')">Contraloria</li>
+        <li class="list-group-item" style="cursor: pointer;" routerLink="fondos" (click)="modal.close('Save click')">Fondos de Fomento</li>
+        <li class="list-group-item" style="cursor: pointer;" routerLink="operaciones" (click)="modal.close('Save click')">Operacion Internacional</li>
+      </ul>
+      <!-- <select name="languages" id="lang">
+        <option routerLink="principal">Negocio internacional</option>
         <option value="especialista">Especialista Comex</option>
         <option value="contraloria">Contraloria</option>
         <option value="cartera">Cartera</option>
         <option value="fondos">Fondos de Fomento</option>
         <option value="acesor">Asesor Comex</option>
         <option value="operacion">Operacion Internacional</option>
-      </select>
+        
+      </select> -->
     </form>
   </div>
   <!-- cerrar a rol de usuario -->
@@ -32,11 +42,11 @@
     <button
       type="button"
       class="btn btn-outline-dark"
-      (click)="modal.close('Save click')"
     >
       Acceder
     </button>
   </div>
+ 
 </ng-template>
 
 <!-- <div class="container mt-4">

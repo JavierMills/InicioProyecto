@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ContraloriaComponent } from './pages/contraloria/contraloria.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    ContraloriaComponent
+  ],
   imports: [
     CommonModule
   ]
