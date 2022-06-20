@@ -10,6 +10,9 @@ import { FondosdefomentoComponent } from './pages/fondosdefomento/fondosdefoment
   ],
   imports: [
     CommonModule
+  ],
+  exports:[
+    FondosdefomentoComponent
   ]
 })
 export class FondosdefomentoModule { }

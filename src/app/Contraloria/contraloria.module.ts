@@ -10,6 +10,9 @@ import { ContraloriaComponent } from './pages/contraloria/contraloria.component'
   ],
   imports: [
     CommonModule
+  ],
+  exports:[
+    ContraloriaComponent
   ]
 })
 export class ContraloriaModule { }

@@ -10,6 +10,9 @@ import { EspecialistacomexComponent } from './pages/especialistacomex/especialis
   ],
   imports: [
     CommonModule
+  ],
+  exports:[
+    EspecialistacomexComponent
   ]
 })
 export class EspecialistacomexModule { }

@@ -10,6 +10,9 @@ import { CarteraComponent } from './pages/cartera/cartera.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports:[
+    CarteraComponent
   ]
 })
 export class CarteraModule { }

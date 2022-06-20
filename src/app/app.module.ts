@@ -7,14 +7,20 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from './shared/shared.module';
 
 
-import { ComponentsComponent } from './Operacion_Internacional/components/components.component';
 
 
 import { AsesorComexModule } from './AsesorComex/asesor-comex.module';
+import { CarteraModule } from './cartera/cartera.module';
+import { ContraloriaModule } from './Contraloria/contraloria.module';
+import { EspecialistacomexModule } from './EspecialistaComex/especialistacomex.module';
+import { NegocioInternacionalModule } from './Negocio_Internacional/negocio-internacional.module';
+import { OperacionInternacionalModule } from './Operacion_Internacional/operacion-internacional.module';
+import { FondosdefomentoModule } from './FondosDeFomento/fondosdefomento.module';
 
 @NgModule({
   declarations: [
     AppComponent,
+    
 
   ],
   imports: [
@@ -23,6 +29,13 @@ import { AsesorComexModule } from './AsesorComex/asesor-comex.module';
     AppRoutingModule,
     NgbModule,
     SharedModule,
+    AsesorComexModule,
+    CarteraModule,
+    ContraloriaModule,
+    EspecialistacomexModule,
+    NegocioInternacionalModule,
+    OperacionInternacionalModule,
+    FondosdefomentoModule
    
   ],
   providers: [],
