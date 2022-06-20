@@ -4,11 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
+
+
 import { SharedModule } from './shared/shared.module';
-
-
-
-
 import { AsesorComexModule } from './AsesorComex/asesor-comex.module';
 import { CarteraModule } from './cartera/cartera.module';
 import { ContraloriaModule } from './Contraloria/contraloria.module';
@@ -28,8 +27,9 @@ import { FondosdefomentoModule } from './FondosDeFomento/fondosdefomento.module'
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    SharedModule,
+    
     AsesorComexModule,
+    SharedModule,
     CarteraModule,
     ContraloriaModule,
     EspecialistacomexModule,

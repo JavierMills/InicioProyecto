@@ -1,18 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { OperacionesInternacionalesComponent } from './pages/operaciones-internacionales/operaciones-internacionales.component';
+import { ComponentsComponent } from '../Operacion_Internacional/components/components.component';
 
 
 
 @NgModule({
   declarations: [
-    OperacionesInternacionalesComponent
+    OperacionesInternacionalesComponent,
+    ComponentsComponent
+  
   ],
   imports: [
     CommonModule
   ],
   exports:[
-    OperacionesInternacionalesComponent
+    OperacionesInternacionalesComponent,
+    ComponentsComponent
   ]
 })
 export class OperacionInternacionalModule { }

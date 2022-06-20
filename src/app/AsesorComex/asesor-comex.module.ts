@@ -1,22 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ComponentsComponent } from './components/components.component';
 import { AsesorcomexComponent } from './pages/asesorcomex/asesorcomex.component';
+import { ComponentsComponent } from './components/Navbar/components.component';
 
 
 
 @NgModule({
   declarations: [
-    ComponentsComponent,
-    AsesorcomexComponent
+    AsesorcomexComponent,
+    ComponentsComponent
   ],
   imports: [
     CommonModule,
     
   ],
   exports:[
-    ComponentsComponent,
-    AsesorcomexComponent
+    AsesorcomexComponent,
+    ComponentsComponent
   ]
 })
 export class AsesorComexModule { }
+ 
