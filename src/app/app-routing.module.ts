@@ -19,36 +19,35 @@ const routes: Routes = [
 
   },
   {
-    path: 'negocio', component: NegocioInternacionalComponent, pathMatch:'full'
+    path: 'negocio', component: NegocioInternacionalComponent
 
   },
   {
-    path: 'asesor', component: AsesorcomexComponent , pathMatch:'full'
+    path: 'asesor', component: AsesorcomexComponent
 
   },
   {
-    path: 'cartera', component: CarteraComponent, pathMatch:'full'
+    path: 'cartera', component: CarteraComponent
 
   },
   {
-    path: 'contraloria', component: ContraloriaComponent, pathMatch:'full'
+    path: 'contraloria', component: ContraloriaComponent
 
   },
   {
-    path: 'especialista', component: EspecialistacomexComponent, pathMatch:'full'
+    path: 'especialista', component: EspecialistacomexComponent
 
   },
   {
-    path: 'fondos', component: FondosdefomentoComponent, pathMatch:'full'
+    path: 'fondos', component: FondosdefomentoComponent
 
   },
   {
-    path: 'operaciones', component: OperacionesInternacionalesComponent, pathMatch:'full'
+    path: 'operaciones', component: OperacionesInternacionalesComponent
 
   },
   {
-    path: '**', component: LoginComponent, pathMatch:'full'
-
+    path: '**', component: LoginComponent
   },
 
 
