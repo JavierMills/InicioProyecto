@@ -9,10 +9,12 @@ import { SharedModule } from './shared/shared.module';
 
 import { ComponentsComponent } from './Operacion_Internacional/components/components.component';
 
+
+import { AsesorComexModule } from './AsesorComex/asesor-comex.module';
+
 @NgModule({
   declarations: [
     AppComponent,
-    ComponentsComponent,
 
   ],
   imports: [
@@ -21,6 +23,7 @@ import { ComponentsComponent } from './Operacion_Internacional/components/compon
     AppRoutingModule,
     NgbModule,
     SharedModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
