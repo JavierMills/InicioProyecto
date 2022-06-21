@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.santander {
+     width: 30%;
+     height: 30%;
+     }
+.empresas::first-letter{
+            color: #FE0000;
+        }
+
+.line{
+    width: 52rem;
+    margin: auto;
+}
+.line1{
+    width: 52rem;
+    margin: auto;
+    height: 2px;
+}
+.contenido{
+    margin-top: 2rem;
+}
