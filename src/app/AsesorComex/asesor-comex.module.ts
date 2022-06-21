@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { ComponentsComponent } from './components/components.component';
 import { AsesorcomexComponent } from './pages/asesorcomex/asesorcomex.component';
 import { FormComponent } from './components/form/form.component';
-import { FolioComponent } from './components/folio/folio.component';
+import { FolioComponent } from './components/Folio/folio.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -16,7 +17,6 @@ import { FolioComponent } from './components/folio/folio.component';
   ],
   imports: [
     CommonModule,
-    
   ],
   exports:[
     ComponentsComponent,
