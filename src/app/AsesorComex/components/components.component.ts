@@ -30,8 +30,8 @@ export class ComponentsComponent implements OnInit {
   public Comex_TMEC : string = 'Solicitudes Comex-TMEC'
   public Turismo : string = 'Solicitudes Turismo'
 
-  dtOptions: DataTables.Settings = {};
-  dtTrigger: Subject<any> = new Subject<any>();
+  // dtOptions: DataTables.Settings = {};
+  // dtTrigger: Subject<any> = new Subject<any>();
 
   allUsers: any = [];
 
@@ -42,16 +42,16 @@ export class ComponentsComponent implements OnInit {
   esconderT:boolean = false;
 
   ngOnInit(): void {
-    this.dtOptions = {
-      pagingType: 'full_numbers',
-      pageLength: 40      
-  };
+  //   this.dtOptions = {
+  //     pagingType: 'full_numbers',
+  //     pageLength: 40
+  // };
 
-  this.http.get("https://jsonplaceholder.typicode.com/users")
-    .subscribe( resp => {
-      this.allUsers = resp;
-      this.dtTrigger.next(0);
-    })
+  // this.http.get("https://jsonplaceholder.typicode.com/users")
+  //   .subscribe( resp => {
+  //     this.allUsers = resp;
+  //     this.dtTrigger.next(0);
+  //   })
 
   this.esconder;
 }
@@ -67,8 +67,8 @@ export class ComponentsComponent implements OnInit {
 
   }
 
-  ngOnDestroy(): void {
-    this.dtTrigger.unsubscribe();
-  }
+  // ngOnDestroy(): void {
+  //   this.dtTrigger.unsubscribe();
+  // }
 
 }
