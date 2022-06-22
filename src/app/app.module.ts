@@ -7,8 +7,6 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from './shared/shared.module';
 
 
-
-
 import { AsesorComexModule } from './AsesorComex/asesor-comex.module';
 import { CarteraModule } from './cartera/cartera.module';
 import { ContraloriaModule } from './Contraloria/contraloria.module';
@@ -16,11 +14,14 @@ import { EspecialistacomexModule } from './EspecialistaComex/especialistacomex.m
 import { NegocioInternacionalModule } from './Negocio_Internacional/negocio-internacional.module';
 import { OperacionInternacionalModule } from './Operacion_Internacional/operacion-internacional.module';
 import { FondosdefomentoModule } from './FondosDeFomento/fondosdefomento.module';
+import { DataTablesModule } from "angular-datatables";
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    
+
 
   ],
   imports: [
@@ -35,8 +36,9 @@ import { FondosdefomentoModule } from './FondosDeFomento/fondosdefomento.module'
     EspecialistacomexModule,
     NegocioInternacionalModule,
     OperacionInternacionalModule,
-    FondosdefomentoModule
-   
+    FondosdefomentoModule,
+    DataTablesModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
