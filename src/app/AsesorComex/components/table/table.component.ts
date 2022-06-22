@@ -8,7 +8,7 @@ import { Subject } from 'rxjs';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
-
+  
   dtOptions: DataTables.Settings = {};
   dtTrigger: Subject<any> = new Subject<any>();
 
