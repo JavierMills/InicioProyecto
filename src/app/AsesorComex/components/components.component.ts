@@ -15,8 +15,16 @@ export class ComponentsComponent implements OnInit {
   public Turismo : string = 'Solicitudes Turismo'
 
   constructor() { }
+  esconder:boolean = false;
+  esconderF:boolean = true;
 
   ngOnInit(): void {
+    this.esconder;
+  }
+
+  mostrar(){
+    this.esconder = true;
+    this.esconderF = false;
   }
 
 }
