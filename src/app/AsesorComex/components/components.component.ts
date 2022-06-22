@@ -14,6 +14,9 @@ export class ComponentsComponent implements OnInit {
   public Comex_TMEC : string = 'Solicitudes Comex-TMEC'
   public Turismo : string = 'Solicitudes Turismo'
 
+
+
+
   constructor() { }
   esconder:boolean = false;
   esconderF:boolean = true;
