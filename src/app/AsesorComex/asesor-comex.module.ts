@@ -7,6 +7,7 @@ import { DataTablesModule } from "angular-datatables";
 import  { HttpClientModule } from "@angular/common/http";
 import { TableComponent } from './components/table/table.component';
 
+
 @NgModule({
   declarations: [
     ComponentsComponent,
@@ -19,7 +20,8 @@ import { TableComponent } from './components/table/table.component';
   imports: [
     CommonModule,
     DataTablesModule,
-    HttpClientModule
+    HttpClientModule,
+
   ],
   exports:[
     ComponentsComponent,
