@@ -1,18 +1,32 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { TablaInterface } from '../interfaces/interface';
+import { HttpClient } from '@angular/common/http';
 
+
+interface tabla{
+  value:string
+};
+interface solicitarCredito{
+  credito:string
+};
 
 @Component({
-  selector: 'app-components',
-  templateUrl: './components.component.html',
-  styleUrls: ['./components.component.scss']
+  selector: 'app-nav',
+  templateUrl: './nav.component.html',
+  styleUrls: ['./nav.component.scss']
 })
-export class ComponentsComponent implements OnInit {
+export class NavComponent implements OnInit {
+
+  credito:solicitarCredito[]=[
+    {credito: 'Garantia Automatica'},
+    {credito: 'Garantia Selectiva'},
+    {credito: 'Contrato PYME'},
+    {credito: 'Garantia Comex TMEC'},
+    {credito: 'Garantia Turismo'}
+  ]
 
 
-  llenatabla:TablaInterface[] = [
-    {value:'Capturar Solcitud'},
+
+  llenatabla:tabla[] = [{value:'Capturar Solcitud'},
   {value:'Proceso Pendiente Asesor Comex'},
   {value:'Especialista Comex (Rechazos)'},
   {value:'Proceso Pendiente Contraloría'},
@@ -23,16 +37,13 @@ export class ComponentsComponent implements OnInit {
   {value:'Rechazado Nafinet'},
   {value:'Reproceso'},];
 
-
-
-
   public Automaticas : string = 'Solicitudes Automaticas'
   public Selectivas : string = 'Solicitudes Selectivas'
   public TMEC : string = 'Solicitud TMEC'
   public Contrato_PYME : string = 'Solicitud Contrato Pyme'
   public Comex_TMEC : string = 'Solicitudes Comex-TMEC'
   public Turismo : string = 'Solicitudes Turismo'
-  public hora : string = ""
+
 
   allUsers: any = [];
   constructor(private http: HttpClient) { }
