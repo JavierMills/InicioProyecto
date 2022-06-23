@@ -1,6 +1,8 @@
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
+
+
 
 @Component({
   selector: 'app-table',
@@ -8,13 +10,13 @@ import { Subject } from 'rxjs';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
-
   dtOptions: DataTables.Settings = {};
   dtTrigger: Subject<any> = new Subject<any>();
 
   allUsers: any = [];
 
   constructor(private http: HttpClient) { }
+
 
   ngOnInit(): void {
     this.dtOptions = {
