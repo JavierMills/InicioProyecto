@@ -37,6 +37,8 @@ export class NavComponent implements OnInit {
   {value:'Rechazado Nafinet'},
   {value:'Reproceso'},];
 
+  fecha : Date = new Date();
+
   public Automaticas : string = 'Solicitudes Automaticas'
   public Selectivas : string = 'Solicitudes Selectivas'
   public TMEC : string = 'Solicitud TMEC'

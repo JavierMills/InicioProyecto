@@ -23,6 +23,8 @@ export class ComponentsComponent implements OnInit {
   {value:'Rechazado Nafinet'},
   {value:'Reproceso'},];
 
+  fecha : Date = new Date();
+
 
 
 
