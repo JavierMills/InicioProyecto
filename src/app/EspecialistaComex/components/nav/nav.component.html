@@ -16,7 +16,7 @@
       </div>
       <div class="col-sm-2"></div>
       <div class="col-sm-3" style="margin-left: 3%;">
-        <label>Viernes 03 de Junio de 2022</label>
+        <label>{{fecha | date: 'EEEE d De MMMM Del y'}}</label>
       </div>
     </div>
     <nav class="navbar navbar-expand-lg" style="background-color: red;">
@@ -57,7 +57,10 @@
           <ul class="navbar-nav">
             <li class="nav-item dropdown">
               <label data-bs-toggle="dropdown" style="color:white;"><b id="black">Programas</b></label>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" (click)="mostrar()">
+                  <li><a class="dropdown-item">Buscar Grantias de cliente</a></li>
+                  <li><a class="dropdown-item">Catalogo de Programas</a></li>
+                  <li><a class="dropdown-item">Alta de Programas</a></li>
               </ul>
             </li>
           </ul>
@@ -67,6 +70,12 @@
               <label data-bs-toggle="dropdown" style="color:white;"><b id="black">Reportes</b></label>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               </ul>
+            </li>
+          </ul>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <label data-bs-toggle="dropdown" style="color:white;"><b id="black">Reestructuras</b></label>
             </li>
           </ul>
           <ul class="navbar-nav">
@@ -92,7 +101,7 @@
           <label>SOLICITADO:</label>
         </div>
         <div class="col-sm-2">
-          <label>ESTATUS FOLIO:</label>
+          <label >ESTATUS FOLIO:</label>
         </div>
         <div class="col-sm-2">
           <label>ACREDITADO:</label>
@@ -112,8 +121,8 @@
           <input type="text">
         </div>
         <div class="col-sm-2">
-          <select style="width:100%;height:100%;">
-            <option *ngFor="let item of llenatabla">{{item.value}}</option>
+          <select (change)="mostrarTabla()" style="width:100%;height:100%;">
+            <option *ngFor="let item of llenatabla" >{{item.value}}</option>
           </select>
         </div>
         <div class="col-sm-2">
@@ -170,6 +179,7 @@
       <app-table *ngIf="esconderT"></app-table>
     </div>
 
+<<<<<<< HEAD
     <!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
 aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -747,3 +757,6 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
   </div>
 </div>
 </div>
+=======
+    <app-form></app-form>
+>>>>>>> 858a733bb32ac955233e6cd331452184adffad0f
