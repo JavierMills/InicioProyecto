@@ -1,14 +1,9 @@
-<!-- Button trigger modal -->
-<button
-  type="button"
-  class="btn btn-primary"
-  data-bs-toggle="modal"
-  data-bs-target="#staticBackdrop"
->
-  Modal
-</button>
-
 <!-- Modal -->
+<<<<<<< HEAD
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-xl">
+=======
 <div
   class="modal fade"
   id="staticBackdrop"
@@ -19,11 +14,15 @@
   aria-hidden="true"
 >
   <div class="modal-dialog modal-dialog-scrollable modal-xl" style="height: 1000px;">
+>>>>>>> 858a733bb32ac955233e6cd331452184adffad0f
     <div class="modal-content">
       <div class="modal-header" style="background-color: red">
         <h5 class="modal-title" id="staticBackdropLabel" style="color: white">
           Solicitud de Credito - COMEX-TMEC
         </h5>
+<<<<<<< HEAD
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+=======
         <button
           type="button"
           class="btn-close"
@@ -31,22 +30,25 @@
           aria-label="Close"
         ></button>
 
+>>>>>>> 858a733bb32ac955233e6cd331452184adffad0f
       </div>
       <div class="modal-body">
         <div class="row" style="background-color: #e3e7ec">
           <div class="col-sm-3">
             <label for="">Crear Folio:</label>&nbsp;
+<<<<<<< HEAD
+            <button class="btn btn-danger" (click)="mostrarContenido()">Crear Folio</button>
+=======
            <button class="btn btn-outline-dark" style="margin-left: 10px;">Crear Folio</button>
+>>>>>>> 858a733bb32ac955233e6cd331452184adffad0f
           </div>
-          <div class="col-sm-4">
-            <label for=""
-              ><b><u>Folio: 20220523-153CT</u></b></label
-            >&nbsp;
-            <button class="btn btn-danger" style="color: white">
+          <div class="col-sm-4" *ngIf="show">
+            <label for=""><b><u>Folio: 20220523-153CT</u></b></label>&nbsp;
+            <button class="btn btn-danger" style="color: white" *ngIf="show">
               Cancelar Folio
             </button>
           </div>
-          <div class="col-sm-2">
+          <div class="col-sm-2" *ngIf="show">
             <a href="">Subir Documento</a>
           </div>
           <div class="col-sm-3">
@@ -57,7 +59,7 @@
 
         <br />
 
-        <div class="row">
+        <div class="row" *ngIf="show">
           <div class="col-sm-1"></div>
           <div class="col-sm-1" style="border: solid; font-size: 90%">
             <label for="">Capturar Solicitud</label>
@@ -103,51 +105,16 @@
 
         <br />
 
-        <!-- <div style="background-color:#FFFFCC;">
-                  <div class="row">
-                      <div class="col-sm-12">
-                          <label for="" style="color:blue;"><b>Datos del cliente</b></label>
-                          <hr style="background-color:blue;">
-                      </div>
-                  </div>
-                  <div class="row">
-                      <div class="col-sm-3">
-                          <label for="">BUC:</label>
-                      </div>
-                      <div class="col-sm-3">
-                          <input type="text">
-                      </div>
-                      <div class="col-sm-3">
-                          <label for="">Nombre o Razon Social del acreditado</label>
-                      </div>
-                      <div class="col-sm-3">
-                          <input type="text"><input type="text">
-                      </div>
-                  </div>
-              </div> -->
-
-        <div class="accordion" id="accordionExample">
+        <div class="accordion" id="accordionExample" *ngIf="show">
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingOne">
-              <button
-                class="accordion-button"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseOne"
-                aria-expanded="true"
-                aria-controls="collapseOne"
-              >
-                <label for="" style="color: blue"
-                  ><b>Datos del cliente</b></label
-                >
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne">
+                <label for="" style="color: blue"><b>Datos del cliente</b></label>
               </button>
             </h2>
-            <div
-              id="collapseOne"
-              class="accordion-collapse collapse show"
-              aria-labelledby="headingOne"
-              data-bs-parent="#accordionExample"
-            >
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample">
               <div class="accordion-body" style="background-color: #ffffcc">
                 <div class="row">
                   <div class="col-sm-3">
@@ -165,9 +132,7 @@
                 </div>
                 <div class="row">
                   <div class="col-sm-3">
-                    <label for=""
-                      >Registro Federal de Contribuyentes RFC:</label
-                    >
+                    <label for="">Registro Federal de Contribuyentes RFC:</label>
                   </div>
                   <div class="col-sm-3">
                     <input type="text" disabled />
@@ -177,28 +142,17 @@
                   </div>
                   <div class="col-sm-3">
                     <div class="dropdown">
-                      <button
-                        class="btn btn-outline-secondary dropdown-toggle"
-                        type="button"
-                        id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                        style="width: 78%"
-                      >
+                      <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false" style="width: 78%">
                         Seleccionar
                       </button>
-                      <ul
-                        class="dropdown-menu"
-                        aria-labelledby="dropdownMenuButton1"
-                      >
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                         <li><a class="dropdown-item" href="#">Action</a></li>
                         <li>
                           <a class="dropdown-item" href="#">Another action</a>
                         </li>
                         <li>
-                          <a class="dropdown-item" href="#"
-                            >Something else here</a
-                          >
+                          <a class="dropdown-item" href="#">Something else here</a>
                         </li>
                       </ul>
                     </div>
@@ -210,28 +164,17 @@
                   </div>
                   <div class="col-sm-3">
                     <div class="dropdown">
-                      <button
-                        class="btn btn-outline-secondary dropdown-toggle"
-                        type="button"
-                        id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                        style="width: 78%"
-                      >
+                      <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false" style="width: 78%">
                         Seleccionar
                       </button>
-                      <ul
-                        class="dropdown-menu"
-                        aria-labelledby="dropdownMenuButton1"
-                      >
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                         <li><a class="dropdown-item" href="#">Action</a></li>
                         <li>
                           <a class="dropdown-item" href="#">Another action</a>
                         </li>
                         <li>
-                          <a class="dropdown-item" href="#"
-                            >Something else here</a
-                          >
+                          <a class="dropdown-item" href="#">Something else here</a>
                         </li>
                       </ul>
                     </div>
@@ -286,25 +229,13 @@
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingTwo">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#collapseTwo"
-                  aria-expanded="false"
-                  aria-controls="collapseTwo"
-                >
-                  <label for="" style="color: blue"
-                    ><b>Anexo de Informacion</b></label
-                  >
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <label for="" style="color: blue"><b>Anexo de Informacion</b></label>
                 </button>
               </h2>
-              <div
-                id="collapseTwo"
-                class="accordion-collapse collapse"
-                aria-labelledby="headingTwo"
-                data-bs-parent="#accordionExample"
-              >
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample">
                 <div class="accordion-body" style="background-color: #ffffcc">
                   <div class="row">
                     <div class="col-sm-3">
@@ -327,28 +258,17 @@
                     </div>
                     <div class="col-sm-3">
                       <div class="dropdown">
-                        <button
-                          class="btn btn-outline-secondary dropdown-toggle"
-                          type="button"
-                          id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                          style="width: 78%"
-                        >
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown" aria-expanded="false" style="width: 78%">
                           Seleccionar
                         </button>
-                        <ul
-                          class="dropdown-menu"
-                          aria-labelledby="dropdownMenuButton1"
-                        >
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                           <li><a class="dropdown-item" href="#">Action</a></li>
                           <li>
                             <a class="dropdown-item" href="#">Another action</a>
                           </li>
                           <li>
-                            <a class="dropdown-item" href="#"
-                              >Something else here</a
-                            >
+                            <a class="dropdown-item" href="#">Something else here</a>
                           </li>
                         </ul>
                       </div>
@@ -363,19 +283,15 @@
                   <br />
                   <div class="row">
                     <div class="col-sm-3">
-                      <label for=""
-                        >Segmento Bancomex (de acuerdo al tope maximo convinado
-                        = TMC):</label
-                      >
+                      <label for="">Segmento Bancomex (de acuerdo al tope maximo convinado
+                        = TMC):</label>
                     </div>
                     <div class="col-sm-3">
                       <input type="text" />
                     </div>
                     <div class="col-sm-3">
-                      <label for=""
-                        >Antiguedad del acreditado como cliente del
-                        intermediario (en meses):</label
-                      >
+                      <label for="">Antiguedad del acreditado como cliente del
+                        intermediario (en meses):</label>
                     </div>
                     <div class="col-sm-3">
                       <input type="text" />
@@ -388,28 +304,17 @@
                     </div>
                     <div class="col-sm-3">
                       <div class="dropdown">
-                        <button
-                          class="btn btn-outline-secondary dropdown-toggle"
-                          type="button"
-                          id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                          style="width: 78%"
-                        >
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown" aria-expanded="false" style="width: 78%">
                           Seleccionar
                         </button>
-                        <ul
-                          class="dropdown-menu"
-                          aria-labelledby="dropdownMenuButton1"
-                        >
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                           <li><a class="dropdown-item" href="#">Action</a></li>
                           <li>
                             <a class="dropdown-item" href="#">Another action</a>
                           </li>
                           <li>
-                            <a class="dropdown-item" href="#"
-                              >Something else here</a
-                            >
+                            <a class="dropdown-item" href="#">Something else here</a>
                           </li>
                         </ul>
                       </div>
@@ -424,10 +329,8 @@
                   <br />
                   <div class="row">
                     <div class="col-sm-3">
-                      <label for=""
-                        >Porcentaje de la produccion destinada al Mercado
-                        Interno:</label
-                      >
+                      <label for="">Porcentaje de la produccion destinada al Mercado
+                        Interno:</label>
                     </div>
                     <div class="col-sm-3">
                       <input type="text" />
@@ -442,10 +345,8 @@
                   <br />
                   <div class="row">
                     <div class="col-sm-3">
-                      <label for=""
-                        >Porcentaje de la produccion destinada al Mercado
-                        Externo:</label
-                      >
+                      <label for="">Porcentaje de la produccion destinada al Mercado
+                        Externo:</label>
                     </div>
                     <div class="col-sm-3">
                       <input type="text" disabled />
@@ -455,28 +356,17 @@
                     </div>
                     <div class="col-sm-3">
                       <div class="dropdown">
-                        <button
-                          class="btn btn-outline-secondary dropdown-toggle"
-                          type="button"
-                          id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                          style="width: 78%"
-                        >
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown" aria-expanded="false" style="width: 78%">
                           Seleccionar
                         </button>
-                        <ul
-                          class="dropdown-menu"
-                          aria-labelledby="dropdownMenuButton1"
-                        >
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                           <li><a class="dropdown-item" href="#">Action</a></li>
                           <li>
                             <a class="dropdown-item" href="#">Another action</a>
                           </li>
                           <li>
-                            <a class="dropdown-item" href="#"
-                              >Something else here</a
-                            >
+                            <a class="dropdown-item" href="#">Something else here</a>
                           </li>
                         </ul>
                       </div>
@@ -489,28 +379,17 @@
                     </div>
                     <div class="col-sm-3">
                       <div class="dropdown">
-                        <button
-                          class="btn btn-outline-secondary dropdown-toggle"
-                          type="button"
-                          id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                          style="width: 78%"
-                        >
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown" aria-expanded="false" style="width: 78%">
                           Seleccionar
                         </button>
-                        <ul
-                          class="dropdown-menu"
-                          aria-labelledby="dropdownMenuButton1"
-                        >
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                           <li><a class="dropdown-item" href="#">Action</a></li>
                           <li>
                             <a class="dropdown-item" href="#">Another action</a>
                           </li>
                           <li>
-                            <a class="dropdown-item" href="#"
-                              >Something else here</a
-                            >
+                            <a class="dropdown-item" href="#">Something else here</a>
                           </li>
                         </ul>
                       </div>
@@ -538,28 +417,17 @@
                     </div>
                     <div class="col-sm-9">
                       <div class="dropdown">
-                        <button
-                          class="btn btn-outline-secondary dropdown-toggle"
-                          type="button"
-                          id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                          style="width: 94%"
-                        >
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown" aria-expanded="false" style="width: 94%">
                           Seleccionar
                         </button>
-                        <ul
-                          class="dropdown-menu"
-                          aria-labelledby="dropdownMenuButton1"
-                        >
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                           <li><a class="dropdown-item" href="#">Action</a></li>
                           <li>
                             <a class="dropdown-item" href="#">Another action</a>
                           </li>
                           <li>
-                            <a class="dropdown-item" href="#"
-                              >Something else here</a
-                            >
+                            <a class="dropdown-item" href="#">Something else here</a>
                           </li>
                         </ul>
                       </div>
@@ -568,35 +436,22 @@
                   <br />
                   <div class="row">
                     <div class="col-sm-5">
-                      <label for=""
-                        >Tipo de Credito (Bancomext) (Para garantias Personales,
-                        seleccionar creditos con garantia):</label
-                      >
+                      <label for="">Tipo de Credito (Bancomext) (Para garantias Personales,
+                        seleccionar creditos con garantia):</label>
                     </div>
                     <div class="col-sm-7">
                       <div class="dropdown">
-                        <button
-                          class="btn btn-outline-secondary dropdown-toggle"
-                          type="button"
-                          id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                          style="width: 92%"
-                        >
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown" aria-expanded="false" style="width: 92%">
                           Seleccionar
                         </button>
-                        <ul
-                          class="dropdown-menu"
-                          aria-labelledby="dropdownMenuButton1"
-                        >
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                           <li><a class="dropdown-item" href="#">Action</a></li>
                           <li>
                             <a class="dropdown-item" href="#">Another action</a>
                           </li>
                           <li>
-                            <a class="dropdown-item" href="#"
-                              >Something else here</a
-                            >
+                            <a class="dropdown-item" href="#">Something else here</a>
                           </li>
                         </ul>
                       </div>
@@ -605,34 +460,21 @@
                   <br />
                   <div class="row">
                     <div class="col-sm-3">
-                      <label for=""
-                        >Destino de los recursos (Catalogo Bancomext):</label
-                      >
+                      <label for="">Destino de los recursos (Catalogo Bancomext):</label>
                     </div>
                     <div class="col-sm-3">
                       <div class="dropdown">
-                        <button
-                          class="btn btn-outline-secondary dropdown-toggle"
-                          type="button"
-                          id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                          style="width: 78%"
-                        >
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown" aria-expanded="false" style="width: 78%">
                           Seleccionar
                         </button>
-                        <ul
-                          class="dropdown-menu"
-                          aria-labelledby="dropdownMenuButton1"
-                        >
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                           <li><a class="dropdown-item" href="#">Action</a></li>
                           <li>
                             <a class="dropdown-item" href="#">Another action</a>
                           </li>
                           <li>
-                            <a class="dropdown-item" href="#"
-                              >Something else here</a
-                            >
+                            <a class="dropdown-item" href="#">Something else here</a>
                           </li>
                         </ul>
                       </div>
@@ -642,28 +484,17 @@
                     </div>
                     <div class="col-sm-3">
                       <div class="dropdown">
-                        <button
-                          class="btn btn-outline-secondary dropdown-toggle"
-                          type="button"
-                          id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                          style="width: 78%"
-                        >
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown" aria-expanded="false" style="width: 78%">
                           Seleccionar
                         </button>
-                        <ul
-                          class="dropdown-menu"
-                          aria-labelledby="dropdownMenuButton1"
-                        >
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                           <li><a class="dropdown-item" href="#">Action</a></li>
                           <li>
                             <a class="dropdown-item" href="#">Another action</a>
                           </li>
                           <li>
-                            <a class="dropdown-item" href="#"
-                              >Something else here</a
-                            >
+                            <a class="dropdown-item" href="#">Something else here</a>
                           </li>
                         </ul>
                       </div>
@@ -676,28 +507,17 @@
                     </div>
                     <div class="col-sm-3">
                       <div class="dropdown">
-                        <button
-                          class="btn btn-outline-secondary dropdown-toggle"
-                          type="button"
-                          id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                          style="width: 78%"
-                        >
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown" aria-expanded="false" style="width: 78%">
                           Seleccionar
                         </button>
-                        <ul
-                          class="dropdown-menu"
-                          aria-labelledby="dropdownMenuButton1"
-                        >
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                           <li><a class="dropdown-item" href="#">Action</a></li>
                           <li>
                             <a class="dropdown-item" href="#">Another action</a>
                           </li>
                           <li>
-                            <a class="dropdown-item" href="#"
-                              >Something else here</a
-                            >
+                            <a class="dropdown-item" href="#">Something else here</a>
                           </li>
                         </ul>
                       </div>
@@ -707,28 +527,17 @@
                     </div>
                     <div class="col-sm-3">
                       <div class="dropdown">
-                        <button
-                          class="btn btn-outline-secondary dropdown-toggle"
-                          type="button"
-                          id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                          style="width: 78%"
-                        >
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown" aria-expanded="false" style="width: 78%">
                           Seleccionar
                         </button>
-                        <ul
-                          class="dropdown-menu"
-                          aria-labelledby="dropdownMenuButton1"
-                        >
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                           <li><a class="dropdown-item" href="#">Action</a></li>
                           <li>
                             <a class="dropdown-item" href="#">Another action</a>
                           </li>
                           <li>
-                            <a class="dropdown-item" href="#"
-                              >Something else here</a
-                            >
+                            <a class="dropdown-item" href="#">Something else here</a>
                           </li>
                         </ul>
                       </div>
@@ -747,28 +556,17 @@
                     </div>
                     <div class="col-sm-3">
                       <div class="dropdown">
-                        <button
-                          class="btn btn-outline-secondary dropdown-toggle"
-                          type="button"
-                          id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                          style="width: 78%"
-                        >
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                          data-bs-toggle="dropdown" aria-expanded="false" style="width: 78%">
                           Seleccionar
                         </button>
-                        <ul
-                          class="dropdown-menu"
-                          aria-labelledby="dropdownMenuButton1"
-                        >
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                           <li><a class="dropdown-item" href="#">Action</a></li>
                           <li>
                             <a class="dropdown-item" href="#">Another action</a>
                           </li>
                           <li>
-                            <a class="dropdown-item" href="#"
-                              >Something else here</a
-                            >
+                            <a class="dropdown-item" href="#">Something else here</a>
                           </li>
                         </ul>
                       </div>
@@ -795,7 +593,7 @@
           </div>
         </div>
       </div>
-      <div class="modal-footer">
+      <div class="modal-footer" *ngIf="show">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
           Close
         </button>
@@ -804,3 +602,4 @@
     </div>
   </div>
 </div>
+

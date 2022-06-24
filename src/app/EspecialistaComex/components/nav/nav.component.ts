@@ -15,6 +15,8 @@ interface solicitarCredito{
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
+  show:boolean = false;
+
 
   credito:solicitarCredito[]=[
     {credito: 'Garantia Automatica'},
@@ -52,6 +54,7 @@ export class NavComponent implements OnInit {
   esconder:boolean = false;
   esconderF:boolean = true;
   esconderT:boolean = false;
+  showModal:boolean = false;
 
   ngOnInit(): void {
 
@@ -70,4 +73,13 @@ export class NavComponent implements OnInit {
 
   }
 
+  modal(){
+    console.log("Llego aqui");
+    
+  }
+
+  mostrarContenido(){
+    console.log("llego aqui");
+    this.show = true;
+  }
 }
