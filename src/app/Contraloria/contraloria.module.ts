@@ -1,15 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ContraloriaComponent } from './pages/contraloria/contraloria.component';
+import { FormComponent } from './components/form/form.component';
+import { TableComponent } from './components/table/table.component';
+import { NavComponent } from './components/nav/nav.component';
+import { DataTablesModule } from 'angular-datatables';
 
 
 
 @NgModule({
   declarations: [
-    ContraloriaComponent
+    ContraloriaComponent,
+    FormComponent,
+    TableComponent,
+    NavComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    DataTablesModule
+
   ],
   exports:[
     ContraloriaComponent

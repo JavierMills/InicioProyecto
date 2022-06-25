@@ -14,3 +14,11 @@
   color: white;
     background-color: black;
 }
+ #efecto{
+  transition: all 0.2s ease;
+}
+#efecto:hover{
+  background-color: red;
+  border: red;
+  transform: scale(1.1);
+}

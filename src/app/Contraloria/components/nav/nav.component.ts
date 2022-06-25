@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-
 interface tabla{
   value:string
 };
@@ -8,12 +7,14 @@ interface solicitarCredito{
   credito:string
 };
 
+
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
+
   show:boolean = false;
 
 
