@@ -4,9 +4,7 @@ import { Component, OnInit } from '@angular/core';
 interface tabla{
   value:string
 };
-interface solicitarCredito{
-  credito:string
-};
+
 
 @Component({
   selector: 'app-nav',
@@ -16,14 +14,12 @@ interface solicitarCredito{
 export class NavComponent implements OnInit {
   show:boolean = false;
 
-
-  credito:solicitarCredito[]=[
-    {credito: 'Garantia Automatica'},
-    {credito: 'Garantia Selectiva'},
-    {credito: 'Contrato PYME'},
-    {credito: 'Garantia Comex TMEC'},
-    {credito: 'Garantia Turismo'}
-  ]
+  public garantiaA : string = "Garantia Automatica"
+  public garantiaS : string = "Garantia Selectiva"
+  public contratoPYME : string = "Solicitud Contrato PYME"
+  public garantiaCOMEXTMEC : string = "Garantia Comex TMEC"
+  public garantiaT : string = "Garantia Turismo"
+  public garantiaTMEC : string = "Garantia TMEC"
 
 
 
@@ -80,5 +76,9 @@ export class NavComponent implements OnInit {
   mostrarContenido(){
     console.log("llego aqui");
     this.show = true;
+  }
+
+  mostrarForm(){
+    this.showModal = true;
   }
 }

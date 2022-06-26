@@ -1,11 +1,11 @@
  <!-- Modal -->
- <div class="modal fade" id="garantiaA" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+ <div class="modal fade" id="garantiaTMEC" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
  aria-labelledby="staticBackdropLabel" aria-hidden="true">
  <div class="modal-dialog modal-dialog-scrollable modal-xl">
    <div class="modal-content">
      <div class="modal-header" style="background-color: red">
        <h5 class="modal-title" id="staticBackdropLabel" style="color: white">
-         Solicitud de Credito
+         Solicitud de Credito - TMEC
        </h5>
        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
      </div>
@@ -16,10 +16,10 @@
            <button class="btn btn-outline-dark" (click)="mostrarContenido()">Crear Folio</button>
          </div>
          <div class="col-sm-4" *ngIf="show">
-           <label for=""><b style="text-decoration:underline; "><u>Folio: 20220523-153</u></b></label>&nbsp;&nbsp;&nbsp;&nbsp;
-           <label for=""><b style="text-decoration:underline; "><u>Folio: HPP</u></b> &nbsp;&nbsp;<button class="btn btn-danger btn-sm" style="color: white" *ngIf="show">
+           <label for=""><b style="text-decoration:underline; "><u>Folio: 20220523-153P</u></b></label>&nbsp;&nbsp;&nbsp;&nbsp;
+           <button class="btn btn-danger btn-sm" style="color: white" *ngIf="show">
             Cancelar Folio
-          </button></label>
+          </button>
          </div>
          <div class="col-sm-2" *ngIf="show">
            <a href="">Subir Documento</a>

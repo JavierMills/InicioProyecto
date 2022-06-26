@@ -6,6 +6,11 @@ import { AsesorComexModule } from '../AsesorComex/asesor-comex.module';
 import { TableComponent } from './components/table/table.component';
 import { DataTablesModule } from 'angular-datatables';
 import { FormComponent } from './components/form/form.component';
+import { FormSelectivasComponent } from './components/form-selectivas/form-selectivas.component';
+import { FormTMECComponent } from './components/form-tmec/form-tmec.component';
+import { FormPYMEComponent } from './components/form-pyme/form-pyme.component';
+import { FormComexTMECComponent } from './components/form-comex-tmec/form-comex-tmec.component';
+import { FormTURISMOComponent } from './components/form-turismo/form-turismo.component';
 
 
 
@@ -16,6 +21,11 @@ import { FormComponent } from './components/form/form.component';
     NavComponent,
     TableComponent,
     FormComponent,
+    FormSelectivasComponent,
+    FormTMECComponent,
+    FormPYMEComponent,
+    FormComexTMECComponent,
+    FormTURISMOComponent
 
 
   ],
