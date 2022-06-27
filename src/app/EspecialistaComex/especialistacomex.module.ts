@@ -6,6 +6,7 @@ import { AsesorComexModule } from '../AsesorComex/asesor-comex.module';
 import { TableComponent } from './components/table/table.component';
 import { DataTablesModule } from 'angular-datatables';
 import { FormComponent } from './components/form/form.component';
+import { ConsultagarantiaComponent } from './components/consultagarantia/consultagarantia.component';
 
 
 
@@ -16,6 +17,7 @@ import { FormComponent } from './components/form/form.component';
     NavComponent,
     TableComponent,
     FormComponent,
+    ConsultagarantiaComponent,
 
 
   ],
