@@ -11,6 +11,7 @@ import { FormTMECComponent } from './components/form-tmec/form-tmec.component';
 import { FormPYMEComponent } from './components/form-pyme/form-pyme.component';
 import { FormComexTMECComponent } from './components/form-comex-tmec/form-comex-tmec.component';
 import { FormTURISMOComponent } from './components/form-turismo/form-turismo.component';
+import { BitacoraProcesoComponent } from './components/bitacora-proceso/bitacora-proceso.component';
 
 
 
@@ -25,7 +26,8 @@ import { FormTURISMOComponent } from './components/form-turismo/form-turismo.com
     FormTMECComponent,
     FormPYMEComponent,
     FormComexTMECComponent,
-    FormTURISMOComponent
+    FormTURISMOComponent,
+    BitacoraProcesoComponent
 
 
   ],
