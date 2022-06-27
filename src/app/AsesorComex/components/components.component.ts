@@ -11,6 +11,13 @@ import { TablaInterface } from '../interfaces/interface';
 export class ComponentsComponent implements OnInit {
 
 
+  public garantiaA : string = "Garantia Automatica"
+  public garantiaS : string = "Garantia Selectiva"
+  public contratoPYME : string = "Solicitud Contrato PYME"
+  public garantiaCOMEXTMEC : string = "Garantia Comex TMEC"
+  public garantiaT : string = "Garantia Turismo"
+  public garantiaTMEC : string = "Garantia TMEC"
+
   llenatabla:TablaInterface[] = [
     {value:'Capturar Solcitud'},
   {value:'Proceso Pendiente Asesor Comex'},

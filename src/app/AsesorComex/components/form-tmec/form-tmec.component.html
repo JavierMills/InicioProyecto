@@ -1,11 +1,11 @@
  <!-- Modal -->
- <div class="modal fade" id="garantiaA" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+ <div class="modal fade" id="garantiaTMEC" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
  aria-labelledby="staticBackdropLabel" aria-hidden="true">
  <div class="modal-dialog modal-dialog-scrollable modal-xl">
    <div class="modal-content">
      <div class="modal-header" style="background-color: red">
        <h5 class="modal-title" id="staticBackdropLabel" style="color: white">
-         Solicitud de Credito
+         Solicitud de Credito - TMEC
        </h5>
        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
      </div>
@@ -16,8 +16,10 @@
            <button class="btn btn-outline-dark" (click)="mostrarContenido()">Crear Folio</button>
          </div>
          <div class="col-sm-4" *ngIf="show">
-           <label for=""><b style="text-decoration:underline; "><u>Folio: 20220523-153</u></b></label>&nbsp;&nbsp;&nbsp;&nbsp;
-           <label for=""><b style="text-decoration:underline; "><u>Folio: HPP</u></b></label>
+           <label for=""><b style="text-decoration:underline; "><u>Folio: 20220523-153P</u></b></label>&nbsp;&nbsp;&nbsp;&nbsp;
+           <button class="btn btn-danger btn-sm" style="color: white" *ngIf="show">
+            Cancelar Folio
+          </button>
          </div>
          <div class="col-sm-2" *ngIf="show">
            <a href="">Subir Documento</a>
@@ -31,48 +33,49 @@
        <br />
 
        <div class="row" *ngIf="show">
-        <div class="col-sm-1"></div>
-         <div class="col-sm-1" style="border: 1px solid #A9A9A9; font-size: 90%; background-color: #2184BE; cursor: pointer;">
-           <label for="" style="cursor: pointer;">Capturar Solicitud</label>
+         <div class="col-sm-1"></div>
+         <div class="col-sm-1" style="border: solid; font-size: 90%">
+           <label for="">Capturar Solicitud</label>
          </div>
          &nbsp;
-         <div class="col-sm-1" style="border: 1px solid #A9A9A9; font-size: 90%; background-color: #EEEEEE; cursor: not-allowed;">
-           <label for="" style="cursor: not-allowed;">Proceso Pendiente Asesor Comex</label>
+         <div class="col-sm-1" style="border: solid; font-size: 90%">
+           <label for="">Proceso Pendiente Asesor Comex</label>
          </div>
          &nbsp;
-         <div class="col-sm-1" style="border: 1px solid #A9A9A9; font-size: 90%; background-color: #EEEEEE; cursor: not-allowed;">
-           <label for="" style="cursor: not-allowed;">Especialista Comex</label>
+         <div class="col-sm-1" style="border: solid; font-size: 90%">
+           <label for="">Especialista Comex</label>
          </div>
          &nbsp;
-         <div class="col-sm-1" style="border: 1px solid #A9A9A9; font-size: 90%; background-color: #EEEEEE; cursor: not-allowed;">
-           <label for=""style="cursor: not-allowed;">Proceso Pendiente Contraloria</label>
+         <div class="col-sm-1" style="border: solid; font-size: 90%">
+           <label for="">Proceso Pendiente Contraloria</label>
          </div>
          &nbsp;
-         <div class="col-sm-1" style="border: 1px solid #A9A9A9; font-size: 90%; background-color: #EEEEEE; cursor: not-allowed;">
-           <label for="" style="cursor: not-allowed;">Proceso Pendiente Cartera</label>
+         <div class="col-sm-1" style="border: solid; font-size: 90%">
+           <label for="">Proceso Pendiente Cartera</label>
          </div>
          &nbsp;
-         <div class="col-sm-1" style="border: 1px solid #A9A9A9; font-size: 90%; background-color: #EEEEEE; cursor: not-allowed;">
-           <label for="" style="cursor: not-allowed;">Fondos de Fomento</label>
+         <div class="col-sm-1" style="border: solid; font-size: 90%">
+           <label for="">Fondos de Fomento</label>
          </div>
          &nbsp;
-         <div class="col-sm-1" style="border: 1px solid #A9A9A9; font-size: 90%; background-color: #EEEEEE; cursor: not-allowed;">
-           <label for="" style="cursor: not-allowed;">Enviada Nafinet</label>
+         <div class="col-sm-1" style="border: solid; font-size: 90%">
+           <label for="">Enviada Nafinet</label>
          </div>
          &nbsp;
-         <div class="col-sm-1" style="border: 1px solid #A9A9A9; font-size: 90%; background-color: #EEEEEE; cursor: not-allowed;">
-           <label for="" style="cursor: not-allowed;">Aprobado Nafinet</label>
+         <div class="col-sm-1" style="border: solid; font-size: 90%">
+           <label for="">Aprobado Nafinet</label>
          </div>
          &nbsp;
-         <div class="col-sm-1" style="border: 1px solid #A9A9A9; font-size: 90%; background-color: #EEEEEE; cursor: not-allowed;">
-           <label for="" style="cursor: not-allowed;">Rechazado Nafinet</label>
+         <div class="col-sm-1" style="border: solid; font-size: 90%">
+           <label for="">Rechazado Nafinet</label>
          </div>
          &nbsp;
-         <div class="col-sm-1" style="border: 1px solid #A9A9A9; font-size: 90%; background-color: #EEEEEE; cursor: not-allowed;">
-           <label for="" style="cursor: not-allowed;">Reproceso</label>
+         <div class="col-sm-1" style="border: solid; font-size: 90%">
+           <label for="">Reproceso</label>
          </div>
          <div class="col-sm-1"></div>
        </div>
+
        <br />
 
        <div class="accordion" id="accordionExample" *ngIf="show">
