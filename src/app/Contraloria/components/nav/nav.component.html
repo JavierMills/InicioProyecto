@@ -12,7 +12,7 @@
     <hr style="margin-top: -4%;">
     <div class="row">
       <div class="col-sm-6" style="margin-left:5%;">
-        <label><b>Especialista Comex:</b></label>&nbsp;<label>Jose Rodriguez Arias (Z396773)</label>
+        <label><b>Contraloria:</b></label>&nbsp;<label>Jose Rodriguez Arias (Z396773)</label>
       </div>
       <div class="col-sm-2"></div>
       <div class="col-sm-3" style="margin-left: 3%;">
@@ -22,33 +22,6 @@
     <nav class="navbar navbar-expand-lg" style="background-color: red;">
       <div class="container-fluid" style="margin-left:5%;">
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-              <label data-bs-toggle="dropdown" style="color:white;"><b id="black">Solicitar Credito</b></label>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <div >
-                  <li><a class="dropdown-item" *ngIf="garantiaA != garantiaA">{{garantiaA}}</a></li>
-                  <li><a class="dropdown-item" *ngIf="garantiaA === garantiaA" data-bs-toggle="modal" data-bs-target="#garantiaA">{{garantiaA}}</a></li>
-
-
-                  <li><a class="dropdown-item" *ngIf="garantiaS!= garantiaS">{{garantiaS}}</a></li>
-                  <li><a class="dropdown-item" *ngIf="garantiaS === garantiaS" data-bs-toggle="modal" data-bs-target="#garantiaS">{{garantiaS}}</a></li>
-
-                  <li><a class="dropdown-item" *ngIf="contratoPYME!= contratoPYME">{{contratoPYME}}</a></li>
-                  <li><a class="dropdown-item" *ngIf="contratoPYME === contratoPYME" data-bs-toggle="modal" data-bs-target="#contratoPYME">{{contratoPYME}}</a></li>
-
-                  <li><a class="dropdown-item" *ngIf="garantiaTMEC!= garantiaTMEC">{{garantiaTMEC}}</a></li>
-                  <li><a class="dropdown-item" *ngIf="garantiaTMEC === garantiaTMEC" data-bs-toggle="modal" data-bs-target="#garantiaTMEC">{{garantiaTMEC}}</a></li>
-
-                  <li><a class="dropdown-item" *ngIf="garantiaT!= garantiaT">{{garantiaT}}</a></li>
-                  <li><a class="dropdown-item" *ngIf="garantiaT === garantiaT" data-bs-toggle="modal" data-bs-target="#garantiaT">{{garantiaT}}</a></li>
-
-                  <li><a class="dropdown-item" *ngIf="garantiaCOMEXTMEC!= garantiaCOMEXTMEC">{{garantiaCOMEXTMEC}}</a></li>
-                  <li><a class="dropdown-item" *ngIf="garantiaCOMEXTMEC === garantiaCOMEXTMEC" data-bs-toggle="modal" data-bs-target="#garantiaCOMEXTMEC">{{garantiaCOMEXTMEC}}</a></li>
-                </div>
-              </ul>
-            </li>
-          </ul>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <ul class="navbar-nav">
             <li class="nav-item dropdown">
@@ -66,19 +39,7 @@
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <ul class="navbar-nav">
             <li class="nav-item dropdown">
-              <label data-bs-toggle="dropdown" style="color:white;"><b id="black" class="formato">Descargar
-                  Formato</b></label>
-            </li>
-          </ul>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-              <label data-bs-toggle="dropdown" style="color:white;"><b id="black">Programas</b></label>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" (click)="mostrar()">
-                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#modalGarantias">Buscar Grantias de cliente</a></li>
-                <li><a class="dropdown-item">Catalogo de Programas</a></li>
-                <li><a class="dropdown-item">Alta de Programas</a></li>
-              </ul>
+              <label data-bs-toggle="dropdown" style="color:white;"><b id="black" class="formato">Descargar Formato</b></label>
             </li>
           </ul>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -90,11 +51,6 @@
             </li>
           </ul>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-              <label data-bs-toggle="dropdown" style="color:white;"><b id="black">Reestructuras</b></label>
-            </li>
-          </ul>
           <ul class="navbar-nav">
             <li class="nav-item dropdown">&nbsp;&nbsp;
               <img src="../../../assets/img/candado.png" alt="cerrar sesion..." style="width: 20px;" height="20px">
@@ -118,7 +74,7 @@
           <label>SOLICITADO:</label>
         </div>
         <div class="col-sm-2">
-          <label>ESTATUS FOLIO:</label>
+          <label >ESTATUS FOLIO:</label>
         </div>
         <div class="col-sm-2">
           <label>ACREDITADO:</label>
@@ -139,7 +95,7 @@
         </div>
         <div class="col-sm-2">
           <select (change)="mostrarTabla()" style="width:100%;height:100%;">
-            <option *ngFor="let item of llenatabla">{{item.value}}</option>
+            <option *ngFor="let item of llenatabla" >{{item.value}}</option>
           </select>
         </div>
         <div class="col-sm-2">
@@ -180,9 +136,9 @@
       </div>
       <div class="row">
         <div class="col-sm-12" style="margin-left: 78%">
-          <button   class="btn btn-primary">Buscar</button>
+          <button class="btn btn-primary">Buscar</button>
           &nbsp;&nbsp;
-          <button  class="btn btn-primary">Limpiar</button>
+          <button class="btn btn-primary">Limpiar</button>
         </div>
       </div>
       <hr />
@@ -190,17 +146,10 @@
     <br><br>
 
 
-  </form>
-</div>
-<div>
-  <app-table *ngIf="esconderT"></app-table>
-</div>
+      </form>
+    </div>
+    <div >
+      <app-table *ngIf="esconderT"></app-table>
+    </div>
 
     <app-form></app-form>
-    <app-form-selectivas></app-form-selectivas>
-    <app-form-tmec></app-form-tmec>
-    <app-form-pyme></app-form-pyme>
-    <app-form-turismo></app-form-turismo>
-    <app-form-comex-tmec></app-form-comex-tmec>
-    <app-consultagarantia></app-consultagarantia>
-
