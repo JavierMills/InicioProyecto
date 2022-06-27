@@ -12,6 +12,7 @@ import { FormPYMEComponent } from './components/form-pyme/form-pyme.component';
 import { FormComexTMECComponent } from './components/form-comex-tmec/form-comex-tmec.component';
 import { FormTURISMOComponent } from './components/form-turismo/form-turismo.component';
 import { BitacoraProcesoComponent } from './components/bitacora-proceso/bitacora-proceso.component';
+import { ConsultagarantiaComponent } from './components/consultagarantia/consultagarantia.component';
 
 
 
@@ -27,7 +28,8 @@ import { BitacoraProcesoComponent } from './components/bitacora-proceso/bitacora
     FormPYMEComponent,
     FormComexTMECComponent,
     FormTURISMOComponent,
-    BitacoraProcesoComponent
+    BitacoraProcesoComponent,
+    ConsultagarantiaComponent
 
 
   ],

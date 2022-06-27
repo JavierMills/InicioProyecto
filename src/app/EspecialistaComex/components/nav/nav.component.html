@@ -66,17 +66,18 @@
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <ul class="navbar-nav">
             <li class="nav-item dropdown">
-              <label data-bs-toggle="dropdown" style="color:white;"><b id="black" class="formato">Descargar Formato</b></label>
+              <label data-bs-toggle="dropdown" style="color:white;"><b id="black" class="formato">Descargar
+                  Formato</b></label>
             </li>
           </ul>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <ul class="navbar-nav">
             <li class="nav-item dropdown">
               <label data-bs-toggle="dropdown" style="color:white;"><b id="black">Programas</b></label>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" (click)="mostrar()">
-                  <li><a class="dropdown-item">Buscar Grantias de cliente</a></li>
-                  <li><a class="dropdown-item">Catalogo de Programas</a></li>
-                  <li><a class="dropdown-item">Alta de Programas</a></li>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" (click)="mostrar()">
+                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#modalGarantias">Buscar Grantias de cliente</a></li>
+                <li><a class="dropdown-item">Catalogo de Programas</a></li>
+                <li><a class="dropdown-item">Alta de Programas</a></li>
               </ul>
             </li>
           </ul>
@@ -117,7 +118,7 @@
           <label>SOLICITADO:</label>
         </div>
         <div class="col-sm-2">
-          <label >ESTATUS FOLIO:</label>
+          <label>ESTATUS FOLIO:</label>
         </div>
         <div class="col-sm-2">
           <label>ACREDITADO:</label>
@@ -138,7 +139,7 @@
         </div>
         <div class="col-sm-2">
           <select (change)="mostrarTabla()" style="width:100%;height:100%;">
-            <option *ngFor="let item of llenatabla" >{{item.value}}</option>
+            <option *ngFor="let item of llenatabla">{{item.value}}</option>
           </select>
         </div>
         <div class="col-sm-2">
@@ -189,11 +190,11 @@
     <br><br>
 
 
-      </form>
-    </div>
-    <div >
-      <app-table *ngIf="esconderT"></app-table>
-    </div>
+  </form>
+</div>
+<div>
+  <app-table *ngIf="esconderT"></app-table>
+</div>
 
     <app-form></app-form>
     <app-form-selectivas></app-form-selectivas>
@@ -201,5 +202,10 @@
     <app-form-pyme></app-form-pyme>
     <app-form-turismo></app-form-turismo>
     <app-form-comex-tmec></app-form-comex-tmec>
+<<<<<<< HEAD
 
     <app-bitacora-proceso></app-bitacora-proceso>
+=======
+    <app-consultagarantia></app-consultagarantia>
+
+>>>>>>> 4a66d875ed4cc5a5afa1336dcbf2ca5d0e5202fb
