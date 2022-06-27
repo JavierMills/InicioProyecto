@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-form',
-  templateUrl: './form.component.html',
-  styleUrls: ['./form.component.scss']
+  selector: 'app-form-comex-tmec',
+  templateUrl: './form-comex-tmec.component.html',
+  styleUrls: ['./form-comex-tmec.component.scss']
 })
-export class FormComponent implements OnInit {
+export class FormComexTmecComponent implements OnInit {
 
   show:boolean = false;
 
@@ -14,8 +14,6 @@ export class FormComponent implements OnInit {
   esconderT:boolean = false;
   showModal:boolean = false;
 
-
-  constructor() { }
 
   ngOnInit(): void {
     this.esconder;

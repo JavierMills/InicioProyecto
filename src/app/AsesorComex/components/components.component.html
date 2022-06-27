@@ -26,12 +26,26 @@
             <li class="nav-item dropdown">
               <label data-bs-toggle="dropdown" style="color:white;"><b id="black">Solicitudes</b></label>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" (click)="mostrar()">
-                <li><a class="dropdown-item">{{Automaticas}}</a></li>
-                <li><a class="dropdown-item">{{Selectivas}}</a></li>
-                <li><a class="dropdown-item">{{TMEC}}</a></li>
-                <li><a class="dropdown-item">{{Contrato_PYME}}</a></li>
-                <li><a class="dropdown-item">{{Comex_TMEC}}</a></li>
-                <li><a class="dropdown-item">{{Turismo}}</a></li>
+                <div >
+                  <li><a class="dropdown-item" *ngIf="garantiaA != garantiaA">{{garantiaA}}</a></li>
+                  <li><a class="dropdown-item" *ngIf="garantiaA === garantiaA" data-bs-toggle="modal" data-bs-target="#garantiaA">{{garantiaA}}</a></li>
+
+
+                  <li><a class="dropdown-item" *ngIf="garantiaS!= garantiaS">{{garantiaS}}</a></li>
+                  <li><a class="dropdown-item" *ngIf="garantiaS === garantiaS" data-bs-toggle="modal" data-bs-target="#garantiaS">{{garantiaS}}</a></li>
+
+                  <li><a class="dropdown-item" *ngIf="contratoPYME!= contratoPYME">{{contratoPYME}}</a></li>
+                  <li><a class="dropdown-item" *ngIf="contratoPYME === contratoPYME" data-bs-toggle="modal" data-bs-target="#contratoPYME">{{contratoPYME}}</a></li>
+
+                  <li><a class="dropdown-item" *ngIf="garantiaTMEC!= garantiaTMEC">{{garantiaTMEC}}</a></li>
+                  <li><a class="dropdown-item" *ngIf="garantiaTMEC === garantiaTMEC" data-bs-toggle="modal" data-bs-target="#garantiaTMEC">{{garantiaTMEC}}</a></li>
+
+                  <li><a class="dropdown-item" *ngIf="garantiaT!= garantiaT">{{garantiaT}}</a></li>
+                  <li><a class="dropdown-item" *ngIf="garantiaT === garantiaT" data-bs-toggle="modal" data-bs-target="#garantiaT">{{garantiaT}}</a></li>
+
+                  <li><a class="dropdown-item" *ngIf="garantiaCOMEXTMEC!= garantiaCOMEXTMEC">{{garantiaCOMEXTMEC}}</a></li>
+                  <li><a class="dropdown-item" *ngIf="garantiaCOMEXTMEC === garantiaCOMEXTMEC" data-bs-toggle="modal" data-bs-target="#garantiaCOMEXTMEC">{{garantiaCOMEXTMEC}}</a></li>
+                </div>
               </ul>
             </li>
           </ul>
@@ -140,3 +154,10 @@
 <div >
   <app-table *ngIf="esconderT"></app-table>
 </div>
+
+<app-form></app-form>
+<app-form-comex-tmec></app-form-comex-tmec>
+<app-form-pyme></app-form-pyme>
+<app-form-selectivas></app-form-selectivas>
+<app-form-tmec></app-form-tmec>
+<app-form-turismo></app-form-turismo>

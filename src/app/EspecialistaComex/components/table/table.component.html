@@ -21,7 +21,7 @@
               </thead>
               <tbody>
               <tr *ngFor="let user of allUsers">
-                  <td>{{ user.id}}<img src="../../../../assets/img/rayito.jpg" style="width: 20px; height: 20px; background-color: white;" alt=""> <img src="../../../../assets/img/rayito.jpg" style="width: 20px; height: 20px; background-color: white;" alt=""></td>
+                  <td>{{ user.id}}<img data-bs-toggle="modal" data-bs-target="#proceso" src="../../../../assets/img/rayito.jpg" style="width: 20px; height: 20px; background-color: white;" alt=""></td>
                   <td>{{ user.name }}</td>
                   <td>{{ user.username }}</td>
                   <td>{{ user.email }}</td>
@@ -32,3 +32,6 @@
           </table>
         </div>
 </div>
+
+
+<app-bitacora-proceso></app-bitacora-proceso>

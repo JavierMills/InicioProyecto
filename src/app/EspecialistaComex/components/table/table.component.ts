@@ -17,6 +17,10 @@ export class TableComponent implements OnInit {
 
   constructor(private http: HttpClient) { }
 
+  esconder:boolean = false;
+  esconderF:boolean = true;
+  esconderT:boolean = false;
+  showModal:boolean = false;
 
   ngOnInit(): void {
     this.dtOptions = {
@@ -34,6 +38,16 @@ export class TableComponent implements OnInit {
 
 ngOnDestroy(): void {
   this.dtTrigger.unsubscribe();
+}
+
+mostrar(): void{
+  this.esconder = true;
+  this.esconderF = false;
+}
+mostrarTabla(){
+  this.esconderT = true;
+  console.log(this.esconderT)
+
 }
 
 }

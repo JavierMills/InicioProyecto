@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-form',
-  templateUrl: './form.component.html',
-  styleUrls: ['./form.component.scss']
+  selector: 'app-form-turismo',
+  templateUrl: './form-turismo.component.html',
+  styleUrls: ['./form-turismo.component.scss']
 })
-export class FormComponent implements OnInit {
+export class FormTurismoComponent implements OnInit {
 
   show:boolean = false;
 
@@ -41,4 +41,5 @@ export class FormComponent implements OnInit {
     console.log("llego aqui");
     this.show = true;
   }
+
 }
