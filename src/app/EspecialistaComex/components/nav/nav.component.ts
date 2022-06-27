@@ -50,7 +50,7 @@ export class NavComponent implements OnInit {
   esconderF:boolean = true;
   esconderT:boolean = false;
   showModal:boolean = false;
-
+  reporte: boolean = false;
   ngOnInit(): void {
 
 
@@ -81,4 +81,8 @@ export class NavComponent implements OnInit {
   mostrarForm(){
     this.showModal = true;
   }
+  mostrarReportes(){
+    this.reporte = true;
+  }
+
 }
