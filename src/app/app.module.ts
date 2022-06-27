@@ -15,7 +15,7 @@ import { NegocioInternacionalModule } from './Negocio_Internacional/negocio-inte
 import { OperacionInternacionalModule } from './Operacion_Internacional/operacion-internacional.module';
 import { FondosdefomentoModule } from './FondosDeFomento/fondosdefomento.module';
 import { DataTablesModule } from "angular-datatables";
-
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -35,7 +35,8 @@ import { DataTablesModule } from "angular-datatables";
     NegocioInternacionalModule,
     OperacionInternacionalModule,
     FondosdefomentoModule,
-    DataTablesModule
+    DataTablesModule,
+    FormsModule
 
   ],
   providers: [],

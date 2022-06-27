@@ -13,7 +13,7 @@ import { FormComexTMECComponent } from './components/form-comex-tmec/form-comex-
 import { FormTURISMOComponent } from './components/form-turismo/form-turismo.component';
 import { BitacoraProcesoComponent } from './components/bitacora-proceso/bitacora-proceso.component';
 import { ConsultagarantiaComponent } from './components/consultagarantia/consultagarantia.component';
-
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -36,7 +36,8 @@ import { ConsultagarantiaComponent } from './components/consultagarantia/consult
   imports: [
     CommonModule,
     AsesorComexModule,
-    DataTablesModule
+    DataTablesModule,
+    FormsModule
   ],
   exports:[
     EspecialistacomexComponent

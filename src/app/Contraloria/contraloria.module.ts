@@ -5,7 +5,7 @@ import { FormComponent } from './components/form/form.component';
 import { TableComponent } from './components/table/table.component';
 import { NavComponent } from './components/nav/nav.component';
 import { DataTablesModule } from 'angular-datatables';
-
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +17,8 @@ import { DataTablesModule } from 'angular-datatables';
   ],
   imports: [
     CommonModule,
-    DataTablesModule
+    DataTablesModule,
+    FormsModule
 
   ],
   exports:[

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -7,12 +8,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
-  show:boolean = false;
+  show: boolean = false;
 
-  esconder:boolean = false;
-  esconderF:boolean = true;
-  esconderT:boolean = false;
-  showModal:boolean = false;
+  esconder: boolean = false;
+  esconderF: boolean = true;
+  esconderT: boolean = false;
+  showModal: boolean = false;
+  buc: string = "";
+  nombreORazonSocial: string = "";
+  ciudad: string = "";
+  colonia: string = "";
+  calleNumero: string = "";
+  cp: string = "";
+  segmento: string = "";
+  sexo: string = "";
+
+
+  ventasTA: string = "";
+  personalOcupado: string = "";
+  segmentoBancomext: string = "";
+  antiguedadAcreditado: string = "";
+  porcentajeNacional: string = "";
+  porcentajeMercadoInterno: string = "";
+  vigenciaTotalLinea: string = "";
+  montoLinea: string = "";
 
 
   constructor() { }
@@ -21,26 +40,116 @@ export class FormComponent implements OnInit {
     this.esconder;
   }
 
-  mostrar(){
+  mostrar() {
     this.esconder = true;
     this.esconderF = false;
   }
 
-  mostrarTabla(){
+  mostrarTabla() {
     this.esconderT = true;
     console.log(this.esconderT)
 
   }
 
-  modal(){
-    console.log("Llego aqui");
-
-  }
-
-  mostrarContenido(){
-    console.log("llego aqui");
+  mostrarContenido() {
     this.show = true;
   }
 
+  resetBuc() {
+    this.buc = "";
+    let com = prompt('Ingresa un comentario por el rechazo del BUC', "");
+    alert(`Tu comentario es: ${com}.`);
+  }
+
+  resertNoRSocial() {
+    this.nombreORazonSocial = "";
+    let com = prompt('Ingresa un comentario por el rechazo de Nombre o Razon Social del acreditado', "");
+    alert(`Tu comentario es: ${com}.`);
+  }
+
+  resetCiudad() {
+    this.ciudad = "";
+    let com = prompt('Ingresa un comentario por el rechazo de Ciudad', "");
+    alert(`Tu comentario es: ${com}.`);
+  }
+
+  resetColonia() {
+    this.colonia = "";
+    let com = prompt('Ingresa un comentario por el rechazo de Colonia', "");
+    alert(`Tu comentario es: ${com}.`);
+  }
+
+  resetcalleNumero() {
+    this.calleNumero = "";
+    let com = prompt('Ingresa un comentario por el rechazo de Calle y Numero', "");
+    alert(`Tu comentario es: ${com}.`);
+  }
+
+  resetcp() {
+    this.cp = "";
+    let com = prompt('Ingresa un comentario por el rechazo de Codigo Postal', "");
+    alert(`Tu comentario es: ${com}.`);
+  }
+
+  resetSegmento() {
+    this.segmento = "";
+    let com = prompt('Ingresa un comentario por el rechazo de Segmento', "");
+    alert(`Tu comentario es: ${com}.`);
+  }
+
+  resetSexo() {
+    this.sexo = "";
+    let com = prompt('Ingresa un comentario por el rechazo de Sexo', "");
+    alert(`Tu comentario es: ${com}.`);
+  }
+
+  resetVentasTA() {
+    this.ventasTA = "";
+    let com = prompt('Ingresa un comentario por el rechazo de Ventas Totales Anuales', "");
+    alert(`Tu comentario es: ${com}.`);
+  }
+
+  resetPersonalOcupado() {
+    this.personalOcupado = "";
+    let com = prompt('Ingresa un comentario por el rechazo de Personal Ocupado', "");
+    alert(`Tu comentario es: ${com}.`);
+  }
+
+  resetSegmentoBancomext() {
+    this.segmentoBancomext = "";
+    let com = prompt('Ingresa un comentario por el rechazo de Segmento Bancomext', "");
+    alert(`Tu comentario es: ${com}.`);
+  }
+
+  resetAntiguedadAcreditado() {
+    this.antiguedadAcreditado = "";
+    let com = prompt('Ingresa un comentario por el rechazo de Antiguedad del Acreditado', "");
+    alert(`Tu comentario es: ${com}.`)
+  }
+
+  resetPorcentajeNacional() {
+    this.porcentajeNacional = "";
+    let com = prompt('Ingresa un comentario por el rechazo de Porcentaje de Origen Nacional', "");
+    alert(`Tu comentario es: ${com}.`)
+  }
+
+  resetPorcentajeMercadoInterno() {
+    this, this.porcentajeMercadoInterno = "";
+    let com = 
+    prompt('Ingresa un comentario por el rechazo de Porcentaje de la produccion destinada al Mercado Interno', "");
+    alert(`Tu comentario es: ${com}.`)
+  }
+
+  resetVigenciaTotalLinea() {
+    this.vigenciaTotalLinea = "";
+    let com = prompt ('Ingresa un comentario por el rechazo de Vigencia Total de la Linea', "");
+    alert(`Tu comentario es: ${com}.`)
+  }
+
+  resetMontoLinea() {
+    this.montoLinea = "";
+    let com = prompt ('Ingresa un comentario por el rechazo de Monto de la Linea', "");
+    alert(`Tu comentario es: ${com}.`)
+  }
 
 }
