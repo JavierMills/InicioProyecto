@@ -27,11 +27,14 @@
               <label data-bs-toggle="dropdown" style="color:white;"><b id="black">Solicitudes</b></label>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" (click)="mostrar()">
                 <div >
-                  <li><a class="dropdown-item" *ngIf="garantiaA != garantiaA">{{garantiaA}}</a></li>
-                  <li><a class="dropdown-item" *ngIf="garantiaA === garantiaA" data-bs-toggle="modal" data-bs-target="#garantiaA">{{garantiaA}}</a></li>
+                    <li id="black">{{garantiaA}}</li>
+                    <li id="black">{{garantiaS}}</li>
+                    <li id="black">{{contratoPYME}}</li>
+                    <li id="black">{{garantiaCOMEXTMEC}}</li>
+                    <li id="black">{{garantiaT}}</li>
+                    <li id="black">{{garantiaTMEC}}</li>
 
-
-                  <li><a class="dropdown-item" *ngIf="garantiaS!= garantiaS">{{garantiaS}}</a></li>
+                  <!-- <li><a class="dropdown-item" *ngIf="garantiaS!= garantiaS">{{garantiaS}}</a></li>
                   <li><a class="dropdown-item" *ngIf="garantiaS === garantiaS" data-bs-toggle="modal" data-bs-target="#garantiaS">{{garantiaS}}</a></li>
 
                   <li><a class="dropdown-item" *ngIf="contratoPYME!= contratoPYME">{{contratoPYME}}</a></li>
@@ -44,7 +47,7 @@
                   <li><a class="dropdown-item" *ngIf="garantiaT === garantiaT" data-bs-toggle="modal" data-bs-target="#garantiaT">{{garantiaT}}</a></li>
 
                   <li><a class="dropdown-item" *ngIf="garantiaCOMEXTMEC!= garantiaCOMEXTMEC">{{garantiaCOMEXTMEC}}</a></li>
-                  <li><a class="dropdown-item" *ngIf="garantiaCOMEXTMEC === garantiaCOMEXTMEC" data-bs-toggle="modal" data-bs-target="#garantiaCOMEXTMEC">{{garantiaCOMEXTMEC}}</a></li>
+                  <li><a class="dropdown-item" *ngIf="garantiaCOMEXTMEC === garantiaCOMEXTMEC" data-bs-toggle="modal" data-bs-target="#garantiaCOMEXTMEC">{{garantiaCOMEXTMEC}}</a></li> -->
                 </div>
               </ul>
             </li>
@@ -98,7 +101,15 @@
         </div>
         <div class="col-sm-2">
           <select style="width:100%;height:100%;">
-            <option *ngFor="let item of llenatabla">{{item.value}}</option>
+            <option id="black">{{CapturarSolicitud}}</option>
+            <option id="black">{{ProcesoPendienteAsesorC}}</option>
+            <option id="black">{{EspecialistaComexRech}}</option>
+            <option id="black">{{ProcesoPendienteContraloria}}</option>
+            <option id="black">{{FondosDeFomento}}</option>
+            <option id="black">{{EnviadaNafinet}}</option>
+            <option id="black">{{AprobadoNafinet}}</option>
+            <option id="black">{{RechaxoNafinet}}</option>
+            <option id="black">{{Reproceso}}</option>
           </select>
         </div>
         <div class="col-sm-2">
@@ -131,7 +142,15 @@
         <div class="col-sm-3">
           <label>ESTATUS FOLIO:</label>&nbsp;
           <select style="width: 60%; height: 60%" (change)="mostrarTabla()">
-            <option *ngFor="let item of llenatabla">{{item.value}}</option>
+            <option >{{CapturarSolicitud}}</option>
+            <option >{{ProcesoPendienteAsesorC}}</option>
+            <option >{{EspecialistaComexRech}}</option>
+            <option >{{ProcesoPendienteContraloria}}</option>
+            <option >{{FondosDeFomento}}</option>
+            <option >{{EnviadaNafinet}}</option>
+            <option >{{AprobadoNafinet}}</option>
+            <option >{{RechaxoNafinet}}</option>
+            <option >{{Reproceso}}</option>
           </select>
         </div>
         <br />
@@ -139,9 +158,9 @@
       </div>
       <div class="row">
         <div class="col-sm-12" style="margin-left: 78%">
-          <button class="btn btn-primary">Buscar</button>
+          <button id="efecto"class="btn btn-primary">Buscar</button>
           &nbsp;&nbsp;
-          <button class="btn btn-primary">Limpiar</button>
+          <button id="efecto" class="btn btn-primary">Limpiar</button>
         </div>
       </div>
       <hr />
@@ -154,10 +173,3 @@
 <div >
   <app-table *ngIf="esconderT"></app-table>
 </div>
-
-<app-form></app-form>
-<app-form-comex-tmec></app-form-comex-tmec>
-<app-form-pyme></app-form-pyme>
-<app-form-selectivas></app-form-selectivas>
-<app-form-tmec></app-form-tmec>
-<app-form-turismo></app-form-turismo>

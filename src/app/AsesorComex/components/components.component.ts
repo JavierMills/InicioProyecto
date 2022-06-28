@@ -18,17 +18,30 @@ export class ComponentsComponent implements OnInit {
   public garantiaT : string = "Garantia Turismo"
   public garantiaTMEC : string = "Garantia TMEC"
 
-  llenatabla:TablaInterface[] = [
-    {value:'Capturar Solcitud'},
-  {value:'Proceso Pendiente Asesor Comex'},
-  {value:'Especialista Comex (Rechazos)'},
-  {value:'Proceso Pendiente Contraloría'},
-  {value:'Proceso Pendiente Cartera'},
-  {value:'Fondos de Fomento'},
-  {value:'Enviada a Nafinet'},
-  {value:'Aprobado Nafinet'},
-  {value:'Rechazado Nafinet'},
-  {value:'Reproceso'},];
+
+  //status de garantia
+
+  public CapturarSolicitud : string = "Capturar Solcitud"
+  public ProcesoPendienteAsesorC : string = "Proceso Pendiente Asesor Comex"
+  public EspecialistaComexRech : string = "Especialista Comex (Rechazos)"
+  public ProcesoPendienteContraloria : string = "Proceso Pendiente Contraloría"
+  public FondosDeFomento : string = "Fondos de Fomento"
+  public EnviadaNafinet : string = "Enviada a Nafinet"
+  public AprobadoNafinet : string = "Aprobado Nafinet"
+  public RechaxoNafinet : string = "Rechazo Nafinet"
+  public Reproceso : string = "Reproceso"
+
+  // llenatabla:TablaInterface[] = [
+  //   {value:'Capturar Solcitud'},
+  // {value:'Proceso Pendiente Asesor Comex'},
+  // {value:'Especialista Comex (Rechazos)'},
+  // {value:'Proceso Pendiente Contraloría'},
+  // {value:'Proceso Pendiente Cartera'},
+  // {value:'Fondos de Fomento'},
+  // {value:'Enviada a Nafinet'},
+  // {value:'Aprobado Nafinet'},
+  // {value:'Rechazado Nafinet'},
+  // {value:'Reproceso'},];
 
   fecha : Date = new Date();
 
