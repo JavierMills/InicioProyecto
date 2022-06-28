@@ -13,6 +13,7 @@ import { FormPymeComponent } from './components/form-pyme/form-pyme.component';
 import { FormSelectivasComponent } from './components/form-selectivas/form-selectivas.component';
 import { FormTmecComponent } from './components/form-tmec/form-tmec.component';
 import { FormTurismoComponent } from './components/form-turismo/form-turismo.component';
+import { FormsModule } from '@angular/forms';
 
 registerLocaleData(localEs);
 
@@ -34,6 +35,7 @@ registerLocaleData(localEs);
     CommonModule,
     DataTablesModule,
     HttpClientModule,
+    FormsModule
 
   ],
   exports:[
