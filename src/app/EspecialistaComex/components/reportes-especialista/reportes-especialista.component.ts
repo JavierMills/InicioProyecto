@@ -21,11 +21,13 @@ export class ReportesEspecialistaComponent implements OnInit {
   esconderT:boolean = false;
   showModal:boolean = false;
   reporte: boolean = false;
+
   ngOnInit(): void {
     this.dtOptions = {
       pagingType: 'full_numbers',
       pageLength: 40
     };
+
 
     this.http.get("https://jsonplaceholder.typicode.com/users")
     .subscribe( resp => {
@@ -48,5 +50,8 @@ mostrarTabla(){
   console.log(this.esconderT)
 
 }
+
+
+
 
 }
