@@ -26,7 +26,7 @@ registerLocaleData(localEs);
     FormPymeComponent,
     FormSelectivasComponent,
     FormTmecComponent,
-    FormTurismoComponent
+    FormTurismoComponent,
 
 
   ],
