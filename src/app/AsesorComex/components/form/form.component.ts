@@ -7,7 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
+<<<<<<< HEAD
   show: boolean = false;
+=======
+  public CapturarSolicitud : string = "Capturar Solcitud"
+  public ProcesoPendienteAsesorC : string = "Proceso Pendiente Asesor Comex"
+  public EspecialistaComexRech : string = "Especialista Comex (Rechazos)"
+  public ProcesoPendienteContraloria : string = "Proceso Pendiente Contraloría"
+  public FondosDeFomento : string = "Fondos de Fomento"
+  public EnviadaNafinet : string = "Enviada a Nafinet"
+  public AprobadoNafinet : string = "Aprobado Nafinet"
+  public RechaxoNafinet : string = "Rechazo Nafinet"
+  public Reproceso : string = "Reproceso"
+
+  show:boolean = false;
+>>>>>>> db0b506fa0b8fd4ff9a0e32f125ae9fa7a0680f5
 
   esconder: boolean = false;
   esconderF: boolean = true;
@@ -23,6 +37,14 @@ export class FormComponent implements OnInit {
   sexo: string = "";
   entidadFed:string = "Seleccionar";
   munODele:string = "Seleccionar";
+
+  mostrarSolicitudAutomatica: boolean = false;
+  mostrarSolicitudSelectiva: boolean = false;
+  mostrarSolicitudComexTMEC: boolean = false;
+  mostrarContratoPyme: boolean = false;
+  mostrarSolicitudTMEC: boolean = false;
+  mostrarSolicitudTurismo: boolean = false;
+
 
 
   ventasTA: string = "";
@@ -65,6 +87,7 @@ export class FormComponent implements OnInit {
   mostrarContenido() {
     this.show = true;
   }
+<<<<<<< HEAD
 
   resetBuc() {
     this.buc = "";
@@ -241,4 +264,33 @@ export class FormComponent implements OnInit {
     alert(`Tu comentario es: ${com}.`)
   }
   
+=======
+  mostrarAutomatica() {
+    if (this.mostrarSolicitudAutomatica) {
+      this.mostrarSolicitudAutomatica = true;
+    } else {
+      this.mostrarSolicitudAutomatica = true;
+    }
+  }
+
+  mostrarSelectiva() {
+    if (this.mostrarSolicitudSelectiva) {
+      this.mostrarSolicitudSelectiva = false;
+    } else {
+      this.mostrarSolicitudSelectiva = true;
+    }
+  }
+  mostrarComexTMEC() {
+    this.mostrarSolicitudComexTMEC = true;
+  }
+  mostrarPYME() {
+    this.mostrarContratoPyme = true;
+  }
+  mostrarTMEC() {
+    this.mostrarSolicitudTMEC = true;
+  }
+  mostrarTurismo() {
+    this.mostrarSolicitudTurismo = true;
+  }
+>>>>>>> db0b506fa0b8fd4ff9a0e32f125ae9fa7a0680f5
 }
