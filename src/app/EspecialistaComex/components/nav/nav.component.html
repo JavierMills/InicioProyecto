@@ -86,7 +86,7 @@
             <li class="nav-item dropdown">
               <label data-bs-toggle="dropdown" style="color:white;"><b id="black">Reportes</b></label>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" (click)="mostrarReportes()">Solicitudes</a></li>
+                <li><a class="dropdown-item" (click)="mostrarReportes()">Solicitudes Realizadas</a></li>
 
               </ul>
             </li>
@@ -141,7 +141,7 @@
         </div>
         <div class="col-sm-2">
           <select (change)="mostrarTabla()" style="width:100%;height:100%;">
-            <option *ngFor="let item of llenatabla">{{item.value}}</option>
+            <option  *ngFor="let item of llenatabla">{{item.value}}</option>
           </select>
         </div>
         <div class="col-sm-2">
