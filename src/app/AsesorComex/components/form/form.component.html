@@ -1,132 +1,3 @@
-<!-- Modal -->
-<div class="modal fade" id="garantiaA" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-  aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-xl">
-    <div class="modal-content">
-      <div class="modal-header" style="background-color: red">
-        <h5 class="modal-title" id="staticBackdropLabel" style="color: white">
-          Solicitud de Credito
-        </h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="row" style="background-color: #e3e7ec">
-          <div class="col-sm-3">
-            <label for="">Crear Folio:</label>&nbsp;
-            <button class="btn btn-outline-dark" (click)="mostrarContenido()">Crear Folio</button>
-          </div>
-          <div class="col-sm-4" *ngIf="show">
-            <label for=""><b style="text-decoration:underline; "><u>Folio:
-                  20220523-153</u></b></label>&nbsp;&nbsp;&nbsp;&nbsp;
-            <label for=""><b style="text-decoration:underline; "><u>Folio: HPP</u></b></label>
-          </div>
-          <div class="col-sm-2" *ngIf="show">
-            <a href="">Subir Documento</a>
-          </div>
-          <div class="col-sm-3">
-            <label for="">Fecha Solicitud:</label>&nbsp;
-            <label for="" style="color: red"><u>23/05/22</u></label>
-          </div>
-        </div>
-<!-- <div *ngIf="!mostrarSolicitudAutomatica">
-  <div class="row" style="width: 90%; text-align: center; margin-left:2%;">
-    <div class="col-sm-2">
-      <label>FOLIO:auto</label>
-    </div>
-    <div class="col-sm-2">
-      <label>SUCURSAL:</label>
-    </div>
-    <div class="col-sm-2">
-      <label>SOLICITADO:</label>
-    </div>
-    <div class="col-sm-2">
-      <label>ESTATUS FOLIO:Auto</label>
-    </div>
-    <div class="col-sm-2">
-      <label>ACREDITADO:</label>
-    </div>
-    <div class="col-sm-2">
-      <label>ACREDITADO:</label>
-    </div>
-  </div>
-  <div class="row" style="width: 90%; text-align: center; margin-left:2%;">
-    <div class="col-sm-2">
-      <input type="text">
-    </div>
-    <div class="col-sm-2">
-      <input type="text">
-    </div>
-    <div class="col-sm-2">
-      <input type="text">
-    </div>
-    <div class="col-sm-2">
-      <select style="width:100%;height:100%;">
-        <option id="black">{{CapturarSolicitud}}</option>
-        <option id="black">{{ProcesoPendienteAsesorC}}</option>
-        <option id="black">{{EspecialistaComexRech}}</option>
-        <option id="black">{{ProcesoPendienteContraloria}}</option>
-        <option id="black">{{FondosDeFomento}}</option>
-        <option id="black">{{EnviadaNafinet}}</option>
-        <option id="black">{{AprobadoNafinet}}</option>
-        <option id="black">{{RechaxoNafinet}}</option>
-        <option id="black">{{Reproceso}}</option>
-      </select>
-    </div>
-    <div class="col-sm-2">
-      <input type="text">
-    </div>
-    <div class="col-sm-2">
-      <input type="text">
-    </div>
-  </div>
-  <br>
-  <div class="row">
-    <div class="col-sm-12" style="margin-left: 78%">
-      <button id="efecto" class="btn btn-primary">Buscar</button>
-      &nbsp;&nbsp;
-      <button id="efecto" class="btn btn-primary">Limpiar</button>
-    </div>
-  </div>
-</div> -->
-
-<div style="background-color: white;" *ngIf="mostrarSolicitudAutomatica" class="content">
-  <div class="row" style="text-align: center">
-    <div class="col-sm-3">
-      <label>FOLIO:</label>&nbsp;
-      <input type="text" />
-    </div>
-    <div class="col-sm-3">
-      <label>SOLICITADO:</label>&nbsp;
-      <input type="text" />
-    </div>
-    <div class="col-sm-3">
-      <label>ESTATUS FOLIO:Automatica</label>&nbsp;
-      <select style="width: 60%; height: 60%">
-        <option >{{CapturarSolicitud}}</option>
-        <option >{{ProcesoPendienteAsesorC}}</option>
-        <option >{{EspecialistaComexRech}}</option>
-        <option >{{ProcesoPendienteContraloria}}</option>
-        <option >{{FondosDeFomento}}</option>
-        <option >{{EnviadaNafinet}}</option>
-        <option >{{AprobadoNafinet}}</option>
-        <option >{{RechaxoNafinet}}</option>
-        <option >{{Reproceso}}</option>
-      </select>
-    </div>
-    <br />
-    <br />
-  </div>
-  <div class="row">
-    <div class="col-sm-12" style="margin-left: 78%">
-      <button id="efecto" class="btn btn-primary">Buscar</button>
-      &nbsp;&nbsp;
-      <button id="efecto" class="btn btn-primary">Limpiar</button>
-    </div>
-  </div>
-  <hr />
-</div>
-
-
 
 <!-- Modal -->
  <div class="modal fade" id="garantiaA" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -141,17 +12,17 @@
      </div>
      <div class="modal-body">
        <div class="row" style="background-color: #e3e7ec">
-         <div class="col-sm-3">
+         <!-- <div class="col-sm-3">
            <label for="">Crear Folio:</label>&nbsp;
            <button class="btn btn-outline-dark" (click)="mostrarContenido()">Crear Folio</button>
-         </div>
-         <div class="col-sm-4" *ngIf="show">
+         </div> -->
+         <div class="col-sm-4">
            <label for=""><b style="text-decoration:underline; "><u>Folio: 20220523-153</u></b></label>&nbsp;&nbsp;&nbsp;&nbsp;
            <label for=""><b style="text-decoration:underline; "><u>Folio: HPP</u></b> &nbsp;&nbsp;<button class="btn btn-danger btn-sm" style="color: white" *ngIf="show">
             Cancelar Folio
           </button></label>
          </div>
-         <div class="col-sm-2" *ngIf="show">
+         <div class="col-sm-2" >
            <a href="">Subir Documento</a>
          </div>
          <div class="col-sm-3">
@@ -162,16 +33,16 @@
 
         <br />
 
-        <div class="row" *ngIf="show">
+        <div class="row">
           <div class="col-sm-1"></div>
           <div class="col-sm-1"
-            style="border: 1px solid #A9A9A9; font-size: 90%; background-color: #2184BE; cursor: pointer;">
-            <label for="" style="cursor: pointer;">Capturar Solicitud</label>
+            style="border: 1px solid #A9A9A9; font-size: 90%; background-color: #9DC8E2; cursor: not-allowed;">
+            <label for="" style="cursor: not-allowed;">Capturar Solicitud</label>
           </div>
           &nbsp;
           <div class="col-sm-1"
-            style="border: 1px solid #A9A9A9; font-size: 90%; background-color: #EEEEEE; cursor: not-allowed;">
-            <label for="" style="cursor: not-allowed;">Proceso Pendiente Asesor Comex</label>
+            style="border: 1px solid #A9A9A9; font-size: 90%; background-color: #2184BE ; cursor: pointer;">
+            <label for="" style="cursor: pointer;">Proceso Pendiente Asesor Comex</label>
           </div>
           &nbsp;
           <div class="col-sm-1"
@@ -217,7 +88,7 @@
         </div>
         <br />
 
-        <div class="accordion" id="accordionExample" *ngIf="show">
+        <div class="accordion" id="accordionExample">
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingOne">
               <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
@@ -719,7 +590,7 @@
             </div>
           </div>
         </div>
-        
+
       </div>
       <div class="modal-footer" *ngIf="show">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">

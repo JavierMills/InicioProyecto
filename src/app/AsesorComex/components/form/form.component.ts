@@ -18,7 +18,9 @@ export class FormComponent implements OnInit {
   public RechaxoNafinet : string = "Rechazo Nafinet"
   public Reproceso : string = "Reproceso"
 
- 
+
+
+
   esconder: boolean = false;
   esconderF: boolean = true;
   esconderT: boolean = false;
@@ -68,6 +70,35 @@ export class FormComponent implements OnInit {
   ngOnInit(): void {
     this.esconder;
   }
+
+
+  mostrarAutomatica() {
+    console.log("mostrar automatica");
+
+    this.mostrarSolicitudAutomatica = true;
+    this.mostrarSolicitudSelectiva = false;
+  }
+
+
+  mostrarSelectiva() {
+    console.log("mostar selectiva");
+
+    this.mostrarSolicitudSelectiva = true;
+    this.mostrarSolicitudAutomatica = false;
+  }
+  mostrarComexTMEC() {
+    this.mostrarSolicitudComexTMEC = true;
+  }
+  mostrarPYME() {
+    this.mostrarContratoPyme = true;
+  }
+  mostrarTMEC() {
+    this.mostrarSolicitudTMEC = true;
+  }
+  mostrarTurismo() {
+    this.mostrarSolicitudTurismo = true;
+  }
+
 
   mostrar() {
     this.esconder = true;
@@ -178,7 +209,7 @@ export class FormComponent implements OnInit {
     this.propositoProyecto = "Seleccionar";
     let com = prompt('Ingresa un comentario por el rechazo de Proposito del Proyecto', "");
     alert(`Tu comentario es: ${com}.`)
-  }  
+  }
 
   resetPorcentajeNacional() {
     this.porcentajeNacional = "";
@@ -188,7 +219,7 @@ export class FormComponent implements OnInit {
 
   resetPorcentajeMercadoInterno() {
     this, this.porcentajeMercadoInterno = "";
-    let com = 
+    let com =
     prompt('Ingresa un comentario por el rechazo de Porcentaje de la produccion destinada al Mercado Interno', "");
     alert(`Tu comentario es: ${com}.`)
   }
@@ -258,30 +289,6 @@ export class FormComponent implements OnInit {
     let com = prompt ('Ingresa un comentario por el rechazo de Moneda', "");
     alert(`Tu comentario es: ${com}.`)
   }
-  
-  mostrarAutomatica() {
-    console.log("mostrar automatica");
-    
-    this.mostrarSolicitudAutomatica = true;
-    this.mostrarSolicitudSelectiva = false;
-  }
 
-  mostrarSelectiva() {
-    console.log("mostar selectiva");
-    
-    this.mostrarSolicitudSelectiva = true;
-    this.mostrarSolicitudAutomatica = false;
-  }
-  mostrarComexTMEC() {
-    this.mostrarSolicitudComexTMEC = true;
-  }
-  mostrarPYME() {
-    this.mostrarContratoPyme = true;
-  }
-  mostrarTMEC() {
-    this.mostrarSolicitudTMEC = true;
-  }
-  mostrarTurismo() {
-    this.mostrarSolicitudTurismo = true;
-  }
+
 }
