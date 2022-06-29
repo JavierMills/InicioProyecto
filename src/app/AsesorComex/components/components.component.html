@@ -1,5 +1,5 @@
 <div class="content">
-  <form action="" >
+  <form action="">
     <div class="row">
       <div class="col-sm-10">
         <img style="width:30%;margin-left:5%;" src="../../../assets/img/tranasparent.png">
@@ -26,13 +26,13 @@
             <li class="nav-item dropdown">
               <label data-bs-toggle="dropdown" style="color:white;"><b id="black">Solicitudes</b></label>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <div >
-                    <li (click)="mostrarAutomatica()"id="black">{{garantiaA}}</li>
-                    <li (click)="mostrarSelectiva()" id="black">{{garantiaS}}</li>
-                    <li (click)="mostrarPYME()" id="black">{{contratoPYME}}</li>
-                    <li (click)="mostrarComexTMEC()"id="black">{{garantiaCOMEXTMEC}}</li>
-                    <li (click)="mostrarTurismo()"id="black">{{garantiaT}}</li>
-                    <li (click)="mostrarTMEC()"id="black">{{garantiaTMEC}}</li>
+                <div>
+                  <li (click)="mostrarAutomatica()" id="black">{{garantiaA}}</li>
+                  <li (click)="mostrarSelectiva()" id="black">{{garantiaS}}</li>
+                  <li (click)="mostrarPYME()" id="black">{{contratoPYME}}</li>
+                  <li (click)="mostrarComexTMEC()" id="black">{{garantiaCOMEXTMEC}}</li>
+                  <li (click)="mostrarTurismo()" id="black">{{garantiaT}}</li>
+                  <li (click)="mostrarTMEC()" id="black">{{garantiaTMEC}}</li>
                 </div>
               </ul>
             </li>
@@ -40,7 +40,8 @@
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <ul class="navbar-nav">
             <li class="nav-item dropdown">
-              <label data-bs-toggle="dropdown" style="color:white;"><b id="black" class="formato">Descargar Formato</b></label>
+              <label data-bs-toggle="dropdown" style="color:white;"><b id="black" class="formato">Descargar
+                  Formato</b></label>
             </li>
           </ul>
           <ul class="navbar-nav">
@@ -55,66 +56,66 @@
     <br>
 
 
-    <div *ngIf="!mostrarSolicitudAutomatica">
-  <div class="row" style="width: 90%; text-align: center; margin-left:2%;">
-    <div class="col-sm-2">
-      <label>FOLIO:auto</label>
+    <div *ngIf="!mostrarSolicitudAutomatica && !mostrarSolicitudSelectiva">
+      <div class="row" style="width: 90%; text-align: center; margin-left:2%;">
+        <div class="col-sm-2">
+          <label>FOLIO:auto</label>
+        </div>
+        <div class="col-sm-2">
+          <label>SUCURSAL:</label>
+        </div>
+        <div class="col-sm-2">
+          <label>SOLICITADO:</label>
+        </div>
+        <div class="col-sm-2">
+          <label>ESTATUS FOLIO:Auto</label>
+        </div>
+        <div class="col-sm-2">
+          <label>ACREDITADO:</label>
+        </div>
+        <div class="col-sm-2">
+          <label>ACREDITADO:</label>
+        </div>
+      </div>
+      <div class="row" style="width: 90%; text-align: center; margin-left:2%;">
+        <div class="col-sm-2">
+          <input type="text">
+        </div>
+        <div class="col-sm-2">
+          <input type="text">
+        </div>
+        <div class="col-sm-2">
+          <input type="text">
+        </div>
+        <div class="col-sm-2">
+          <select style="width:100%;height:100%;">
+            <option id="black">{{CapturarSolicitud}}</option>
+            <option id="black">{{ProcesoPendienteAsesorC}}</option>
+            <option id="black">{{EspecialistaComexRech}}</option>
+            <option id="black">{{ProcesoPendienteContraloria}}</option>
+            <option id="black">{{FondosDeFomento}}</option>
+            <option id="black">{{EnviadaNafinet}}</option>
+            <option id="black">{{AprobadoNafinet}}</option>
+            <option id="black">{{RechaxoNafinet}}</option>
+            <option id="black">{{Reproceso}}</option>
+          </select>
+        </div>
+        <div class="col-sm-2">
+          <input type="text">
+        </div>
+        <div class="col-sm-2">
+          <input type="text">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm-12" style="margin-left: 78%">
+          <button id="efecto" class="btn btn-primary">Buscar</button>
+          &nbsp;&nbsp;
+          <button id="efecto" class="btn btn-primary">Limpiar</button>
+        </div>
+      </div>
     </div>
-    <div class="col-sm-2">
-      <label>SUCURSAL:</label>
-    </div>
-    <div class="col-sm-2">
-      <label>SOLICITADO:</label>
-    </div>
-    <div class="col-sm-2">
-      <label>ESTATUS FOLIO:Auto</label>
-    </div>
-    <div class="col-sm-2">
-      <label>ACREDITADO:</label>
-    </div>
-    <div class="col-sm-2">
-      <label>ACREDITADO:</label>
-    </div>
-  </div>
-  <div class="row" style="width: 90%; text-align: center; margin-left:2%;">
-    <div class="col-sm-2">
-      <input type="text">
-    </div>
-    <div class="col-sm-2">
-      <input type="text">
-    </div>
-    <div class="col-sm-2">
-      <input type="text">
-    </div>
-    <div class="col-sm-2">
-      <select style="width:100%;height:100%;">
-        <option id="black">{{CapturarSolicitud}}</option>
-        <option id="black">{{ProcesoPendienteAsesorC}}</option>
-        <option id="black">{{EspecialistaComexRech}}</option>
-        <option id="black">{{ProcesoPendienteContraloria}}</option>
-        <option id="black">{{FondosDeFomento}}</option>
-        <option id="black">{{EnviadaNafinet}}</option>
-        <option id="black">{{AprobadoNafinet}}</option>
-        <option id="black">{{RechaxoNafinet}}</option>
-        <option id="black">{{Reproceso}}</option>
-      </select>
-    </div>
-    <div class="col-sm-2">
-      <input type="text">
-    </div>
-    <div class="col-sm-2">
-      <input type="text">
-    </div>
-  </div>
-  <br>
-  <div class="row">
-    <div class="col-sm-12" style="margin-left: 78%">
-      <button id="efecto" class="btn btn-primary">Buscar</button>
-      &nbsp;&nbsp;
-      <button id="efecto" class="btn btn-primary">Limpiar</button>
-    </div>
-  </div>
-</div>
 
     <div style="background-color: white;" *ngIf="mostrarSolicitudAutomatica" class="content">
       <div class="row" style="text-align: center">
@@ -129,15 +130,15 @@
         <div class="col-sm-3">
           <label>ESTATUS FOLIO:Automatica</label>&nbsp;
           <select style="width: 60%; height: 60%">
-            <option >{{CapturarSolicitud}}</option>
-            <option >{{ProcesoPendienteAsesorC}}</option>
-            <option >{{EspecialistaComexRech}}</option>
-            <option >{{ProcesoPendienteContraloria}}</option>
-            <option >{{FondosDeFomento}}</option>
-            <option >{{EnviadaNafinet}}</option>
-            <option >{{AprobadoNafinet}}</option>
-            <option >{{RechaxoNafinet}}</option>
-            <option >{{Reproceso}}</option>
+            <option>{{CapturarSolicitud}}</option>
+            <option>{{ProcesoPendienteAsesorC}}</option>
+            <option>{{EspecialistaComexRech}}</option>
+            <option>{{ProcesoPendienteContraloria}}</option>
+            <option>{{FondosDeFomento}}</option>
+            <option>{{EnviadaNafinet}}</option>
+            <option>{{AprobadoNafinet}}</option>
+            <option>{{RechaxoNafinet}}</option>
+            <option>{{Reproceso}}</option>
           </select>
         </div>
         <br />
@@ -154,8 +155,8 @@
     </div>
     <!-- hasta aqui Automatica-->
 
-     <!-- de aqui selectiva -->
-     <!-- <div *ngIf="!mostrarSolicitudSelectiva">
+    <!-- de aqui selectiva -->
+    <!-- <div *ngIf="!mostrarSolicitudSelectiva">
       <div class="row" style="width: 90%; text-align: center; margin-left:2%;">
         <div class="col-sm-2">
           <label>FOLIO:</label>
@@ -214,7 +215,7 @@
           <button id="efecto" class="btn btn-primary">Limpiar</button>
         </div>
       </div>
-    </div> -->
+    </div>  -->
     <div *ngIf="mostrarSolicitudSelectiva" class="content">
       <div class="row" style="text-align: center">
         <div class="col-sm-3">
@@ -228,15 +229,15 @@
         <div class="col-sm-3">
           <label>ESTATUS FOLIO:Selectiva</label>&nbsp;
           <select style="width: 60%; height: 60%">
-            <option >{{CapturarSolicitud}}</option>
-            <option >{{ProcesoPendienteAsesorC}}</option>
-            <option >{{EspecialistaComexRech}}</option>
-            <option >{{ProcesoPendienteContraloria}}</option>
-            <option >{{FondosDeFomento}}</option>
-            <option >{{EnviadaNafinet}}</option>
-            <option >{{AprobadoNafinet}}</option>
-            <option >{{RechaxoNafinet}}</option>
-            <option >{{Reproceso}}</option>
+            <option>{{CapturarSolicitud}}</option>
+            <option>{{ProcesoPendienteAsesorC}}</option>
+            <option>{{EspecialistaComexRech}}</option>
+            <option>{{ProcesoPendienteContraloria}}</option>
+            <option>{{FondosDeFomento}}</option>
+            <option>{{EnviadaNafinet}}</option>
+            <option>{{AprobadoNafinet}}</option>
+            <option>{{RechaxoNafinet}}</option>
+            <option>{{Reproceso}}</option>
           </select>
         </div>
         <br />
@@ -262,7 +263,7 @@
   </form>
 
 </div>
-<div >
+<div>
   <app-table *ngIf="esconderT"></app-table>
 </div>
 <!-- <app-form></app-form>
