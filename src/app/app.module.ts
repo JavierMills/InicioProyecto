@@ -16,6 +16,7 @@ import { OperacionInternacionalModule } from './Operacion_Internacional/operacio
 import { FondosdefomentoModule } from './FondosDeFomento/fondosdefomento.module';
 import { DataTablesModule } from "angular-datatables";
 import { FormsModule } from '@angular/forms';
+import { HoteleroModule } from './Hotelero/hotelero.module';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { FormsModule } from '@angular/forms';
     FondosdefomentoModule,
     DataTablesModule,
     FormsModule,
+    HoteleroModule
 
 
   ],

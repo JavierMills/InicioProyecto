@@ -10,6 +10,7 @@ import { ContraloriaComponent } from './Contraloria/pages/contraloria/contralori
 import { EspecialistacomexComponent } from './EspecialistaComex/pages/especialistacomex/especialistacomex.component';
 import { FondosdefomentoComponent } from './FondosDeFomento/pages/fondosdefomento/fondosdefomento.component';
 import { OperacionesInternacionalesComponent } from './Operacion_Internacional/pages/operaciones-internacionales/operaciones-internacionales.component';
+import { HoteleroComponent } from './Hotelero/pages/hotelero/hotelero.component';
 
 
 
@@ -47,10 +48,10 @@ const routes: Routes = [
     path: 'operaciones', component: OperacionesInternacionalesComponent
 
   },
-  // {
-  //   path: 'hotelero', component: HoteleroC
+  {
+    path: 'hotelero', component: HoteleroComponent
 
-  // },
+  },
   {
     path: '**', component: LoginComponent
   },

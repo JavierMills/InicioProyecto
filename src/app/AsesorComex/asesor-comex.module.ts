@@ -41,10 +41,7 @@ registerLocaleData(localEs);
     FormsModule
 
   ],
-  exports:[
-    ComponentsComponent,
-    AsesorcomexComponent,
-  ],
+
   providers:[
     {
       provide: LOCALE_ID,

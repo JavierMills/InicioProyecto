@@ -113,7 +113,7 @@ mostrarTabla: boolean = false;
     this.mostrarContratoPyme = false;
     this.mostrarSolicitudComexTMEC = false;
     this.mostrarSolicitudTMEC = false;
-    this.mostrarSolicitudTurismo = false; 
+    this.mostrarSolicitudTurismo = false;
     this.mostrarTabla = false;
   }
 
