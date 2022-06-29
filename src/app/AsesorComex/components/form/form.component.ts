@@ -7,9 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
-<<<<<<< HEAD
   show: boolean = false;
-=======
   public CapturarSolicitud : string = "Capturar Solcitud"
   public ProcesoPendienteAsesorC : string = "Proceso Pendiente Asesor Comex"
   public EspecialistaComexRech : string = "Especialista Comex (Rechazos)"
@@ -20,9 +18,7 @@ export class FormComponent implements OnInit {
   public RechaxoNafinet : string = "Rechazo Nafinet"
   public Reproceso : string = "Reproceso"
 
-  show:boolean = false;
->>>>>>> db0b506fa0b8fd4ff9a0e32f125ae9fa7a0680f5
-
+ 
   esconder: boolean = false;
   esconderF: boolean = true;
   esconderT: boolean = false;
@@ -87,7 +83,6 @@ export class FormComponent implements OnInit {
   mostrarContenido() {
     this.show = true;
   }
-<<<<<<< HEAD
 
   resetBuc() {
     this.buc = "";
@@ -264,21 +259,18 @@ export class FormComponent implements OnInit {
     alert(`Tu comentario es: ${com}.`)
   }
   
-=======
   mostrarAutomatica() {
-    if (this.mostrarSolicitudAutomatica) {
-      this.mostrarSolicitudAutomatica = true;
-    } else {
-      this.mostrarSolicitudAutomatica = true;
-    }
+    console.log("mostrar automatica");
+    
+    this.mostrarSolicitudAutomatica = true;
+    this.mostrarSolicitudSelectiva = false;
   }
 
   mostrarSelectiva() {
-    if (this.mostrarSolicitudSelectiva) {
-      this.mostrarSolicitudSelectiva = false;
-    } else {
-      this.mostrarSolicitudSelectiva = true;
-    }
+    console.log("mostar selectiva");
+    
+    this.mostrarSolicitudSelectiva = true;
+    this.mostrarSolicitudAutomatica = false;
   }
   mostrarComexTMEC() {
     this.mostrarSolicitudComexTMEC = true;
@@ -292,5 +284,4 @@ export class FormComponent implements OnInit {
   mostrarTurismo() {
     this.mostrarSolicitudTurismo = true;
   }
->>>>>>> db0b506fa0b8fd4ff9a0e32f125ae9fa7a0680f5
 }

@@ -83,18 +83,12 @@ export class ComponentsComponent implements OnInit {
 
 
   mostrarAutomatica() {
-    if (this.mostrarSolicitudAutomatica) {
-      this.mostrarSolicitudAutomatica = true;
-    } else {
-      this.mostrarSolicitudAutomatica = true;
-    }
+    this.mostrarSolicitudAutomatica = true;
+    this.mostrarSolicitudSelectiva = false;
   }
   mostrarSelectiva() {
-    if (this.mostrarSolicitudSelectiva) {
-      this.mostrarSolicitudSelectiva = false;
-    } else {
-      this.mostrarSolicitudSelectiva = true;
-    }
+    this.mostrarSolicitudSelectiva = true;
+    this.mostrarSolicitudAutomatica = false;
   }
   mostrarComexTMEC() {
     this.mostrarSolicitudComexTMEC = true;
