@@ -106,6 +106,17 @@ mostrarTabla: boolean = false;
     this.mostrarSolicitudTMEC = false;
 
   }
+
+  inicio(){
+    this.mostrarSolicitudAutomatica = false;
+    this.mostrarSolicitudSelectiva = false;
+    this.mostrarContratoPyme = false;
+    this.mostrarSolicitudComexTMEC = false;
+    this.mostrarSolicitudTMEC = false;
+    this.mostrarSolicitudTurismo = false; 
+    this.mostrarTabla = false;
+  }
+
   mostrarPYME() {
     this.mostrarContratoPyme = true;
     this.mostrarSolicitudAutomatica = false;
