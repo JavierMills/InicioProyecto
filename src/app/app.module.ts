@@ -36,7 +36,8 @@ import { FormsModule } from '@angular/forms';
     OperacionInternacionalModule,
     FondosdefomentoModule,
     DataTablesModule,
-    FormsModule
+    FormsModule,
+
 
   ],
   providers: [],
