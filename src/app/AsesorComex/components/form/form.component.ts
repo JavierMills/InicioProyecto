@@ -20,6 +20,7 @@ export class FormComponent implements OnInit {
 
 
 
+
   esconder: boolean = false;
   esconderF: boolean = true;
   esconderT: boolean = false;
@@ -69,12 +70,21 @@ export class FormComponent implements OnInit {
   ngOnInit(): void {
     this.esconder;
   }
+
+
+  mostrarAutomatica() {
+    console.log("mostrar automatica");
+
+    this.mostrarSolicitudAutomatica = true;
+    this.mostrarSolicitudSelectiva = false;
+  }
+
+
   mostrarSelectiva() {
-    if (this.mostrarSolicitudSelectiva) {
-      this.mostrarSolicitudSelectiva = false;
-    } else {
-      this.mostrarSolicitudSelectiva = true;
-    }
+    console.log("mostar selectiva");
+
+    this.mostrarSolicitudSelectiva = true;
+    this.mostrarSolicitudAutomatica = false;
   }
   mostrarComexTMEC() {
     this.mostrarSolicitudComexTMEC = true;
@@ -88,6 +98,7 @@ export class FormComponent implements OnInit {
   mostrarTurismo() {
     this.mostrarSolicitudTurismo = true;
   }
+
 
   mostrar() {
     this.esconder = true;
@@ -103,12 +114,6 @@ export class FormComponent implements OnInit {
   mostrarContenido() {
     this.show = true;
   }
-
-
-
-
-
-
 
   resetBuc() {
     this.buc = "";
@@ -283,14 +288,6 @@ export class FormComponent implements OnInit {
     this.moneda = "Seleccionar";
     let com = prompt ('Ingresa un comentario por el rechazo de Moneda', "");
     alert(`Tu comentario es: ${com}.`)
-  }
-
-  mostrarAutomatica() {
-    if (this.mostrarSolicitudAutomatica) {
-      this.mostrarSolicitudAutomatica = true;
-    } else {
-      this.mostrarSolicitudAutomatica = true;
-    }
   }
 
 
