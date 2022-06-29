@@ -1,4 +1,5 @@
 import { HttpClient } from '@angular/common/http';
+import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -55,6 +56,7 @@ export class ComponentsComponent implements OnInit {
   esconderT: boolean = false;
 
   mostrarSolicitudAutomatica: boolean = false;
+  mostrarSolicitudAutomaticaF: boolean = true;
 
   mostrarSolicitudSelectiva: boolean = false;
 
@@ -83,11 +85,8 @@ export class ComponentsComponent implements OnInit {
 
 
   mostrarAutomatica() {
-    if (this.mostrarSolicitudAutomatica) {
-      this.mostrarSolicitudAutomatica = true;
-    } else {
-      this.mostrarSolicitudAutomatica = true;
-    }
+    this.mostrarSolicitudAutomatica =true;
+    this.mostrarSolicitudAutomaticaF =false;
   }
   mostrarSelectiva() {
     if (this.mostrarSolicitudSelectiva) {

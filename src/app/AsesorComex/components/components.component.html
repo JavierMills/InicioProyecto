@@ -54,8 +54,8 @@
     </nav>
     <br>
 
-
-    <div *ngIf="!mostrarSolicitudAutomatica">
+<!-- ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo -->
+    <div *ngIf="mostrarSolicitudAutomaticaF">
   <div class="row" style="width: 90%; text-align: center; margin-left:2%;">
     <div class="col-sm-2">
       <label>FOLIO:auto</label>
@@ -67,7 +67,7 @@
       <label>SOLICITADO:</label>
     </div>
     <div class="col-sm-2">
-      <label>ESTATUS FOLIO:Auto</label>
+      <label>ESTATUS FOLIO:</label>
     </div>
     <div class="col-sm-2">
       <label>ACREDITADO:</label>
@@ -152,13 +152,11 @@
       </div>
       <hr />
     </div>
-    <!-- hasta aqui Automatica-->
-
-     <!-- de aqui selectiva -->
-     <!-- <div *ngIf="!mostrarSolicitudSelectiva">
+<!-- oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo -->
+    <!-- <div *ngIf="!mostrarSolicitudSelectiva">
       <div class="row" style="width: 90%; text-align: center; margin-left:2%;">
         <div class="col-sm-2">
-          <label>FOLIO:</label>
+          <label>FOLIO:auto</label>
         </div>
         <div class="col-sm-2">
           <label>SUCURSAL:</label>
@@ -167,7 +165,7 @@
           <label>SOLICITADO:</label>
         </div>
         <div class="col-sm-2">
-          <label>ESTATUS FOLIO: selectivas</label>
+          <label>ESTATUS FOLIO:Selectiva</label>
         </div>
         <div class="col-sm-2">
           <label>ACREDITADO:</label>
@@ -214,8 +212,46 @@
           <button id="efecto" class="btn btn-primary">Limpiar</button>
         </div>
       </div>
-    </div> -->
-    <div *ngIf="mostrarSolicitudSelectiva" class="content">
+    </div>
+
+        <div style="background-color: white;" *ngIf="mostrarSolicitudSelectiva" class="content">
+          <div class="row" style="text-align: center">
+            <div class="col-sm-3">
+              <label>FOLIO:</label>&nbsp;
+              <input type="text" />
+            </div>
+            <div class="col-sm-3">
+              <label>SOLICITADO:</label>&nbsp;
+              <input type="text" />
+            </div>
+            <div class="col-sm-3">
+              <label>ESTATUS FOLIO:Automatica</label>&nbsp;
+              <select style="width: 60%; height: 60%">
+                <option >{{CapturarSolicitud}}</option>
+                <option >{{ProcesoPendienteAsesorC}}</option>
+                <option >{{EspecialistaComexRech}}</option>
+                <option >{{ProcesoPendienteContraloria}}</option>
+                <option >{{FondosDeFomento}}</option>
+                <option >{{EnviadaNafinet}}</option>
+                <option >{{AprobadoNafinet}}</option>
+                <option >{{RechaxoNafinet}}</option>
+                <option >{{Reproceso}}</option>
+              </select>
+            </div>
+            <br />
+            <br />
+          </div>
+          <div class="row">
+            <div class="col-sm-12" style="margin-left: 78%">
+              <button id="efecto" class="btn btn-primary">Buscar</button>
+              &nbsp;&nbsp;
+              <button id="efecto" class="btn btn-primary">Limpiar</button>
+            </div>
+          </div>
+          <hr />
+        </div> -->
+
+    <!-- <div *ngIf="mostrarSolicitudSelectiva" class="content">
       <div class="row" style="text-align: center">
         <div class="col-sm-3">
           <label>FOLIO:</label>&nbsp;
@@ -252,8 +288,7 @@
       <hr />
 
 
-
-    </div>
+    </div> -->
     <!-- hasta aqui selectiva-->
 
     <br><br>
