@@ -1,5 +1,5 @@
 <!-- //se manda llamar el modal -->
-<ng-template #mymodal let-modal>
+<ng-template #mymodal let-modal style="overflow-x:hidden; overflow-y:hidden">
   <div class="modal-header" style="background-color: #ec0000">
     <h4 class="modal-title" id="modal-basic-title" style="color: #ffff">
       ACCESOS
@@ -16,7 +16,7 @@
   <div class="modal-body">
     <form action="#">
       <label for="lang">Seleccione el Tipo de Acceso:</label>
-      <ul class="list-group">
+      <ul class="list-group ">
         <li class="list-group-item" (keyup.enter)="openKeyuP($event)" style="cursor: pointer;" routerLink="negocio" (click)="modal.close('Save click')">Negocio Internacional</li>
         <li class="list-group-item" (keyup.enter)="openKeyuP($event)" style="cursor: pointer;" routerLink="asesor" (click)="modal.close('Save click')">Asesor Comex</li>
         <li class="list-group-item" (keyup.enter)="openKeyuP($event)" style="cursor: pointer;" routerLink="cartera" (click)="modal.close('Save click')">Cartera</li>
@@ -24,6 +24,18 @@
         <li class="list-group-item" (keyup.enter)="openKeyuP($event)" style="cursor: pointer;" routerLink="contraloria" (click)="modal.close('Save click')">Contraloria</li>
         <li class="list-group-item" (keyup.enter)="openKeyuP($event)" style="cursor: pointer;" routerLink="fondos" (click)="modal.close('Save click')">Fondos de Fomento</li>
         <li class="list-group-item" (keyup.enter)="openKeyuP($event)" style="cursor: pointer;" routerLink="operaciones" (click)="modal.close('Save click')">Operacion Internacional</li>
+
+
+        <li class="list-group-item" (keyup.enter)="openKeyuP($event)" style="cursor: pointer;" routerLink="hotelero" (click)="modal.close('Save click')">Hotelero</li>
+        <li class="list-group-item" (keyup.enter)="openKeyuP($event)" style="cursor: pointer;" routerLink="operaciones" (click)="modal.close('Save click')">Validador</li>
+
+        <li class="list-group-item" (keyup.enter)="openKeyuP($event)" style="cursor: pointer;" routerLink="operaciones" (click)="modal.close('Save click')">Riesgos</li>
+        <li class="list-group-item" (keyup.enter)="openKeyuP($event)" style="cursor: pointer;" routerLink="operaciones" (click)="modal.close('Save click')">Auditoria</li>
+        <li class="list-group-item" (keyup.enter)="openKeyuP($event)" style="cursor: pointer;" routerLink="operaciones" (click)="modal.close('Save click')">Garantias</li>
+        <li class="list-group-item" (keyup.enter)="openKeyuP($event)" style="cursor: pointer;" routerLink="operaciones" (click)="modal.close('Save click')">Consulta</li>
+        <li class="list-group-item" (keyup.enter)="openKeyuP($event)" style="cursor: pointer;" routerLink="operaciones" (click)="modal.close('Save click')">Recuperaciones</li>
+        <li class="list-group-item" (keyup.enter)="openKeyuP($event)" style="cursor: pointer;" routerLink="operaciones" (click)="modal.close('Save click')">Admin</li>
+
       </ul>
       <!-- <select name="languages" id="lang">
         <option routerLink="principal">Negocio internacional</option>
@@ -33,13 +45,13 @@
         <option value="fondos">Fondos de Fomento</option>
         <option value="acesor">Asesor Comex</option>
         <option value="operacion">Operacion Internacional</option>
-        
+
       </select> -->
     </form>
   </div>
   <!-- cerrar a rol de usuario -->
 
- 
+
 </ng-template>
 
 <div class="container mt-4">
@@ -56,13 +68,13 @@
 </div>
 <div class="container">
 <form>
-    
+
     <div class="form-outline mb-4">
       <label class="form-label" for="form1Example1">Usuario:</label>
       <input type="text" id="form1Example1" class="form-control" />
     </div>
 
-  
+
     <div class="form-outline mb-4">
       <label class="form-label" for="form1Example2">Password:</label>
       <input type="password" id="form1Example2" class="form-control" />
