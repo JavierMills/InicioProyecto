@@ -4,6 +4,9 @@ import { ComponentsComponent } from './components/components.component';
 import { AsesorcomexComponent } from './pages/asesorcomex/asesorcomex.component';
 import { DataTablesModule } from "angular-datatables";
 import  { HttpClientModule } from "@angular/common/http";
+
+
+
 import { TableComponent } from './components/table/table.component';
 import { registerLocaleData } from '@angular/common';
 import localEs from '@angular/common/locales/es';

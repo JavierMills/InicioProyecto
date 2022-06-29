@@ -51,6 +51,7 @@ export class NavComponent implements OnInit {
 
 
   reporte: boolean = false;
+
   ngOnInit(): void {
     this.esconder;
   }

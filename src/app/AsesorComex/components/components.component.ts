@@ -1,5 +1,4 @@
 import { HttpClient } from '@angular/common/http';
-import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -27,18 +26,6 @@ export class ComponentsComponent implements OnInit {
   public RechaxoNafinet: string = 'Rechazo Nafinet';
   public Reproceso: string = 'Reproceso';
 
-  // llenatabla:TablaInterface[] = [
-  //   {value:'Capturar Solcitud'},
-  // {value:'Proceso Pendiente Asesor Comex'},
-  // {value:'Especialista Comex (Rechazos)'},
-  // {value:'Proceso Pendiente Contraloría'},
-  // {value:'Proceso Pendiente Cartera'},
-  // {value:'Fondos de Fomento'},
-  // {value:'Enviada a Nafinet'},
-  // {value:'Aprobado Nafinet'},
-  // {value:'Rechazado Nafinet'},
-  // {value:'Reproceso'},];
-
   fecha: Date = new Date();
 
   public Automaticas: string = 'Solicitudes Automaticas';
@@ -53,10 +40,16 @@ export class ComponentsComponent implements OnInit {
   constructor(private http: HttpClient) {}
   esconder: boolean = false;
   esconderF: boolean = true;
-  esconderT: boolean = false;
+  mostrarNavbar: boolean = true;
+
+// Automaticas
+mostrarTabla: boolean = false;
+
+//
+
+  mostrarSelectivas: boolean = false;
 
   mostrarSolicitudAutomatica: boolean = false;
-  mostrarSolicitudAutomaticaF: boolean = true;
 
   mostrarSolicitudSelectiva: boolean = false;
 
@@ -77,31 +70,65 @@ export class ComponentsComponent implements OnInit {
     this.esconderF = false;
   }
 
-  mostrarTabla() {
-    this.esconderT = true;
-    console.log(this.esconderT);
+  mostrarTablas() {
+    this.mostrarTabla = true;
+    console.log('click');
+
   }
+
 
 
 
   mostrarAutomatica() {
-    this.mostrarSolicitudAutomatica =true;
-    this.mostrarSolicitudAutomaticaF =false;
+    this.mostrarSolicitudAutomatica = true;
+    this.mostrarSolicitudSelectiva = false;
+    this.mostrarContratoPyme = false;
+    this.mostrarSolicitudComexTMEC = false;
+    this.mostrarSolicitudTurismo = false;
+    this.mostrarSolicitudTMEC = false;
+
   }
   mostrarSelectiva() {
     this.mostrarSolicitudSelectiva = true;
     this.mostrarSolicitudAutomatica = false;
+    this.mostrarContratoPyme = false;
+    this.mostrarSolicitudComexTMEC = false;
+    this.mostrarSolicitudTurismo = false;
+    this.mostrarSolicitudTMEC = false;
+
   }
   mostrarComexTMEC() {
     this.mostrarSolicitudComexTMEC = true;
+    this.mostrarContratoPyme = false;
+    this.mostrarSolicitudAutomatica = false;
+    this.mostrarSolicitudSelectiva = false;
+    this.mostrarSolicitudTurismo = false;
+    this.mostrarSolicitudTMEC = false;
+
   }
   mostrarPYME() {
     this.mostrarContratoPyme = true;
+    this.mostrarSolicitudAutomatica = false;
+    this.mostrarSolicitudSelectiva = false;
+    this.mostrarSolicitudComexTMEC = false;
+    this.mostrarSolicitudTurismo = false;
+    this.mostrarSolicitudTMEC = false;
+
   }
   mostrarTMEC() {
     this.mostrarSolicitudTMEC = true;
+    this.mostrarContratoPyme = false;
+    this.mostrarSolicitudAutomatica = false;
+    this.mostrarSolicitudSelectiva = false;
+    this.mostrarSolicitudComexTMEC = false;
+    this.mostrarSolicitudTurismo = false;
   }
   mostrarTurismo() {
     this.mostrarSolicitudTurismo = true;
+    this.mostrarSolicitudTMEC = false;
+    this.mostrarContratoPyme = false;
+    this.mostrarSolicitudAutomatica = false;
+    this.mostrarSolicitudSelectiva = false;
+    this.mostrarSolicitudComexTMEC = false;
   }
 }
