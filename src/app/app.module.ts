@@ -17,6 +17,7 @@ import { FondosdefomentoModule } from './FondosDeFomento/fondosdefomento.module'
 import { DataTablesModule } from "angular-datatables";
 import { FormsModule } from '@angular/forms';
 import { HoteleroModule } from './Hotelero/hotelero.module';
+import { ValidadorModule } from './Validador/validador.module';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { HoteleroModule } from './Hotelero/hotelero.module';
     FondosdefomentoModule,
     DataTablesModule,
     FormsModule,
-    HoteleroModule
+    HoteleroModule,
+    ValidadorModule
 
 
   ],

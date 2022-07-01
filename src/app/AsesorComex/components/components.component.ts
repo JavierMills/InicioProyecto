@@ -42,10 +42,15 @@ export class ComponentsComponent implements OnInit {
   esconderF: boolean = true;
   mostrarNavbar: boolean = true;
 
-// Automaticas
-mostrarTabla: boolean = false;
+  // Automaticas
+  mostrarTablaAutomaticas: boolean = false;
+  mostrarTablaComextmec: boolean = false;
+  mostrarTablaPyme: boolean = false;
+  mostrarTablaSelectivas: boolean = false;
+  mostrarTablaTmec: boolean = false;
+  mostrarTablaTurismo: boolean = false;
 
-//
+  //
 
   mostrarSelectivas: boolean = false;
 
@@ -70,12 +75,60 @@ mostrarTabla: boolean = false;
     this.esconderF = false;
   }
 
-  mostrarTablas() {
-    this.mostrarTabla = true;
-    console.log('click');
-
+  mostrarTablasAutomaticas() {
+    this.mostrarTablaAutomaticas = true;
+    this.mostrarTablaComextmec = false;
+    this.mostrarTablaPyme = false;
+    this.mostrarTablaSelectivas = false;
+    this.mostrarTablaTmec = false;
+    this.mostrarTablaTurismo = false;
   }
 
+  mostrarTablasSelectivas() {
+    this.mostrarTablaAutomaticas = false;
+    this.mostrarTablaComextmec = false;
+    this.mostrarTablaPyme = false;
+    this.mostrarTablaSelectivas = true;
+    this.mostrarTablaTmec = false;
+    this.mostrarTablaTurismo = false;
+  }
+
+  mostrarTablasContratoPyme() {
+    this.mostrarTablaAutomaticas = false;
+    this.mostrarTablaComextmec = false;
+    this.mostrarTablaPyme = true;
+    this.mostrarTablaSelectivas = false;
+    this.mostrarTablaTmec = false;
+    this.mostrarTablaTurismo = false;
+  }
+
+  mostrarTablasComexTmec() {
+    this.mostrarTablaAutomaticas = false;
+    this.mostrarTablaComextmec = true;
+    this.mostrarTablaPyme = false;
+    this.mostrarTablaSelectivas = false;
+    this.mostrarTablaTmec = false;
+    this.mostrarTablaTurismo = false;
+  }
+
+  mostrarTablasTurismo() {
+    this.mostrarTablaAutomaticas = false;
+    this.mostrarTablaComextmec = false;
+    this.mostrarTablaPyme = false;
+    this.mostrarTablaSelectivas = false;
+    this.mostrarTablaTmec = false;
+    this.mostrarTablaTurismo = true;
+  }
+
+
+  mostrarTablasTmec() {
+    this.mostrarTablaAutomaticas = false;
+    this.mostrarTablaComextmec = false;
+    this.mostrarTablaPyme = false;
+    this.mostrarTablaSelectivas = false;
+    this.mostrarTablaTmec = true;
+    this.mostrarTablaTurismo = false;
+  }
 
 
 
@@ -86,7 +139,6 @@ mostrarTabla: boolean = false;
     this.mostrarSolicitudComexTMEC = false;
     this.mostrarSolicitudTurismo = false;
     this.mostrarSolicitudTMEC = false;
-
   }
   mostrarSelectiva() {
     this.mostrarSolicitudSelectiva = true;
@@ -95,7 +147,6 @@ mostrarTabla: boolean = false;
     this.mostrarSolicitudComexTMEC = false;
     this.mostrarSolicitudTurismo = false;
     this.mostrarSolicitudTMEC = false;
-
   }
   mostrarComexTMEC() {
     this.mostrarSolicitudComexTMEC = true;
@@ -104,17 +155,21 @@ mostrarTabla: boolean = false;
     this.mostrarSolicitudSelectiva = false;
     this.mostrarSolicitudTurismo = false;
     this.mostrarSolicitudTMEC = false;
-
   }
 
-  inicio(){
+  inicio() {
     this.mostrarSolicitudAutomatica = false;
     this.mostrarSolicitudSelectiva = false;
     this.mostrarContratoPyme = false;
     this.mostrarSolicitudComexTMEC = false;
     this.mostrarSolicitudTMEC = false;
     this.mostrarSolicitudTurismo = false;
-    this.mostrarTabla = false;
+    this.mostrarTablaAutomaticas = false;
+    this.mostrarTablaComextmec = false;
+    this.mostrarTablaPyme = false;
+    this.mostrarTablaSelectivas = false;
+    this.mostrarTablaTmec = false;
+    this.mostrarTablaTurismo = false;
   }
 
   mostrarPYME() {
@@ -124,7 +179,6 @@ mostrarTabla: boolean = false;
     this.mostrarSolicitudComexTMEC = false;
     this.mostrarSolicitudTurismo = false;
     this.mostrarSolicitudTMEC = false;
-
   }
   mostrarTMEC() {
     this.mostrarSolicitudTMEC = true;

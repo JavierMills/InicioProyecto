@@ -111,7 +111,7 @@
       <br>
       <div class="row">
         <div class="col-sm-12" style="margin-left: 78%">
-          <button id="efecto" (click)="mostrarTablas()" class="btn btn-primary">Buscar</button>
+          <button id="efecto" (click)="mostrarTablasAutomaticas()" class="btn btn-primary">Buscar</button>
           &nbsp;&nbsp;
           <button id="efecto" class="btn btn-primary">Limpiar</button>
         </div>
@@ -147,7 +147,7 @@
       </div>
       <div class="row">
         <div class="col-sm-12" style="margin-left: 78%">
-          <button id="efecto" (click)="mostrarTablas()" class="btn btn-primary">Buscar</button>
+          <button id="efecto" (click)="mostrarTablasAutomaticas()" class="btn btn-primary">Buscar</button>
           &nbsp;&nbsp;
           <button id="efecto" class="btn btn-primary">Limpiar</button>
         </div>
@@ -185,7 +185,7 @@
       </div>
       <div class="row">
         <div class="col-sm-12" style="margin-left: 78%">
-          <button id="efecto" (click)="mostrarTablas()" class="btn btn-primary">Buscar</button>
+          <button id="efecto" (click)="mostrarTablasSelectivas()" class="btn btn-primary">Buscar</button>
           &nbsp;&nbsp;
           <button id="efecto" class="btn btn-primary">Limpiar</button>
         </div>
@@ -226,7 +226,7 @@
       </div>
       <div class="row">
         <div class="col-sm-12" style="margin-left: 78%">
-          <button id="efecto" (click)="mostrarTablas()" class="btn btn-primary">Buscar</button>
+          <button (click)="mostrarTablasContratoPyme()" id="efecto" class="btn btn-primary">Buscar</button>
           &nbsp;&nbsp;
           <button id="efecto" class="btn btn-primary">Limpiar</button>
         </div>
@@ -267,7 +267,7 @@
       </div>
       <div class="row">
         <div class="col-sm-12" style="margin-left: 78%">
-          <button id="efecto" (click)="mostrarTablas()" class="btn btn-primary">Buscar</button>
+          <button (click)="mostrarTablasComexTmec()" id="efecto" class="btn btn-primary">Buscar</button>
           &nbsp;&nbsp;
           <button id="efecto" class="btn btn-primary">Limpiar</button>
         </div>
@@ -305,7 +305,7 @@
       </div>
       <div class="row">
         <div class="col-sm-12" style="margin-left: 78%">
-          <button id="efecto" (click)="mostrarTablas()" class="btn btn-primary">Buscar</button>
+          <button (click)="mostrarTablasTmec()" id="efecto" class="btn btn-primary">Buscar</button>
           &nbsp;&nbsp;
           <button id="efecto" class="btn btn-primary">Limpiar</button>
         </div>
@@ -343,7 +343,7 @@
       </div>
       <div class="row">
         <div class="col-sm-12" style="margin-left: 78%">
-          <button id="efecto" (click)="mostrarTablas()" class="btn btn-primary">Buscar</button>
+          <button (click)="mostrarTablasTurismo()" id="efecto" class="btn btn-primary">Buscar</button>
           &nbsp;&nbsp;
           <button id="efecto" class="btn btn-primary">Limpiar</button>
         </div>
@@ -353,7 +353,12 @@
     <!-- hasta aqui -->
     <br><br>
 
-    <app-table *ngIf="mostrarTabla"></app-table>
+    <app-table *ngIf="mostrarTablaAutomaticas"></app-table>
+    <app-table-comex-tmec *ngIf="mostrarTablaComextmec"></app-table-comex-tmec>
+    <app-table-pyme *ngIf="mostrarTablaPyme"></app-table-pyme>
+    <app-table-selectivas *ngIf="mostrarTablaSelectivas"></app-table-selectivas>
+    <app-table-tmec *ngIf="mostrarTablaTmec"></app-table-tmec>
+    <app-table-turismo *ngIf="mostrarTablaTurismo"></app-table-turismo>
 
 
 

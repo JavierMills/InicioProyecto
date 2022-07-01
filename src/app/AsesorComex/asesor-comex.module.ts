@@ -17,6 +17,11 @@ import { FormSelectivasComponent } from './components/form-selectivas/form-selec
 import { FormTmecComponent } from './components/form-tmec/form-tmec.component';
 import { FormTurismoComponent } from './components/form-turismo/form-turismo.component';
 import { FormsModule } from '@angular/forms';
+import { TableComexTmecComponent } from './components/table-comex-tmec/table-comex-tmec.component';
+import { TablePymeComponent } from './components/table-pyme/table-pyme.component';
+import { TableSelectivasComponent } from './components/table-selectivas/table-selectivas.component';
+import { TableTmecComponent } from './components/table-tmec/table-tmec.component';
+import { TableTurismoComponent } from './components/table-turismo/table-turismo.component';
 
 registerLocaleData(localEs);
 
@@ -24,14 +29,18 @@ registerLocaleData(localEs);
   declarations: [
     ComponentsComponent,
     AsesorcomexComponent,
-    TableComponent,
     FormComexTmecComponent,
     FormComponent,
     FormPymeComponent,
     FormSelectivasComponent,
     FormTmecComponent,
     FormTurismoComponent,
-
+    TableComponent,
+    TableComexTmecComponent,
+    TablePymeComponent,
+    TableSelectivasComponent,
+    TableTmecComponent,
+    TableTurismoComponent
 
   ],
   imports: [

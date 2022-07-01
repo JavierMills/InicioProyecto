@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormTurismoComponent implements OnInit {
   show: boolean = false;
-
+  fecha: Date = new Date();
   esconder: boolean = false;
   esconderF: boolean = true;
   esconderT: boolean = false;
@@ -159,7 +159,7 @@ export class FormTurismoComponent implements OnInit {
     this.propositoProyecto = "Seleccionar";
     let com = prompt('Ingresa un comentario por el rechazo de Proposito del Proyecto', "");
     alert(`Tu comentario es: ${com}.`)
-  }  
+  }
 
   resetPorcentajeNacional() {
     this.porcentajeNacional = "";
@@ -169,7 +169,7 @@ export class FormTurismoComponent implements OnInit {
 
   resetPorcentajeMercadoInterno() {
     this, this.porcentajeMercadoInterno = "";
-    let com = 
+    let com =
     prompt('Ingresa un comentario por el rechazo de Porcentaje de la produccion destinada al Mercado Interno', "");
     alert(`Tu comentario es: ${com}.`)
   }
