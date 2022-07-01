@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormPymeComponent implements OnInit {
 
-  
+  fecha: Date = new Date();
   show: boolean = false;
 
   esconder: boolean = false;
@@ -161,7 +161,7 @@ export class FormPymeComponent implements OnInit {
     this.propositoProyecto = "Seleccionar";
     let com = prompt('Ingresa un comentario por el rechazo de Proposito del Proyecto', "");
     alert(`Tu comentario es: ${com}.`)
-  }  
+  }
 
   resetPorcentajeNacional() {
     this.porcentajeNacional = "";
@@ -171,7 +171,7 @@ export class FormPymeComponent implements OnInit {
 
   resetPorcentajeMercadoInterno() {
     this, this.porcentajeMercadoInterno = "";
-    let com = 
+    let com =
     prompt('Ingresa un comentario por el rechazo de Porcentaje de la produccion destinada al Mercado Interno', "");
     alert(`Tu comentario es: ${com}.`)
   }

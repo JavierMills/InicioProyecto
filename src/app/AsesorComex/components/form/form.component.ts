@@ -18,7 +18,7 @@ export class FormComponent implements OnInit {
   public RechaxoNafinet : string = "Rechazo Nafinet"
   public Reproceso : string = "Reproceso"
 
-
+  fecha: Date = new Date();
 
 
   esconder: boolean = false;

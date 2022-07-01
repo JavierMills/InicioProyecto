@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form-comex-tmec.component.scss']
 })
 export class FormComexTmecComponent implements OnInit {
-
+  fecha: Date = new Date();
   show: boolean = false;
 
   esconder: boolean = false;
@@ -160,7 +160,7 @@ export class FormComexTmecComponent implements OnInit {
     this.propositoProyecto = "Seleccionar";
     let com = prompt('Ingresa un comentario por el rechazo de Proposito del Proyecto', "");
     alert(`Tu comentario es: ${com}.`)
-  }  
+  }
 
   resetPorcentajeNacional() {
     this.porcentajeNacional = "";
@@ -170,7 +170,7 @@ export class FormComexTmecComponent implements OnInit {
 
   resetPorcentajeMercadoInterno() {
     this, this.porcentajeMercadoInterno = "";
-    let com = 
+    let com =
     prompt('Ingresa un comentario por el rechazo de Porcentaje de la produccion destinada al Mercado Interno', "");
     alert(`Tu comentario es: ${com}.`)
   }
