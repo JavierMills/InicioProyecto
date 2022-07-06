@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NegocioInternacionalComponent } from 'src/app/Negocio_Internacional/pages/negocio-internacional/negocio-internacional.component';
 
 
 @Component({

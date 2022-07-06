@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './start/login.component';
 import { ModalComponent } from './modal/modal.component';
 import { RouterModule } from '@angular/router';
+import { HeaderComponent } from './header/header.component';
 
 
 
@@ -10,6 +11,7 @@ import { RouterModule } from '@angular/router';
   declarations: [
     LoginComponent,
     ModalComponent,
+    HeaderComponent,
 
   ],
   imports: [
@@ -18,7 +20,8 @@ import { RouterModule } from '@angular/router';
   ],
   exports:[
     LoginComponent,
-    ModalComponent
+    ModalComponent,
+    HeaderComponent
   ]
 })
 export class SharedModule { }

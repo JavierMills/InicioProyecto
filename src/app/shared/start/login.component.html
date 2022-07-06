@@ -1,5 +1,5 @@
 <!-- //se manda llamar el modal -->
-<ng-template #mymodal let-modal>
+<ng-template #mymodal let-modal style="overflow-x:hidden; overflow-y:hidden">
   <div class="modal-header" style="background-color: #ec0000">
     <h4 class="modal-title" id="modal-basic-title" style="color: #ffff">
       ACCESOS
@@ -16,14 +16,26 @@
   <div class="modal-body">
     <form action="#">
       <label for="lang">Seleccione el Tipo de Acceso:</label>
-      <ul class="list-group">
-        <li class="list-group-item"  style="cursor: pointer;" routerLink="negocio" (click)="modal.close('Save click')">Negocio Internacional</li>
-        <li class="list-group-item"  style="cursor: pointer;" routerLink="asesor" (click)="modal.close('Save click')">Asesor Comex</li>
-        <li class="list-group-item"  style="cursor: pointer;" routerLink="cartera" (click)="modal.close('Save click')">Cartera</li>
-        <li class="list-group-item"  style="cursor: pointer;" routerLink="especialista" (click)="modal.close('Save click')">Especilalista Comex</li>
-        <li class="list-group-item"  style="cursor: pointer;" routerLink="contraloria" (click)="modal.close('Save click')">Contraloria</li>
-        <li class="list-group-item"  style="cursor: pointer;" routerLink="fondos" (click)="modal.close('Save click')">Fondos de Fomento</li>
-        <li class="list-group-item"  style="cursor: pointer;" routerLink="operaciones" (click)="modal.close('Save click')">Operacion Internacional</li>
+      <ul class="list-group ">
+        <li class="list-group-item" (keyup.enter)="openKeyuP($event)" style="cursor: pointer;" routerLink="negocio" (click)="modal.close('Save click')">Negocio Internacional</li>
+        <li class="list-group-item" (keyup.enter)="openKeyuP($event)" style="cursor: pointer;" routerLink="asesor" (click)="modal.close('Save click')">Asesor Comex</li>
+        <li class="list-group-item" (keyup.enter)="openKeyuP($event)" style="cursor: pointer;" routerLink="cartera" (click)="modal.close('Save click')">Cartera</li>
+        <li class="list-group-item" (keyup.enter)="openKeyuP($event)" style="cursor: pointer;" routerLink="especialista" (click)="modal.close('Save click')">Especilalista Comex</li>
+        <li class="list-group-item" (keyup.enter)="openKeyuP($event)" style="cursor: pointer;" routerLink="contraloria" (click)="modal.close('Save click')">Contraloria</li>
+        <li class="list-group-item" (keyup.enter)="openKeyuP($event)" style="cursor: pointer;" routerLink="fondos" (click)="modal.close('Save click')">Fondos de Fomento</li>
+        <li class="list-group-item" (keyup.enter)="openKeyuP($event)" style="cursor: pointer;" routerLink="operaciones" (click)="modal.close('Save click')">Operacion Internacional</li>
+
+
+        <li class="list-group-item" (keyup.enter)="openKeyuP($event)" style="cursor: pointer;" routerLink="hotelero" (click)="modal.close('Save click')">Hotelero</li>
+        <li class="list-group-item" (keyup.enter)="openKeyuP($event)" style="cursor: pointer;" routerLink="validador" (click)="modal.close('Save click')">Validador</li>
+
+        <li class="list-group-item" (keyup.enter)="openKeyuP($event)" style="cursor: pointer;" routerLink="operaciones" (click)="modal.close('Save click')">Riesgos</li>
+        <li class="list-group-item" (keyup.enter)="openKeyuP($event)" style="cursor: pointer;" routerLink="operaciones" (click)="modal.close('Save click')">Auditoria</li>
+        <li class="list-group-item" (keyup.enter)="openKeyuP($event)" style="cursor: pointer;" routerLink="operaciones" (click)="modal.close('Save click')">Garantias</li>
+        <li class="list-group-item" (keyup.enter)="openKeyuP($event)" style="cursor: pointer;" routerLink="operaciones" (click)="modal.close('Save click')">Consulta</li>
+        <li class="list-group-item" (keyup.enter)="openKeyuP($event)" style="cursor: pointer;" routerLink="operaciones" (click)="modal.close('Save click')">Recuperaciones</li>
+        <li class="list-group-item" (keyup.enter)="openKeyuP($event)" style="cursor: pointer;" routerLink="operaciones" (click)="modal.close('Save click')">Admin</li>
+
       </ul>
       <!-- <select name="languages" id="lang">
         <option routerLink="principal">Negocio internacional</option>
@@ -33,42 +45,42 @@
         <option value="fondos">Fondos de Fomento</option>
         <option value="acesor">Asesor Comex</option>
         <option value="operacion">Operacion Internacional</option>
-        
+
       </select> -->
     </form>
   </div>
   <!-- cerrar a rol de usuario -->
 
- 
+
 </ng-template>
 
-<!-- <div class="container mt-4">
+<div class="container mt-4">
   <img class="santander" src="../../../assets/img/santander-logo-3.png" alt="cargando..." />
   <div class="divH2">
     <h2 class="empresas">SIG EMPRESAS</h2>
   </div>
-</div> -->
-<!-- <hr class="line" />
+</div>
+<hr class="line" />
 
 <div class="contenido container">
   <h2 style="color: red">Datos Acceso</h2>
   <h2>Soporte</h2>
 </div>
-<div class="container"> -->
-<!-- <form>
-    
+<div class="container">
+<form>
+
     <div class="form-outline mb-4">
       <label class="form-label" for="form1Example1">Usuario:</label>
       <input type="text" id="form1Example1" class="form-control" />
     </div>
 
-  
+
     <div class="form-outline mb-4">
       <label class="form-label" for="form1Example2">Password:</label>
       <input type="password" id="form1Example2" class="form-control" />
     </div>
-  </form> -->
-<!-- <div class="col-2">
+  </form>
+<div class="col-2">
     <h6 style="color: red; text-decoration: underline; cursor: pointer">
       Manual de Usuario
     </h6>
@@ -76,7 +88,7 @@
       Soporte Tecnico
     </h6>
   </div>
-</div> -->
+</div>
 <div
   class="ingresar"
   style="display: flex; justify-content: flex-start; margin-left: 310px"
@@ -86,12 +98,6 @@
   </button>
 </div>
 
-<!-- <footer class="container">
+<footer class="container">
   <hr class="line1 mt-4" />
 </footer>
-
-<div>
-  <h6 class="footer">
-    Santander Mexico, Microinformatrica 2022, Santander Mexico
-  </h6>
-</div> -->

@@ -32,6 +32,14 @@ export class LoginComponent{
       return  `with: ${reason}`;
     }
   }
+
+  openKeyuP(event : any) {
+    this.modalService.open(event, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      this.closeResult = `${this.getDismissReason(reason)}`;
+    });
+  } 
 }
 
 

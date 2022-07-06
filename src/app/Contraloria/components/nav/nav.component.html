@@ -1,0 +1,370 @@
+<div class="content">
+  <form action="" style="overflow-x:hidden; overflow-y:hidden">
+    <app-header></app-header>
+    <div class="row">
+      <div class="col-sm-6" style="margin-left:5%;">
+        <label><b>Contraloria:</b></label>&nbsp;<label>Jose Rodriguez Arias (Z396773)</label>
+      </div>
+      <div class="col-sm-2"></div>
+      <div class="col-sm-3" style="margin-left: 3%;">
+        <label>{{fecha | date: 'EEEE d De MMMM Del y'}}</label>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg" style="background-color: red;">
+      <div class="container-fluid" style="margin-left:5%;">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <label data-bs-toggle="dropdown" style="color:white;" (click)="inicio()"><b id="black">Solicitudes</b></label>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <div>
+                  <li (click)="mostrarAutomatica()" id="black">{{garantiaA}}</li>
+                  <li (click)="mostrarSelectiva()" id="black">{{garantiaS}}</li>
+                  <li (click)="mostrarPYME()" id="black">{{contratoPYME}}</li>
+                  <li (click)="mostrarComexTMEC()" id="black">{{garantiaCOMEXTMEC}}</li>
+                  <li (click)="mostrarTurismo()" id="black">{{garantiaT}}</li>
+                  <li (click)="mostrarTMEC()" id="black">{{garantiaTMEC}}</li>
+                </div>
+              </ul>
+            </li>
+          </ul>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <label data-bs-toggle="dropdown" style="color:white;"><b id="black" class="formato">Descargar
+                  Formato</b></label>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">&nbsp;&nbsp;
+              <img src="../../../assets/img/candado.png" alt="cerrar sesion..." style="width: 20px;" height="20px">
+              <label style="color:white;"><b id="black"><a class="cerrar" href="#">Cerrar Sesion</a></b></label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br>
+
+
+    <div *ngIf="!mostrarSolicitudAutomatica && !mostrarSolicitudSelectiva && !mostrarContratoPyme && !mostrarSolicitudTMEC
+    && !mostrarSolicitudComexTMEC && !mostrarSolicitudTurismo">
+      <div class="row" style="width: 90%; text-align: center; margin-left:2%;">
+        <div class="col-sm-2">
+          <label>FOLIO:auto</label>
+        </div>
+        <div class="col-sm-2">
+          <label>SUCURSAL:</label>
+        </div>
+        <div class="col-sm-2">
+          <label>SOLICITADO:</label>
+        </div>
+        <div class="col-sm-2">
+          <label>ESTATUS FOLIO:Auto</label>
+        </div>
+        <div class="col-sm-2">
+          <label>ACREDITADO:</label>
+        </div>
+        <div class="col-sm-2">
+          <label>ACREDITADO:</label>
+        </div>
+      </div>
+      <div class="row" style="width: 90%; text-align: center; margin-left:2%;">
+        <div class="col-sm-2">
+          <input type="text">
+        </div>
+        <div class="col-sm-2">
+          <input type="text">
+        </div>
+        <div class="col-sm-2">
+          <input type="text">
+        </div>
+        <div class="col-sm-2">
+          <select style="width:100%;height:100%;">
+            <option id="black">{{CapturarSolicitud}}</option>
+            <option id="black">{{ProcesoPendienteAsesorC}}</option>
+            <option id="black">{{EspecialistaComexRech}}</option>
+            <option id="black">{{ProcesoPendienteContraloria}}</option>
+            <option id="black">{{FondosDeFomento}}</option>
+            <option id="black">{{EnviadaNafinet}}</option>
+            <option id="black">{{AprobadoNafinet}}</option>
+            <option id="black">{{RechaxoNafinet}}</option>
+            <option id="black">{{Reproceso}}</option>
+          </select>
+        </div>
+        <div class="col-sm-2">
+          <input type="text">
+        </div>
+        <div class="col-sm-2">
+          <input type="text">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm-12" style="margin-left: 78%">
+          <button id="efecto" (click)="mostrarTablasAutomaticas()" class="btn btn-primary">Buscar</button>
+          &nbsp;&nbsp;
+          <button id="efecto" class="btn btn-primary">Limpiar</button>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="mostrarSolicitudAutomatica" class="content">
+      <div class="row" style="text-align: center">
+        <div class="col-sm-3">
+          <label>FOLIO:</label>&nbsp;
+          <input type="text" />
+        </div>
+        <div class="col-sm-3">
+          <label>SOLICITADO:</label>&nbsp;
+          <input type="text" />
+        </div>
+        <div class="col-sm-3">
+          <label >ESTATUS FOLIO:AUTOMATICA</label>&nbsp;
+          <select style="width: 60%; height: 60%">
+            <option>{{CapturarSolicitud}}</option>
+            <option>{{ProcesoPendienteAsesorC}}</option>
+            <option>{{EspecialistaComexRech}}</option>
+            <option>{{ProcesoPendienteContraloria}}</option>
+            <option>{{FondosDeFomento}}</option>
+            <option>{{EnviadaNafinet}}</option>
+            <option>{{AprobadoNafinet}}</option>
+            <option>{{RechaxoNafinet}}</option>
+            <option>{{Reproceso}}</option>
+          </select>
+        </div>
+        <br />
+        <br />
+      </div>
+      <div class="row">
+        <div class="col-sm-12" style="margin-left: 78%">
+          <button id="efecto" (click)="mostrarTablasAutomaticas()" class="btn btn-primary">Buscar</button>
+          &nbsp;&nbsp;
+          <button id="efecto" class="btn btn-primary">Limpiar</button>
+        </div>
+      </div>
+      <hr />
+
+    </div>
+
+    <div *ngIf="mostrarSolicitudSelectiva" class="content">
+      <div class="row" style="text-align: center">
+        <div class="col-sm-3">
+          <label>FOLIO:</label>&nbsp;
+          <input type="text" />
+        </div>
+        <div class="col-sm-3">
+          <label>SOLICITADO:</label>&nbsp;
+          <input type="text" />
+        </div>
+        <div class="col-sm-3">
+          <label>ESTATUS FOLIO:Selectiva</label>&nbsp;
+          <select style="width: 60%; height: 60%">
+            <option>{{CapturarSolicitud}}</option>
+            <option>{{ProcesoPendienteAsesorC}}</option>
+            <option>{{EspecialistaComexRech}}</option>
+            <option>{{ProcesoPendienteContraloria}}</option>
+            <option>{{FondosDeFomento}}</option>
+            <option>{{EnviadaNafinet}}</option>
+            <option>{{AprobadoNafinet}}</option>
+            <option>{{RechaxoNafinet}}</option>
+            <option>{{Reproceso}}</option>
+          </select>
+        </div>
+        <br />
+        <br />
+      </div>
+      <div class="row">
+        <div class="col-sm-12" style="margin-left: 78%">
+          <button id="efecto" (click)="mostrarTablasSelectivas()" class="btn btn-primary">Buscar</button>
+          &nbsp;&nbsp;
+          <button id="efecto" class="btn btn-primary">Limpiar</button>
+        </div>
+      </div>
+      <hr />
+
+
+
+    </div>
+    <!-- hasta aqui selectiva-->
+    <!-- pyme desde aqui -->
+    <div *ngIf="mostrarContratoPyme" class="content">
+      <div class="row" style="text-align: center">
+        <div class="col-sm-3">
+          <label>FOLIO:</label>&nbsp;
+          <input type="text" />
+        </div>
+        <div class="col-sm-3">
+          <label>SOLICITADO:</label>&nbsp;
+          <input type="text" />
+        </div>
+        <div class="col-sm-3">
+          <label>ESTATUS FOLIO:PYME</label>&nbsp;
+          <select style="width: 60%; height: 60%">
+            <option>{{CapturarSolicitud}}</option>
+            <option>{{ProcesoPendienteAsesorC}}</option>
+            <option>{{EspecialistaComexRech}}</option>
+            <option>{{ProcesoPendienteContraloria}}</option>
+            <option>{{FondosDeFomento}}</option>
+            <option>{{EnviadaNafinet}}</option>
+            <option>{{AprobadoNafinet}}</option>
+            <option>{{RechaxoNafinet}}</option>
+            <option>{{Reproceso}}</option>
+          </select>
+        </div>
+        <br />
+        <br />
+      </div>
+      <div class="row">
+        <div class="col-sm-12" style="margin-left: 78%">
+          <button (click)="mostrarTablasContratoPyme()" id="efecto" class="btn btn-primary">Buscar</button>
+          &nbsp;&nbsp;
+          <button id="efecto" class="btn btn-primary">Limpiar</button>
+        </div>
+      </div>
+      <hr />
+
+
+
+    </div>
+    <!-- hasta aqui -->
+    <!-- desde aqui comextmec -->
+    <div *ngIf="mostrarSolicitudComexTMEC" class="content">
+      <div class="row" style="text-align: center">
+        <div class="col-sm-3">
+          <label>FOLIO:</label>&nbsp;
+          <input type="text" />
+        </div>
+        <div class="col-sm-3">
+          <label>SOLICITADO:</label>&nbsp;
+          <input type="text" />
+        </div>
+        <div class="col-sm-3">
+          <label>ESTATUS FOLIO:comextmec</label>&nbsp;
+          <select style="width: 60%; height: 60%">
+            <option>{{CapturarSolicitud}}</option>
+            <option>{{ProcesoPendienteAsesorC}}</option>
+            <option>{{EspecialistaComexRech}}</option>
+            <option>{{ProcesoPendienteContraloria}}</option>
+            <option>{{FondosDeFomento}}</option>
+            <option>{{EnviadaNafinet}}</option>
+            <option>{{AprobadoNafinet}}</option>
+            <option>{{RechaxoNafinet}}</option>
+            <option>{{Reproceso}}</option>
+          </select>
+        </div>
+        <br />
+        <br />
+      </div>
+      <div class="row">
+        <div class="col-sm-12" style="margin-left: 78%">
+          <button (click)="mostrarTablasComexTmec()" id="efecto" class="btn btn-primary">Buscar</button>
+          &nbsp;&nbsp;
+          <button id="efecto" class="btn btn-primary">Limpiar</button>
+        </div>
+      </div>
+      <hr />
+    </div>
+    <!-- hasta aqui -->
+     <!-- desde aqui tmec -->
+     <div *ngIf="mostrarSolicitudTMEC" class="content">
+      <div class="row" style="text-align: center">
+        <div class="col-sm-3">
+          <label>FOLIO:</label>&nbsp;
+          <input type="text" />
+        </div>
+        <div class="col-sm-3">
+          <label>SOLICITADO:</label>&nbsp;
+          <input type="text" />
+        </div>
+        <div class="col-sm-3">
+          <label>ESTATUS FOLIO:tmec</label>&nbsp;
+          <select style="width: 60%; height: 60%">
+            <option>{{CapturarSolicitud}}</option>
+            <option>{{ProcesoPendienteAsesorC}}</option>
+            <option>{{EspecialistaComexRech}}</option>
+            <option>{{ProcesoPendienteContraloria}}</option>
+            <option>{{FondosDeFomento}}</option>
+            <option>{{EnviadaNafinet}}</option>
+            <option>{{AprobadoNafinet}}</option>
+            <option>{{RechaxoNafinet}}</option>
+            <option>{{Reproceso}}</option>
+          </select>
+        </div>
+        <br />
+        <br />
+      </div>
+      <div class="row">
+        <div class="col-sm-12" style="margin-left: 78%">
+          <button (click)="mostrarTablasTmec()" id="efecto" class="btn btn-primary">Buscar</button>
+          &nbsp;&nbsp;
+          <button id="efecto" class="btn btn-primary">Limpiar</button>
+        </div>
+      </div>
+      <hr />
+    </div>
+    <!-- hasta aqui -->
+    <!-- desde aqui tmec -->
+    <div *ngIf="mostrarSolicitudTurismo" class="content">
+      <div class="row" style="text-align: center">
+        <div class="col-sm-3">
+          <label>FOLIO:</label>&nbsp;
+          <input type="text" />
+        </div>
+        <div class="col-sm-3">
+          <label>SOLICITADO:</label>&nbsp;
+          <input type="text" />
+        </div>
+        <div class="col-sm-3">
+          <label>ESTATUS FOLIO:Turismo</label>&nbsp;
+          <select style="width: 60%; height: 60%">
+            <option>{{CapturarSolicitud}}</option>
+            <option>{{ProcesoPendienteAsesorC}}</option>
+            <option>{{EspecialistaComexRech}}</option>
+            <option>{{ProcesoPendienteContraloria}}</option>
+            <option>{{FondosDeFomento}}</option>
+            <option>{{EnviadaNafinet}}</option>
+            <option>{{AprobadoNafinet}}</option>
+            <option>{{RechaxoNafinet}}</option>
+            <option>{{Reproceso}}</option>
+          </select>
+        </div>
+        <br />
+        <br />
+      </div>
+      <div class="row">
+        <div class="col-sm-12" style="margin-left: 78%">
+          <button (click)="mostrarTablasTurismo()" id="efecto" class="btn btn-primary">Buscar</button>
+          &nbsp;&nbsp;
+          <button id="efecto" class="btn btn-primary">Limpiar</button>
+        </div>
+      </div>
+      <hr />
+    </div>
+    <!-- hasta aqui -->
+    <br><br>
+
+    <app-table *ngIf="mostrarTablaAutomaticas"></app-table>
+    <app-table-comex-tmec *ngIf="mostrarTablaComextmec"></app-table-comex-tmec>
+    <app-table-pyme *ngIf="mostrarTablaPyme"></app-table-pyme>
+    <app-table-selectivas *ngIf="mostrarTablaSelectivas"></app-table-selectivas>
+    <app-table-tmec *ngIf="mostrarTablaTmec"></app-table-tmec>
+    <app-table-turismo *ngIf="mostrarTablaTurismo"></app-table-turismo>
+
+
+
+
+
+
+
+  </form>
+
+</div>
+<div>
+</div>
+<app-form></app-form>
+<app-form-comex-tmec></app-form-comex-tmec>
+<app-form-pyme></app-form-pyme>
+<app-form-selectivas></app-form-selectivas>
+<app-form-tmec></app-form-tmec>
+<app-form-turismo></app-form-turismo>
