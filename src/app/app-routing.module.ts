@@ -11,6 +11,7 @@ import { EspecialistacomexComponent } from './EspecialistaComex/pages/especialis
 import { FondosdefomentoComponent } from './FondosDeFomento/pages/fondosdefomento/fondosdefomento.component';
 import { OperacionesInternacionalesComponent } from './Operacion_Internacional/pages/operaciones-internacionales/operaciones-internacionales.component';
 import { HoteleroComponent } from './Hotelero/pages/hotelero/hotelero.component';
+import { ValidadorComponent } from './Validador/pages/validador/validador.component';
 
 
 
@@ -52,6 +53,11 @@ const routes: Routes = [
     path: 'hotelero', component: HoteleroComponent
 
   },
+  {
+    path: 'validador', component: ValidadorComponent
+
+  },
+
   {
     path: '**', component: LoginComponent
   },

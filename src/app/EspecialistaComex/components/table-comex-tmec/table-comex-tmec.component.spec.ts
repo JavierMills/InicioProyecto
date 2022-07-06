@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FormComponent } from './form.component';
+import { TableComexTmecComponent } from './table-comex-tmec.component';
 
-describe('FormComponent', () => {
-  let component: FormComponent;
-  let fixture: ComponentFixture<FormComponent>;
+describe('TableComexTmecComponent', () => {
+  let component: TableComexTmecComponent;
+  let fixture: ComponentFixture<TableComexTmecComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FormComponent ]
+      declarations: [ TableComexTmecComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(FormComponent);
+    fixture = TestBed.createComponent(TableComexTmecComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -4,6 +4,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FormComponent } from './components/form/form.component';
 import { TableComponent } from './components/table/table.component';
 import { ValidadorComponent } from './pages/validador/validador.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -15,7 +16,8 @@ import { ValidadorComponent } from './pages/validador/validador.component';
     ValidadorComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ]
 })
 export class ValidadorModule { }
