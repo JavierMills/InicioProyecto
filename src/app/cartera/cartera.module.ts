@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CarteraComponent } from './pages/cartera/cartera.component';
 import { NavComponent } from './components/nav/nav.component';
 import { TableComponent } from './components/table/table.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -13,7 +14,8 @@ import { TableComponent } from './components/table/table.component';
     TableComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ],
   exports:[
     CarteraComponent

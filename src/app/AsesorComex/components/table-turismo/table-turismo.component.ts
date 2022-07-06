@@ -33,4 +33,5 @@ export class TableTurismoComponent implements OnInit, OnDestroy {
 ngOnDestroy(): void {
   this.dtTrigger.unsubscribe();
 }
+
 }

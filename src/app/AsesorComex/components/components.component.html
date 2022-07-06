@@ -1,15 +1,9 @@
 <div class="content">
   <form action="" style="overflow-x:hidden; overflow-y:hidden">
-    <div class="row">
-      <div class="col-sm-10">
-        <img style="width:30%;margin-left:5%;" src="../../../assets/img/tranasparent.png">
-      </div>
-      <div class="col-sm-2" style="margin-left:80%; margin-top: -6%;">
-        <span style="color: red;"><b>SIG E</b></span><span><b>mpresas</b></span>&nbsp;<span
-          style="color: red;"><b>C</b></span><span><b>omex</b></span>
-      </div>
-    </div>
-    <hr style="margin-top: -4%;">
+
+    <app-header></app-header>
+
+
     <div class="row">
       <div class="col-sm-6" style="margin-left:5%;">
         <label><b>Asesor Comex:</b></label>&nbsp;<label>Jose Rodriguez Arias (Z396773)</label>
@@ -19,6 +13,7 @@
         <label>{{fecha | date: 'EEEE d De MMMM Del y'}}</label>
       </div>
     </div>
+
     <nav class="navbar navbar-expand-lg" style="background-color: red;">
       <div class="container-fluid" style="margin-left:5%;">
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -27,12 +22,13 @@
               <label data-bs-toggle="dropdown" style="color:white;" (click)="inicio()"><b id="black">Solicitudes</b></label>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <div>
-                  <li (click)="mostrarAutomatica()" id="black">{{garantiaA}}</li>
-                  <li (click)="mostrarSelectiva()" id="black">{{garantiaS}}</li>
-                  <li (click)="mostrarPYME()" id="black">{{contratoPYME}}</li>
-                  <li (click)="mostrarComexTMEC()" id="black">{{garantiaCOMEXTMEC}}</li>
-                  <li (click)="mostrarTurismo()" id="black">{{garantiaT}}</li>
-                  <li (click)="mostrarTMEC()" id="black">{{garantiaTMEC}}</li>
+                  <li (click)="mostrarAutomatica()" id="black">{{Automaticas}}</li>
+                  <li (click)="mostrarSelectiva()" id="black">{{Selectivas}}</li>
+                  <li (click)="mostrarPYME()" id="black">{{Contrato_PYME}}</li>
+                  <li (click)="mostrarComexTMEC()" id="black">{{Comex_TMEC}}</li>
+                  <li (click)="mostrarTurismo()" id="black">{{Turismo}}</li>
+                  <li (click)="mostrarTMEC()" id="black">{{TMEC}}</li>
+                  <li (click)="mostrarReestructuras()" id="black">{{Reestructuras}}</li>
                 </div>
               </ul>
             </li>
@@ -54,10 +50,14 @@
       </div>
     </nav>
     <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
 
     <div *ngIf="!mostrarSolicitudAutomatica && !mostrarSolicitudSelectiva && !mostrarContratoPyme && !mostrarSolicitudTMEC
-    && !mostrarSolicitudComexTMEC && !mostrarSolicitudTurismo">
+    && !mostrarSolicitudComexTMEC && !mostrarSolicitudTurismo && !mostrarSolicitudReestructura">
       <div class="row" style="width: 90%; text-align: center; margin-left:2%;">
         <div class="col-sm-2">
           <label>FOLIO:auto</label>
@@ -135,6 +135,7 @@
             <option>{{ProcesoPendienteAsesorC}}</option>
             <option>{{EspecialistaComexRech}}</option>
             <option>{{ProcesoPendienteContraloria}}</option>
+            <option>{{ProcesoPendienteCartera}}</option>
             <option>{{FondosDeFomento}}</option>
             <option>{{EnviadaNafinet}}</option>
             <option>{{AprobadoNafinet}}</option>
@@ -173,6 +174,7 @@
             <option>{{ProcesoPendienteAsesorC}}</option>
             <option>{{EspecialistaComexRech}}</option>
             <option>{{ProcesoPendienteContraloria}}</option>
+            <option>{{ProcesoPendienteCartera}}</option>
             <option>{{FondosDeFomento}}</option>
             <option>{{EnviadaNafinet}}</option>
             <option>{{AprobadoNafinet}}</option>
@@ -214,6 +216,7 @@
             <option>{{ProcesoPendienteAsesorC}}</option>
             <option>{{EspecialistaComexRech}}</option>
             <option>{{ProcesoPendienteContraloria}}</option>
+            <option>{{ProcesoPendienteCartera}}</option>
             <option>{{FondosDeFomento}}</option>
             <option>{{EnviadaNafinet}}</option>
             <option>{{AprobadoNafinet}}</option>
@@ -255,6 +258,7 @@
             <option>{{ProcesoPendienteAsesorC}}</option>
             <option>{{EspecialistaComexRech}}</option>
             <option>{{ProcesoPendienteContraloria}}</option>
+            <option>{{ProcesoPendienteCartera}}</option>
             <option>{{FondosDeFomento}}</option>
             <option>{{EnviadaNafinet}}</option>
             <option>{{AprobadoNafinet}}</option>
@@ -293,6 +297,7 @@
             <option>{{ProcesoPendienteAsesorC}}</option>
             <option>{{EspecialistaComexRech}}</option>
             <option>{{ProcesoPendienteContraloria}}</option>
+            <option>{{ProcesoPendienteCartera}}</option>
             <option>{{FondosDeFomento}}</option>
             <option>{{EnviadaNafinet}}</option>
             <option>{{AprobadoNafinet}}</option>
@@ -331,6 +336,7 @@
             <option>{{ProcesoPendienteAsesorC}}</option>
             <option>{{EspecialistaComexRech}}</option>
             <option>{{ProcesoPendienteContraloria}}</option>
+            <option>{{ProcesoPendienteCartera}}</option>
             <option>{{FondosDeFomento}}</option>
             <option>{{EnviadaNafinet}}</option>
             <option>{{AprobadoNafinet}}</option>
@@ -351,6 +357,43 @@
       <hr />
     </div>
     <!-- hasta aqui -->
+    <div *ngIf="mostrarSolicitudReestructura" class="content">
+      <div class="row" style="text-align: center">
+        <div class="col-sm-3">
+          <label>FOLIO:</label>&nbsp;
+          <input type="text" />
+        </div>
+        <div class="col-sm-3">
+          <label>SOLICITADO:</label>&nbsp;
+          <input type="text" />
+        </div>
+        <div class="col-sm-3">
+          <label>ESTATUS FOLIO:Reestructuras</label>&nbsp;
+          <select style="width: 60%; height: 60%">
+            <option>{{CapturarSolicitud}}</option>
+            <option>{{ProcesoPendienteAsesorC}}</option>
+            <option>{{EspecialistaComexRech}}</option>
+            <option>{{ProcesoPendienteContraloria}}</option>
+            <option>{{ProcesoPendienteCartera}}</option>
+            <option>{{FondosDeFomento}}</option>
+            <option>{{EnviadaNafinet}}</option>
+            <option>{{AprobadoNafinet}}</option>
+            <option>{{RechaxoNafinet}}</option>
+            <option>{{Reproceso}}</option>
+          </select>
+        </div>
+        <br />
+        <br />
+      </div>
+      <div class="row">
+        <div class="col-sm-12" style="margin-left: 78%">
+          <button (click)="mostrarTablasReestructuras()" id="efecto" class="btn btn-primary">Buscar</button>
+          &nbsp;&nbsp;
+          <button id="efecto" class="btn btn-primary">Limpiar</button>
+        </div>
+      </div>
+      <hr />
+    </div>
     <br><br>
 
     <app-table *ngIf="mostrarTablaAutomaticas"></app-table>
@@ -359,8 +402,7 @@
     <app-table-selectivas *ngIf="mostrarTablaSelectivas"></app-table-selectivas>
     <app-table-tmec *ngIf="mostrarTablaTmec"></app-table-tmec>
     <app-table-turismo *ngIf="mostrarTablaTurismo"></app-table-turismo>
-
-
+    <app-table-reestructuras *ngIf="mostrarTablaReestructura"></app-table-reestructuras>
 
 
 
@@ -377,3 +419,5 @@
 <app-form-selectivas></app-form-selectivas>
 <app-form-tmec></app-form-tmec>
 <app-form-turismo></app-form-turismo>
+<app-form-reestructuras></app-form-reestructuras>
+

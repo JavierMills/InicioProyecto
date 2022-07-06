@@ -20,6 +20,7 @@ export class ComponentsComponent implements OnInit {
   public ProcesoPendienteAsesorC: string = 'Proceso Pendiente Asesor Comex';
   public EspecialistaComexRech: string = 'Especialista Comex (Rechazos)';
   public ProcesoPendienteContraloria: string = 'Proceso Pendiente Contraloría';
+  public ProcesoPendienteCartera: string = 'Proceso Pendiente Cartera';
   public FondosDeFomento: string = 'Fondos de Fomento';
   public EnviadaNafinet: string = 'Enviada a Nafinet';
   public AprobadoNafinet: string = 'Aprobado Nafinet';
@@ -34,6 +35,7 @@ export class ComponentsComponent implements OnInit {
   public Contrato_PYME: string = 'Solicitud Contrato Pyme';
   public Comex_TMEC: string = 'Solicitudes Comex-TMEC';
   public Turismo: string = 'Solicitudes Turismo';
+  public Reestructuras: string = 'Reestructuras';
   public hora: string = '';
 
   allUsers: any = [];
@@ -49,6 +51,7 @@ export class ComponentsComponent implements OnInit {
   mostrarTablaSelectivas: boolean = false;
   mostrarTablaTmec: boolean = false;
   mostrarTablaTurismo: boolean = false;
+  mostrarTablaReestructura : boolean = false;
 
   //
 
@@ -66,6 +69,8 @@ export class ComponentsComponent implements OnInit {
 
   mostrarSolicitudTurismo: boolean = false;
 
+  mostrarSolicitudReestructura : boolean = false;
+
   ngOnInit(): void {
     this.esconder;
   }
@@ -82,6 +87,8 @@ export class ComponentsComponent implements OnInit {
     this.mostrarTablaSelectivas = false;
     this.mostrarTablaTmec = false;
     this.mostrarTablaTurismo = false;
+    this.mostrarTablaReestructura = false;
+
   }
 
   mostrarTablasSelectivas() {
@@ -91,6 +98,8 @@ export class ComponentsComponent implements OnInit {
     this.mostrarTablaSelectivas = true;
     this.mostrarTablaTmec = false;
     this.mostrarTablaTurismo = false;
+    this.mostrarTablaReestructura = false;
+
   }
 
   mostrarTablasContratoPyme() {
@@ -100,6 +109,8 @@ export class ComponentsComponent implements OnInit {
     this.mostrarTablaSelectivas = false;
     this.mostrarTablaTmec = false;
     this.mostrarTablaTurismo = false;
+    this.mostrarTablaReestructura = false;
+
   }
 
   mostrarTablasComexTmec() {
@@ -109,6 +120,8 @@ export class ComponentsComponent implements OnInit {
     this.mostrarTablaSelectivas = false;
     this.mostrarTablaTmec = false;
     this.mostrarTablaTurismo = false;
+    this.mostrarTablaReestructura = false;
+
   }
 
   mostrarTablasTurismo() {
@@ -118,7 +131,10 @@ export class ComponentsComponent implements OnInit {
     this.mostrarTablaSelectivas = false;
     this.mostrarTablaTmec = false;
     this.mostrarTablaTurismo = true;
+    this.mostrarTablaReestructura = false;
+
   }
+
 
 
   mostrarTablasTmec() {
@@ -128,6 +144,17 @@ export class ComponentsComponent implements OnInit {
     this.mostrarTablaSelectivas = false;
     this.mostrarTablaTmec = true;
     this.mostrarTablaTurismo = false;
+    this.mostrarTablaReestructura = false;
+
+  }
+  mostrarTablasReestructuras() {
+    this.mostrarTablaAutomaticas = false;
+    this.mostrarTablaComextmec = false;
+    this.mostrarTablaPyme = false;
+    this.mostrarTablaSelectivas = false;
+    this.mostrarTablaTmec = false;
+    this.mostrarTablaTurismo = false;
+    this.mostrarTablaReestructura = true;
   }
 
 
@@ -139,6 +166,8 @@ export class ComponentsComponent implements OnInit {
     this.mostrarSolicitudComexTMEC = false;
     this.mostrarSolicitudTurismo = false;
     this.mostrarSolicitudTMEC = false;
+    this.mostrarSolicitudReestructura= false;
+
   }
   mostrarSelectiva() {
     this.mostrarSolicitudSelectiva = true;
@@ -147,6 +176,8 @@ export class ComponentsComponent implements OnInit {
     this.mostrarSolicitudComexTMEC = false;
     this.mostrarSolicitudTurismo = false;
     this.mostrarSolicitudTMEC = false;
+    this.mostrarSolicitudReestructura= false;
+
   }
   mostrarComexTMEC() {
     this.mostrarSolicitudComexTMEC = true;
@@ -155,6 +186,8 @@ export class ComponentsComponent implements OnInit {
     this.mostrarSolicitudSelectiva = false;
     this.mostrarSolicitudTurismo = false;
     this.mostrarSolicitudTMEC = false;
+    this.mostrarSolicitudReestructura= false;
+
   }
 
   inicio() {
@@ -170,6 +203,11 @@ export class ComponentsComponent implements OnInit {
     this.mostrarTablaSelectivas = false;
     this.mostrarTablaTmec = false;
     this.mostrarTablaTurismo = false;
+    this.mostrarSolicitudReestructura= false;
+    this.mostrarTablaReestructura = false;
+
+
+
   }
 
   mostrarPYME() {
@@ -179,6 +217,8 @@ export class ComponentsComponent implements OnInit {
     this.mostrarSolicitudComexTMEC = false;
     this.mostrarSolicitudTurismo = false;
     this.mostrarSolicitudTMEC = false;
+    this.mostrarSolicitudReestructura= false;
+
   }
   mostrarTMEC() {
     this.mostrarSolicitudTMEC = true;
@@ -187,9 +227,22 @@ export class ComponentsComponent implements OnInit {
     this.mostrarSolicitudSelectiva = false;
     this.mostrarSolicitudComexTMEC = false;
     this.mostrarSolicitudTurismo = false;
+    this.mostrarSolicitudReestructura= false;
+
   }
   mostrarTurismo() {
     this.mostrarSolicitudTurismo = true;
+    this.mostrarSolicitudTMEC = false;
+    this.mostrarContratoPyme = false;
+    this.mostrarSolicitudAutomatica = false;
+    this.mostrarSolicitudSelectiva = false;
+    this.mostrarSolicitudComexTMEC = false;
+    this.mostrarSolicitudReestructura= false;
+
+  }
+  mostrarReestructuras() {
+    this.mostrarSolicitudReestructura= true;
+    this.mostrarSolicitudTurismo = false;
     this.mostrarSolicitudTMEC = false;
     this.mostrarContratoPyme = false;
     this.mostrarSolicitudAutomatica = false;
