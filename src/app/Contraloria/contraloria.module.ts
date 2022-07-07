@@ -17,6 +17,10 @@ import { TableSelectivasComponent } from './components/table-selectivas/table-se
 import { TableTmecComponent } from './components/table-tmec/table-tmec.component';
 import { TableTurismoComponent } from './components/table-turismo/table-turismo.component';
 import { SharedModule } from '../shared/shared.module';
+import { TableReestructurtasComponent } from './components/table-reestructurtas/table-reestructurtas.component';
+import { FormReestructurasComponent } from './components/form-reestructuras/form-reestructuras.component';
+import { FormHoteleroComponent } from './components/form-hotelero/form-hotelero.component';
+import { TableHoteleroComponent } from './components/table-hotelero/table-hotelero.component';
 
 
 @NgModule({
@@ -34,7 +38,11 @@ import { SharedModule } from '../shared/shared.module';
     TablePymeComponent,
     TableSelectivasComponent,
     TableTmecComponent,
-    TableTurismoComponent
+    TableTurismoComponent,
+    TableReestructurtasComponent,
+    FormReestructurasComponent,
+    FormHoteleroComponent,
+    TableHoteleroComponent
   ],
   imports: [
     CommonModule,

@@ -36,7 +36,7 @@ const routes: Routes = [
 
   },
   {
-    path: 'contraloria', component: CarteraComponent
+    path: 'contraloria', component: ContraloriaComponent
 
   },
   {

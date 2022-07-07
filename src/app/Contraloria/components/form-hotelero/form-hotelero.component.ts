@@ -1,26 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-form',
-  templateUrl: './form.component.html',
-  styleUrls: ['./form.component.scss']
+  selector: 'app-form-hotelero',
+  templateUrl: './form-hotelero.component.html',
+  styleUrls: ['./form-hotelero.component.scss']
 })
-export class FormComponent implements OnInit {
-
-  alert:boolean = false;
-  show: boolean = false;
-  public CapturarSolicitud : string = "Capturar Solcitud"
-  public ProcesoPendienteAsesorC : string = "Proceso Pendiente Asesor Comex"
-  public EspecialistaComexRech : string = "Especialista Comex (Rechazos)"
-  public ProcesoPendienteContraloria : string = "Proceso Pendiente Contraloría"
-  public FondosDeFomento : string = "Fondos de Fomento"
-  public EnviadaNafinet : string = "Enviada a Nafinet"
-  public AprobadoNafinet : string = "Aprobado Nafinet"
-  public RechaxoNafinet : string = "Rechazo Nafinet"
-  public Reproceso : string = "Reproceso"
+export class FormHoteleroComponent implements OnInit {
 
   fecha: Date = new Date();
-
+  show: boolean = false;
 
   esconder: boolean = false;
   esconderF: boolean = true;
@@ -36,14 +24,6 @@ export class FormComponent implements OnInit {
   sexo: string = "";
   entidadFed:string = "Seleccionar";
   munODele:string = "Seleccionar";
-
-  mostrarSolicitudAutomatica: boolean = false;
-  mostrarSolicitudSelectiva: boolean = false;
-  mostrarSolicitudComexTMEC: boolean = false;
-  mostrarContratoPyme: boolean = false;
-  mostrarSolicitudTMEC: boolean = false;
-  mostrarSolicitudTurismo: boolean = false;
-
 
 
   ventasTA: string = "";
@@ -66,44 +46,11 @@ export class FormComponent implements OnInit {
   entidadFinanciera:string = "Seleccionar";
   moneda:string ="Seleccionar";
 
-  steper:any;
-
-  constructor() {
-
-  }
+  constructor() { }
 
   ngOnInit(): void {
     this.esconder;
   }
-
-
-  mostrarAutomatica() {
-    console.log("mostrar automatica");
-
-    this.mostrarSolicitudAutomatica = true;
-    this.mostrarSolicitudSelectiva = false;
-  }
-
-
-  mostrarSelectiva() {
-    console.log("mostar selectiva");
-
-    this.mostrarSolicitudSelectiva = true;
-    this.mostrarSolicitudAutomatica = false;
-  }
-  mostrarComexTMEC() {
-    this.mostrarSolicitudComexTMEC = true;
-  }
-  mostrarPYME() {
-    this.mostrarContratoPyme = true;
-  }
-  mostrarTMEC() {
-    this.mostrarSolicitudTMEC = true;
-  }
-  mostrarTurismo() {
-    this.mostrarSolicitudTurismo = true;
-  }
-
 
   mostrar() {
     this.esconder = true;
@@ -294,13 +241,4 @@ export class FormComponent implements OnInit {
     let com = prompt ('Ingresa un comentario por el rechazo de Moneda', "");
     alert(`Tu comentario es: ${com}.`)
   }
-
-  closeAlert(){
-    this.alert = false;
-  }
-
-  // MostrarAlert(){
-  //   this.steper = this.steperService.setActive("paso4");
-  //   this.alert = true;
-  // }
 }

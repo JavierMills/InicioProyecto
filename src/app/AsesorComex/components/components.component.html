@@ -26,6 +26,7 @@
                   <li (click)="mostrarComexTMEC()" id="black">{{Comex_TMEC}}</li>
                   <li (click)="mostrarTurismo()" id="black">{{Turismo}}</li>
                   <li (click)="mostrarTMEC()" id="black">{{TMEC}}</li>
+                  <li (click)="mostrar()" id="black">{{TMEC}}</li>
                   <li (click)="mostrarReestructuras()" id="black">{{Reestructuras}}</li>
                 </div>
               </ul>
@@ -48,11 +49,8 @@
       </div>
     </nav>
     <br>
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 218982f6c962d97ea16060480a060a8d69a3d37a
 
     <div *ngIf="!mostrarSolicitudAutomatica && !mostrarSolicitudSelectiva && !mostrarContratoPyme && !mostrarSolicitudTMEC
     && !mostrarSolicitudComexTMEC && !mostrarSolicitudTurismo && !mostrarSolicitudReestructura">
@@ -323,10 +321,4 @@
 </div>
 <div>
 </div>
-<app-form-comex-tmec></app-form-comex-tmec>
-<app-form-pyme></app-form-pyme>
-<app-form-selectivas></app-form-selectivas>
-<app-form-tmec></app-form-tmec>
-<app-form-turismo></app-form-turismo>
-<app-form-reestructuras></app-form-reestructuras>
 

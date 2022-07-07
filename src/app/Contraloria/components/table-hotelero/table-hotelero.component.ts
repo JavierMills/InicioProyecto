@@ -3,11 +3,12 @@ import { HttpClient } from '@angular/common/http';
 import { Subject } from 'rxjs';
 
 @Component({
-  selector: 'app-table',
-  templateUrl: './table.component.html',
-  styleUrls: ['./table.component.scss']
+  selector: 'app-table-hotelero',
+  templateUrl: './table-hotelero.component.html',
+  styleUrls: ['./table-hotelero.component.scss']
 })
-export class TableComponent implements OnInit {
+export class TableHoteleroComponent implements OnInit {
+
 
   dtOptions: DataTables.Settings = {};
   dtTrigger: Subject<any> = new Subject<any>();
@@ -33,4 +34,5 @@ export class TableComponent implements OnInit {
 ngOnDestroy(): void {
   this.dtTrigger.unsubscribe();
 }
+
 }

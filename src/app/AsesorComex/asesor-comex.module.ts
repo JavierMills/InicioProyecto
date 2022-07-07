@@ -24,12 +24,9 @@ import { TableTmecComponent } from './components/table-tmec/table-tmec.component
 import { TableTurismoComponent } from './components/table-turismo/table-turismo.component';
 import { FormReestructurasComponent } from './components/form-reestructuras/form-reestructuras.component';
 import { TableReestructurasComponent } from './components/table-reestructuras/table-reestructuras.component';
-<<<<<<< HEAD
 import { SteperComponent } from './components/steper/steper.component';
-=======
 import { SharedModule } from '../shared/shared.module';
 import { FiltroAutomaticasComponent } from './components/filtro-automaticas/filtro-automaticas.component';
->>>>>>> 218982f6c962d97ea16060480a060a8d69a3d37a
 
 registerLocaleData(localEs);
 
@@ -51,11 +48,8 @@ registerLocaleData(localEs);
     TableTurismoComponent,
     TableReestructurasComponent,
     FormReestructurasComponent,
-<<<<<<< HEAD
-    SteperComponent
-=======
+    SteperComponent,
     FiltroAutomaticasComponent
->>>>>>> 218982f6c962d97ea16060480a060a8d69a3d37a
 
   ],
   imports: [

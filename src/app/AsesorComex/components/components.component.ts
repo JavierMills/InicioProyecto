@@ -205,9 +205,6 @@ export class ComponentsComponent implements OnInit {
     this.mostrarTablaTurismo = false;
     this.mostrarSolicitudReestructura= false;
     this.mostrarTablaReestructura = false;
-
-
-
   }
 
   mostrarPYME() {
