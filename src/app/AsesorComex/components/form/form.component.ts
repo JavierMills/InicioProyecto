@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+// import { LOADIPHLPAPI } from 'dns';
+import { SteperService } from '../steper/steper.service';
 
 @Component({
   selector: 'app-form',
@@ -6,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent implements OnInit {
-
+  
+  alert:boolean = false;
   show: boolean = false;
   public CapturarSolicitud : string = "Capturar Solcitud"
   public ProcesoPendienteAsesorC : string = "Proceso Pendiente Asesor Comex"
@@ -65,7 +68,11 @@ export class FormComponent implements OnInit {
   entidadFinanciera:string = "Seleccionar";
   moneda:string ="Seleccionar";
 
-  constructor() { }
+  steper:any;
+  
+  constructor(private steperService:SteperService) { 
+  
+  }
 
   ngOnInit(): void {
     this.esconder;
@@ -290,5 +297,14 @@ export class FormComponent implements OnInit {
     alert(`Tu comentario es: ${com}.`)
   }
 
+  closeAlert(){
+    this.alert = false;
+  }
 
+  MostrarAlert(){
+    this.steper = this.steperService.setActive("paso4");
+    this.alert = true;
+  }
+
+  
 }

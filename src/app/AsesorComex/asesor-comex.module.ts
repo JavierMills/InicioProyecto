@@ -25,6 +25,7 @@ import { TableTurismoComponent } from './components/table-turismo/table-turismo.
 import { SharedModule } from '../shared/shared.module';
 import { FormReestructurasComponent } from './components/form-reestructuras/form-reestructuras.component';
 import { TableReestructurasComponent } from './components/table-reestructuras/table-reestructuras.component';
+import { SteperComponent } from './components/steper/steper.component';
 
 registerLocaleData(localEs);
 
@@ -45,7 +46,8 @@ registerLocaleData(localEs);
     TableTmecComponent,
     TableTurismoComponent,
     TableReestructurasComponent,
-    FormReestructurasComponent
+    FormReestructurasComponent,
+    SteperComponent
 
   ],
   imports: [
