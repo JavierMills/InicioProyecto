@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SteperService } from '../steper/steper.service';
 
 @Component({
   selector: 'app-form-tmec',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form-tmec.component.scss']
 })
 export class FormTmecComponent implements OnInit {
-
+  steper:any;
+  alert:boolean = false;
   show: boolean = false;
   fecha: Date = new Date();
   esconder: boolean = false;
@@ -45,7 +47,7 @@ export class FormTmecComponent implements OnInit {
   entidadFinanciera:string = "Seleccionar";
   moneda:string ="Seleccionar";
 
-  constructor() { }
+  constructor(private steperService:SteperService) { }
 
   ngOnInit(): void {
     this.esconder;
@@ -241,5 +243,13 @@ export class FormTmecComponent implements OnInit {
     alert(`Tu comentario es: ${com}.`)
   }
 
+  closeAlert(){
+    this.alert = false;
+  }
+
+  MostrarAlert(){
+    this.steper = this.steperService.setActive("paso4");
+    this.alert = true;
+  }
 
 }

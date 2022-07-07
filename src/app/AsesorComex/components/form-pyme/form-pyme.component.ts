@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SteperService } from '../steper/steper.service';
 
 @Component({
   selector: 'app-form-pyme',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form-pyme.component.scss']
 })
 export class FormPymeComponent implements OnInit {
-
+  steper:any;
+  alert:boolean = false;
   fecha: Date = new Date();
   show: boolean = false;
 
@@ -46,7 +48,7 @@ export class FormPymeComponent implements OnInit {
   entidadFinanciera:string = "Seleccionar";
   moneda:string ="Seleccionar";
 
-  constructor() { }
+  constructor(private steperService:SteperService) { }
 
   ngOnInit(): void {
     this.esconder;
@@ -242,5 +244,12 @@ export class FormPymeComponent implements OnInit {
     alert(`Tu comentario es: ${com}.`)
   }
 
+  closeAlert(){
+    this.alert = false;
+  }
 
+  MostrarAlert(){
+    this.steper = this.steperService.setActive("paso4");
+    this.alert = true;
+  }
 }
