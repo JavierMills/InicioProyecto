@@ -12,12 +12,12 @@ import { CarteraModule } from './cartera/cartera.module';
 import { ContraloriaModule } from './Contraloria/contraloria.module';
 import { EspecialistacomexModule } from './EspecialistaComex/especialistacomex.module';
 import { NegocioInternacionalModule } from './Negocio_Internacional/negocio-internacional.module';
-import { OperacionInternacionalModule } from './Operacion_Internacional/operacion-internacional.module';
 import { FondosdefomentoModule } from './FondosDeFomento/fondosdefomento.module';
 import { DataTablesModule } from "angular-datatables";
 import { FormsModule } from '@angular/forms';
 import { HoteleroModule } from './Hotelero/hotelero.module';
 import { ValidadorModule } from './Validador/validador.module';
+import { OperacionInternacionalModule } from './Operacion_Internacional/operacion-internacional.module';
 
 
 @NgModule({
@@ -29,18 +29,18 @@ import { ValidadorModule } from './Validador/validador.module';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    SharedModule,
     AsesorComexModule,
     CarteraModule,
     ContraloriaModule,
     EspecialistacomexModule,
     NegocioInternacionalModule,
-    OperacionInternacionalModule,
     FondosdefomentoModule,
     DataTablesModule,
     FormsModule,
     HoteleroModule,
-    ValidadorModule
+    ValidadorModule,
+    SharedModule,
+    OperacionInternacionalModule
 
 
   ],

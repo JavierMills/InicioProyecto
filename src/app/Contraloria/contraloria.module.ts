@@ -41,7 +41,6 @@ import { SharedModule } from '../shared/shared.module';
     DataTablesModule,
     FormsModule,
     SharedModule
-
   ],
   exports:[
     ContraloriaComponent

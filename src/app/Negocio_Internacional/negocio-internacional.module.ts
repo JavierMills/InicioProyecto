@@ -13,10 +13,8 @@ import { SharedModule } from '../shared/shared.module';
   ],
   imports: [
     CommonModule,
-    SharedModule
+  SharedModule
   ],
-  exports:[
-    NegocioInternacionalComponent
-  ]
+
 })
 export class NegocioInternacionalModule { }

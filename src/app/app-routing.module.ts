@@ -12,6 +12,8 @@ import { FondosdefomentoComponent } from './FondosDeFomento/pages/fondosdefoment
 import { OperacionesInternacionalesComponent } from './Operacion_Internacional/pages/operaciones-internacionales/operaciones-internacionales.component';
 import { HoteleroComponent } from './Hotelero/pages/hotelero/hotelero.component';
 import { ValidadorComponent } from './Validador/pages/validador/validador.component';
+import { OperacionInternacionalModule } from './Operacion_Internacional/operacion-internacional.module';
+
 
 
 
@@ -34,7 +36,7 @@ const routes: Routes = [
 
   },
   {
-    path: 'contraloria', component: ContraloriaComponent
+    path: 'contraloria', component: CarteraComponent
 
   },
   {
@@ -57,6 +59,11 @@ const routes: Routes = [
     path: 'validador', component: ValidadorComponent
 
   },
+  {
+    path: 'operaciones', component: OperacionInternacionalModule
+
+  },
+
 
   {
     path: '**', component: LoginComponent
