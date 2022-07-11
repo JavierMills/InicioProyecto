@@ -22,7 +22,7 @@ import { OperacionInternacionalModule } from './Operacion_Internacional/operacio
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent    
   ],
   imports: [
     AppRoutingModule,
