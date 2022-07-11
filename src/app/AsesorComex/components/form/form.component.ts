@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-// import { LOADIPHLPAPI } from 'dns';
 import { SteperService } from '../steper/steper.service';
+// import { LOADIPHLPAPI } from 'dns';
 
 @Component({
   selector: 'app-form',
@@ -8,7 +8,7 @@ import { SteperService } from '../steper/steper.service';
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent implements OnInit {
-  
+
   alert:boolean = false;
   show: boolean = false;
   public CapturarSolicitud : string = "Capturar Solcitud"
@@ -69,9 +69,9 @@ export class FormComponent implements OnInit {
   moneda:string ="Seleccionar";
 
   steper:any;
-  
-  constructor(private steperService:SteperService) { 
-  
+
+  constructor(private steperService:SteperService) {
+
   }
 
   ngOnInit(): void {
@@ -306,5 +306,5 @@ export class FormComponent implements OnInit {
     this.alert = true;
   }
 
-  
+
 }

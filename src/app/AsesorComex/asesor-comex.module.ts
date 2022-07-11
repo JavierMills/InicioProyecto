@@ -10,8 +10,8 @@ import  { HttpClientModule } from "@angular/common/http";
 import { TableComponent } from './components/table/table.component';
 import { registerLocaleData } from '@angular/common';
 import localEs from '@angular/common/locales/es';
-import { FormComexTmecComponent } from './components/form-comex-tmec/form-comex-tmec.component'
 import { FormComponent } from './components/form/form.component';
+import { FormComexTmecComponent } from './components/form-comex-tmec/form-comex-tmec.component'
 import { FormPymeComponent } from './components/form-pyme/form-pyme.component';
 import { FormSelectivasComponent } from './components/form-selectivas/form-selectivas.component';
 import { FormTmecComponent } from './components/form-tmec/form-tmec.component';
@@ -26,7 +26,13 @@ import { FormReestructurasComponent } from './components/form-reestructuras/form
 import { TableReestructurasComponent } from './components/table-reestructuras/table-reestructuras.component';
 import { SteperComponent } from './components/steper/steper.component';
 import { SharedModule } from '../shared/shared.module';
-import { FiltroAutomaticasComponent } from './components/filtro-automaticas/filtro-automaticas.component';
+import { FiltroAutomaticasComponent } from './components/Filtros/filtro-automaticas/filtro-automaticas.component';
+import { FiltroSelectivasComponent } from './components/Filtros/filtro-selectivas/filtro-selectivas.component';
+import { FiltroControPymeComponent } from './components/Filtros/filtro-contro-pyme/filtro-contro-pyme.component';
+import { FiltroComexTmecComponent } from './components/Filtros/filtro-comex-tmec/filtro-comex-tmec.component';
+import { FiltroTMECComponent } from './components/Filtros/filtro-tmec/filtro-tmec.component';
+import { FiltroTurismoComponent } from './components/Filtros/filtro-turismo/filtro-turismo.component';
+
 
 registerLocaleData(localEs);
 
@@ -49,7 +55,12 @@ registerLocaleData(localEs);
     TableReestructurasComponent,
     FormReestructurasComponent,
     SteperComponent,
-    FiltroAutomaticasComponent
+    FiltroAutomaticasComponent,
+    FiltroSelectivasComponent,
+    FiltroControPymeComponent,
+    FiltroComexTmecComponent,
+    FiltroTMECComponent,
+    FiltroTurismoComponent
 
   ],
   imports: [

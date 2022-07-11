@@ -1,0 +1,56 @@
+<div class="row" style="width: 90%; text-align: center; margin-left:2%;">
+  <div class="col-sm-2">
+    <label>FOLIO:auto</label>
+  </div>
+  <div class="col-sm-2">
+    <label>SUCURSAL:</label>
+  </div>
+  <div class="col-sm-2">
+    <label>SOLICITADO:</label>
+  </div>
+  <div class="col-sm-2">
+    <label>ESTATUS FOLIO:CONT</label>
+  </div>
+  <div class="col-sm-2">
+    <label>ACREDITADO:</label>
+  </div>
+
+</div>
+<div class="row" style="width: 90%; text-align: center; margin-left:2%;">
+  <div class="col-sm-2">
+    <input type="text">
+  </div>
+  <div class="col-sm-2">
+    <input type="text">
+  </div>
+  <div class="col-sm-2">
+    <input type="text">
+
+  </div>
+  <div class="col-sm-2">
+    <select style="width:100%;height:100%;">
+      <option id="black">{{CapturarSolicitud}}</option>
+      <option id="black">{{ProcesoPendienteAsesorC}}</option>
+      <option id="black">{{EspecialistaComexRech}}</option>
+      <option id="black">{{ProcesoPendienteContraloria}}</option>
+      <option id="black">{{FondosDeFomento}}</option>
+      <option id="black">{{EnviadaNafinet}}</option>
+      <option id="black">{{AprobadoNafinet}}</option>
+      <option id="black">{{RechaxoNafinet}}</option>
+      <option id="black">{{Reproceso}}</option>
+    </select>
+  </div>
+  <div class="col-sm-2">
+    <input type="text">
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-sm-12" style="margin-left: 78%">
+    <button (click)="mostrarTablasContratoPyme()" id="efecto" class="btn btn-primary">Buscar</button>
+    &nbsp;&nbsp;
+    <button id="efecto" class="btn btn-primary">Limpiar</button>
+  </div>
+</div>
+    <app-table-pyme *ngIf="mostrarTablaPyme"></app-table-pyme>
+    <app-form-pyme></app-form-pyme>
