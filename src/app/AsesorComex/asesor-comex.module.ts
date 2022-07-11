@@ -24,7 +24,6 @@ import { TableTmecComponent } from './components/table-tmec/table-tmec.component
 import { TableTurismoComponent } from './components/table-turismo/table-turismo.component';
 import { FormReestructurasComponent } from './components/form-reestructuras/form-reestructuras.component';
 import { TableReestructurasComponent } from './components/table-reestructuras/table-reestructuras.component';
-import { SteperComponent } from './components/steper/steper.component';
 import { SharedModule } from '../shared/shared.module';
 import { FiltroAutomaticasComponent } from './components/filtro-automaticas/filtro-automaticas.component';
 
@@ -48,7 +47,6 @@ registerLocaleData(localEs);
     TableTurismoComponent,
     TableReestructurasComponent,
     FormReestructurasComponent,
-    SteperComponent,
     FiltroAutomaticasComponent
 
   ],

@@ -4,6 +4,7 @@ import { LoginComponent } from './start/login.component';
 import { ModalComponent } from './modal/modal.component';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
+import { SteperComponent } from '../AsesorComex/components/steper/steper.component';
 
 
 
@@ -12,6 +13,7 @@ import { HeaderComponent } from './header/header.component';
     LoginComponent,
     ModalComponent,
     HeaderComponent,
+    SteperComponent
 
   ],
   imports: [
@@ -21,7 +23,8 @@ import { HeaderComponent } from './header/header.component';
   exports:[
     LoginComponent,
     ModalComponent,
-    HeaderComponent
+    HeaderComponent,
+    SteperComponent
   ]
 })
 export class SharedModule { }

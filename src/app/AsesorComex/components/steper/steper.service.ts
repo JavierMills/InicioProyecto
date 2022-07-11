@@ -17,6 +17,7 @@ export class SteperService {
     {paso:"paso9", status:"incompleto"},
     {paso:"paso10", status:"incompleto"}
   ]
+
   
 
   constructor() { 

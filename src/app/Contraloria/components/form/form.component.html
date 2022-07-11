@@ -25,14 +25,14 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="col-sm-3" style="width: 40%; display: flex; justify-content: center; align-items: center; ">
           <label for="">Fecha Solicitud:</label>&nbsp;
           <label for="" style="color: red"><u>{{fecha | date: 'M/d/yyyy'  }}</u></label>&nbsp;&nbsp;
-          <label for="" style="color: red"><img style="height: 18px; width: 18px;" src="../../../../assets/img/flechita.png" alt=""><u>Vobo</u></label>&nbsp;
+          <label (click)="MostrarAlert()" for="" style="color: red"><img style="height: 18px; width: 18px;" src="../../../../assets/img/flechita.png" alt=""><u>Vobo</u></label>&nbsp;
           <label for="" style="color: red"><img style="height: 18px; width: 18px;" src="../../../../assets/img/equis.png" alt=""><u>Rechazar</u></label>
         </div>
       </div>
 
        <br />
 
-       <!-- <app-steper></app-steper> -->
+       <app-steper></app-steper>
 
        <br />
 
