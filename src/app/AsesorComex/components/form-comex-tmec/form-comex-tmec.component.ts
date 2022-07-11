@@ -9,7 +9,7 @@ import { SteperService } from '../steper/steper.service';
 export class FormComexTmecComponent implements OnInit {
   alert:boolean = false;
   steper:any;
-  
+
   fecha: Date = new Date();
   show: boolean = false;
 

@@ -80,49 +80,49 @@ export class ComponentsComponent implements OnInit {
     this.esconderF = false;
   }
 
-  mostrarTablasAutomaticas() {
-    this.mostrarTablaAutomaticas = true;
-    this.mostrarTablaComextmec = false;
-    this.mostrarTablaPyme = false;
-    this.mostrarTablaSelectivas = false;
-    this.mostrarTablaTmec = false;
-    this.mostrarTablaTurismo = false;
-    this.mostrarTablaReestructura = false;
+  // mostrarTablasAutomaticas() {
+  //   this.mostrarTablaAutomaticas = true;
+  //   this.mostrarTablaComextmec = false;
+  //   this.mostrarTablaPyme = false;
+  //   this.mostrarTablaSelectivas = false;
+  //   this.mostrarTablaTmec = false;
+  //   this.mostrarTablaTurismo = false;
+  //   this.mostrarTablaReestructura = false;
 
-  }
+  // }
 
-  mostrarTablasSelectivas() {
-    this.mostrarTablaAutomaticas = false;
-    this.mostrarTablaComextmec = false;
-    this.mostrarTablaPyme = false;
-    this.mostrarTablaSelectivas = true;
-    this.mostrarTablaTmec = false;
-    this.mostrarTablaTurismo = false;
-    this.mostrarTablaReestructura = false;
+  // mostrarTablasSelectivas() {
+  //   this.mostrarTablaAutomaticas = false;
+  //   this.mostrarTablaComextmec = false;
+  //   this.mostrarTablaPyme = false;
+  //   this.mostrarTablaSelectivas = true;
+  //   this.mostrarTablaTmec = false;
+  //   this.mostrarTablaTurismo = false;
+  //   this.mostrarTablaReestructura = false;
 
-  }
+  // }
 
-  mostrarTablasContratoPyme() {
-    this.mostrarTablaAutomaticas = false;
-    this.mostrarTablaComextmec = false;
-    this.mostrarTablaPyme = true;
-    this.mostrarTablaSelectivas = false;
-    this.mostrarTablaTmec = false;
-    this.mostrarTablaTurismo = false;
-    this.mostrarTablaReestructura = false;
+  // mostrarTablasContratoPyme() {
+  //   this.mostrarTablaAutomaticas = false;
+  //   this.mostrarTablaComextmec = false;
+  //   this.mostrarTablaPyme = true;
+  //   this.mostrarTablaSelectivas = false;
+  //   this.mostrarTablaTmec = false;
+  //   this.mostrarTablaTurismo = false;
+  //   this.mostrarTablaReestructura = false;
 
-  }
+  // }
 
-  mostrarTablasComexTmec() {
-    this.mostrarTablaAutomaticas = false;
-    this.mostrarTablaComextmec = true;
-    this.mostrarTablaPyme = false;
-    this.mostrarTablaSelectivas = false;
-    this.mostrarTablaTmec = false;
-    this.mostrarTablaTurismo = false;
-    this.mostrarTablaReestructura = false;
+  // mostrarTablasComexTmec() {
+  //   this.mostrarTablaAutomaticas = false;
+  //   this.mostrarTablaComextmec = true;
+  //   this.mostrarTablaPyme = false;
+  //   this.mostrarTablaSelectivas = false;
+  //   this.mostrarTablaTmec = false;
+  //   this.mostrarTablaTurismo = false;
+  //   this.mostrarTablaReestructura = false;
 
-  }
+  // }
 
   mostrarTablasTurismo() {
     this.mostrarTablaAutomaticas = false;
@@ -137,16 +137,16 @@ export class ComponentsComponent implements OnInit {
 
 
 
-  mostrarTablasTmec() {
-    this.mostrarTablaAutomaticas = false;
-    this.mostrarTablaComextmec = false;
-    this.mostrarTablaPyme = false;
-    this.mostrarTablaSelectivas = false;
-    this.mostrarTablaTmec = true;
-    this.mostrarTablaTurismo = false;
-    this.mostrarTablaReestructura = false;
+  // mostrarTablasTmec() {
+  //   this.mostrarTablaAutomaticas = false;
+  //   this.mostrarTablaComextmec = false;
+  //   this.mostrarTablaPyme = false;
+  //   this.mostrarTablaSelectivas = false;
+  //   this.mostrarTablaTmec = true;
+  //   this.mostrarTablaTurismo = false;
+  //   this.mostrarTablaReestructura = false;
 
-  }
+  // }
   mostrarTablasReestructuras() {
     this.mostrarTablaAutomaticas = false;
     this.mostrarTablaComextmec = false;

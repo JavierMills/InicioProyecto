@@ -1,0 +1,36 @@
+<div class="row" style="text-align: center">
+  <div class="col-sm-3">
+    <label>FOLIO:</label>&nbsp;
+    <input type="text" />
+  </div>
+  <div class="col-sm-3">
+    <label>SOLICITADO:</label>&nbsp;
+    <input type="text" />
+  </div>
+  <div class="col-sm-3">
+    <label>ESTATUS FOLIO:tmec</label>&nbsp;
+    <select style="width: 60%; height: 60%">
+      <option>{{CapturarSolicitud}}</option>
+      <option>{{ProcesoPendienteAsesorC}}</option>
+      <option>{{EspecialistaComexRech}}</option>
+      <option>{{ProcesoPendienteContraloria}}</option>
+      <option>{{ProcesoPendienteCartera}}</option>
+      <option>{{FondosDeFomento}}</option>
+      <option>{{EnviadaNafinet}}</option>
+      <option>{{AprobadoNafinet}}</option>
+      <option>{{RechaxoNafinet}}</option>
+      <option>{{Reproceso}}</option>
+    </select>
+  </div>
+  <br />
+  <br />
+</div>
+<div class="row">
+  <div class="col-sm-12" style="margin-left: 78%">
+    <button (click)="mostrarTablasTmec()" id="efecto" class="btn btn-primary">Buscar</button>
+    &nbsp;&nbsp;
+    <button id="efecto" class="btn btn-primary">Limpiar</button>
+  </div>
+</div>
+<app-table-tmec *ngIf="mostrarTablaTmec"></app-table-tmec>
+<app-form-tmec></app-form-tmec>
