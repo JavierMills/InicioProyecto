@@ -31,6 +31,7 @@ import { FiltroControPymeComponent } from './components/Filtros/filtro-contro-py
 import { FiltroComexTmecComponent } from './components/Filtros/filtro-comex-tmec/filtro-comex-tmec.component';
 import { FiltroTMECComponent } from './components/Filtros/filtro-tmec/filtro-tmec.component';
 import { FiltroTurismoComponent } from './components/Filtros/filtro-turismo/filtro-turismo.component';
+import { FiltroReestructurasComponent } from './components/Filtros/filtro-reestructuras/filtro-reestructuras.component';
 
 
 registerLocaleData(localEs);
@@ -53,17 +54,13 @@ registerLocaleData(localEs);
     TableTurismoComponent,
     TableReestructurasComponent,
     FormReestructurasComponent,
-<<<<<<< HEAD
-    SteperComponent,
     FiltroAutomaticasComponent,
     FiltroSelectivasComponent,
-    FiltroControPymeComponent,
     FiltroComexTmecComponent,
+    FiltroControPymeComponent,
     FiltroTMECComponent,
-    FiltroTurismoComponent
-=======
-    FiltroAutomaticasComponent
->>>>>>> ce30e380cab3c609d22c35f86716591b58fc9690
+    FiltroTurismoComponent,
+    FiltroReestructurasComponent
 
   ],
   imports: [
@@ -73,7 +70,15 @@ registerLocaleData(localEs);
     FormsModule,
     SharedModule
   ],
-
+  exports:[
+    FiltroAutomaticasComponent,
+    FiltroSelectivasComponent,
+    FiltroComexTmecComponent,
+    FiltroControPymeComponent,
+    FiltroTMECComponent,
+    FiltroTurismoComponent,
+    FiltroReestructurasComponent
+  ],
   providers:[
     {
       provide: LOCALE_ID,
