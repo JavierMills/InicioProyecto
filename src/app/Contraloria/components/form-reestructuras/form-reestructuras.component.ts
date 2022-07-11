@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SteperService } from 'src/app/AsesorComex/components/steper/steper.service';
 
 @Component({
   selector: 'app-form-reestructuras',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form-reestructuras.component.scss']
 })
 export class FormReestructurasComponent implements OnInit {
-
+  alert:boolean = false;
   fecha: Date = new Date();
   show: boolean = false;
 
@@ -46,7 +47,12 @@ export class FormReestructurasComponent implements OnInit {
   entidadFinanciera:string = "Seleccionar";
   moneda:string ="Seleccionar";
 
-  constructor() { }
+  steper:any;
+
+  constructor(private steperService:SteperService) {
+    this.steper = this.steperService.setActive("paso4");
+  }
+
 
   ngOnInit(): void {
     this.esconder;
@@ -240,6 +246,15 @@ export class FormReestructurasComponent implements OnInit {
     this.moneda = "Seleccionar";
     let com = prompt ('Ingresa un comentario por el rechazo de Moneda', "");
     alert(`Tu comentario es: ${com}.`)
+  }
+
+  closeAlert(){
+    this.alert = false;
+  }
+
+  MostrarAlert(){
+    this.steper = this.steperService.setActive("paso5");
+    this.alert = true;
   }
 
 }

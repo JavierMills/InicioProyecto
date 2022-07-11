@@ -21,6 +21,7 @@ import { TableReestructurtasComponent } from './components/table-reestructurtas/
 import { FormReestructurasComponent } from './components/form-reestructuras/form-reestructuras.component';
 import { FormHoteleroComponent } from './components/form-hotelero/form-hotelero.component';
 import { TableHoteleroComponent } from './components/table-hotelero/table-hotelero.component';
+import { AsesorComexModule } from '../AsesorComex/asesor-comex.module';
 
 
 @NgModule({
@@ -42,13 +43,14 @@ import { TableHoteleroComponent } from './components/table-hotelero/table-hotele
     TableReestructurtasComponent,
     FormReestructurasComponent,
     FormHoteleroComponent,
-    TableHoteleroComponent
+    TableHoteleroComponent,
   ],
   imports: [
     CommonModule,
     DataTablesModule,
     FormsModule,
-    SharedModule
+    SharedModule,
+    AsesorComexModule
   ],
   exports:[
     ContraloriaComponent

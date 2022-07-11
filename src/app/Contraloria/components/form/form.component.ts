@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SteperService } from 'src/app/AsesorComex/components/steper/steper.service';
 
 @Component({
   selector: 'app-form',
@@ -68,8 +69,8 @@ export class FormComponent implements OnInit {
 
   steper:any;
 
-  constructor() {
-
+  constructor(private steperService:SteperService) {
+    this.steper = this.steperService.setActive("paso4");
   }
 
   ngOnInit(): void {
@@ -299,8 +300,8 @@ export class FormComponent implements OnInit {
     this.alert = false;
   }
 
-  // MostrarAlert(){
-  //   this.steper = this.steperService.setActive("paso4");
-  //   this.alert = true;
-  // }
+  MostrarAlert(){
+    this.steper = this.steperService.setActive("paso5");
+    this.alert = true;
+  }
 }
