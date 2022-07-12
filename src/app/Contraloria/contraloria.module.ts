@@ -49,8 +49,7 @@ import { AsesorComexModule } from '../AsesorComex/asesor-comex.module';
     CommonModule,
     DataTablesModule,
     FormsModule,
-    SharedModule,
-    AsesorComexModule
+    SharedModule
   ],
   exports:[
     ContraloriaComponent

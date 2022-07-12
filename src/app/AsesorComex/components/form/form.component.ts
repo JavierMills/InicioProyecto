@@ -10,6 +10,9 @@ import { SteperService } from '../steper/steper.service';
 })
 export class FormComponent implements OnInit {
 
+  mostrarComentario:boolean = false;
+  comentario:string = "";
+  fechacompleta:any = "";
   alert:boolean = false;
   show: boolean = false;
   public CapturarSolicitud : string = "Capturar Solcitud"
@@ -307,5 +310,14 @@ export class FormComponent implements OnInit {
     this.alert = true;
   }
 
+  agregarComentairo(){
+    this.mostrarComentario = true;
+    let fecha = new Date();
 
+    let fechaformato = `${fecha.getFullYear()}-${fecha.getMonth()+1}-${fecha.getDate()}`;
+    let hora = `${fecha.getHours()}-${fecha.getMinutes()+1}-${fecha.getSeconds()}`;
+
+    this.fechacompleta = fechaformato + " " + hora + " " + "Comentario" + " " + "Jose Rodriguez Arias" + " ";
+
+  }
 }

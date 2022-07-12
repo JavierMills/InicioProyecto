@@ -53,17 +53,13 @@ registerLocaleData(localEs);
     TableTurismoComponent,
     TableReestructurasComponent,
     FormReestructurasComponent,
-<<<<<<< HEAD
-    SteperComponent,
     FiltroAutomaticasComponent,
     FiltroSelectivasComponent,
     FiltroControPymeComponent,
     FiltroComexTmecComponent,
     FiltroTMECComponent,
-    FiltroTurismoComponent
-=======
+    FiltroTurismoComponent,
     FiltroAutomaticasComponent
->>>>>>> ce30e380cab3c609d22c35f86716591b58fc9690
 
   ],
   imports: [

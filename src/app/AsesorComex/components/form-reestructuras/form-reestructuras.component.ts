@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormReestructurasComponent implements OnInit {
 
+  mostrarComentario:boolean = false;
+  comentario:string = "";
+  fechacompleta:any = "";
+
   show: boolean = false;
   public CapturarSolicitud : string = "Capturar Solcitud"
   public ProcesoPendienteAsesorC : string = "Proceso Pendiente Asesor Comex"
@@ -290,4 +294,14 @@ export class FormReestructurasComponent implements OnInit {
     alert(`Tu comentario es: ${com}.`)
   }
 
+  agregarComentairo(){
+    this.mostrarComentario = true;
+    let fecha = new Date();
+
+    let fechaformato = `${fecha.getFullYear()}-${fecha.getMonth()+1}-${fecha.getDate()}`;
+    let hora = `${fecha.getHours()}-${fecha.getMinutes()+1}-${fecha.getSeconds()}`;
+
+    this.fechacompleta = fechaformato + " " + hora + " " + "Comentario" + " " + "Jose Rodriguez Arias" + " ";
+
+  }
 }
