@@ -16,28 +16,22 @@
             <ul class="navbar-nav">
               <li class="nav-item dropdown">
                 <label data-bs-toggle="dropdown" style="color:white;"><b id="black">Solicitar Credito</b></label>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="width: 180%; background-color: #2D2D2D; color: white;">
                   <div >
-                    <!-- <li><a class="dropdown-item" *ngIf="garantiaA != garantiaA">{{garantiaA}}</a></li> -->
-                    <li><a class="dropdown-item" *ngIf="garantiaA === garantiaA" data-bs-toggle="modal" data-bs-target="#garantiaA">{{garantiaA}}</a></li>
+                    <li class="hoverBlack" *ngIf="garantiaA === garantiaA" data-bs-toggle="modal" data-bs-target="#garantiaA">{{garantiaA}}</li>
 
-                    <!-- <li><a class="dropdown-item" *ngIf="garantiaS!= garantiaS">{{garantiaS}}</a></li> -->
-                    <li><a class="dropdown-item" *ngIf="garantiaS === garantiaS" data-bs-toggle="modal" data-bs-target="#garantiaS">{{garantiaS}}</a></li>
+                    <li class="hoverBlack" *ngIf="garantiaS === garantiaS" data-bs-toggle="modal" data-bs-target="#garantiaS">{{garantiaS}}</li>
 
-                    <!-- <li><a class="dropdown-item" *ngIf="contratoPYME!= contratoPYME">{{contratoPYME}}</a></li> -->
-                    <li><a class="dropdown-item" *ngIf="contratoPYME === contratoPYME" data-bs-toggle="modal" data-bs-target="#contratoPYME">{{contratoPYME}}</a></li>
+                    <li class="hoverBlack" *ngIf="garantiaTMEC === garantiaTMEC" data-bs-toggle="modal" data-bs-target="#garantiaTMEC">{{garantiaTMEC}}</li>
 
-                    <!-- <li><a class="dropdown-item" *ngIf="garantiaTMEC!= garantiaTMEC">{{garantiaTMEC}}</a></li> -->
-                    <li><a class="dropdown-item" *ngIf="garantiaTMEC === garantiaTMEC" data-bs-toggle="modal" data-bs-target="#garantiaTMEC">{{garantiaTMEC}}</a></li>
 
-                    <!-- <li><a class="dropdown-item" *ngIf="garantiaT!= garantiaT">{{garantiaT}}</a></li> -->
-                    <li><a class="dropdown-item" *ngIf="garantiaT === garantiaT" data-bs-toggle="modal" data-bs-target="#garantiaT">{{garantiaT}}</a></li>
+                    <li class="hoverBlack" *ngIf="contratoPYME === contratoPYME" data-bs-toggle="modal" data-bs-target="#contratoPYME">{{contratoPYME}}</li>
 
-                    <li><a class="dropdown-item" *ngIf="garantiaCOMEXTMEC!= garantiaCOMEXTMEC">{{garantiaCOMEXTMEC}}</a></li>
-                    <!-- <li><a class="dropdown-item" *ngIf="garantiaCOMEXTMEC === garantiaCOMEXTMEC" data-bs-toggle="modal" data-bs-target="#garantiaCOMEXTMEC">{{garantiaCOMEXTMEC}}</a></li> -->
+                    <li class="hoverBlack" *ngIf="garantiaCOMEXTMEC === garantiaCOMEXTMEC" data-bs-toggle="modal" data-bs-target="#garantiaCOMEXTMEC">{{garantiaCOMEXTMEC}}</li>
 
-                    <!-- <li><a class="dropdown-item" *ngIf="res!= res">{{res}}</a></li> -->
-                    <li><a class="dropdown-item" *ngIf="res === res" data-bs-toggle="modal" data-bs-target="#garantiaR">{{res}}</a></li>
+                    <li  class="hoverBlack"  *ngIf="garantiaT === garantiaT" data-bs-toggle="modal" data-bs-target="#garantiaT">{{garantiaT}}</li>
+
+                    <li class="hoverBlack" *ngIf="res === res" data-bs-toggle="modal" data-bs-target="#garantiaR">{{res}}</li>
                   </div>
                 </ul>
               </li>
@@ -46,13 +40,13 @@
             <ul class="navbar-nav">
               <li class="nav-item dropdown">
                 <label data-bs-toggle="dropdown" (click)="inicio()" style="color:white;"><b id="black">Solicitudes</b></label>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="width: 240%; background-color: #2D2D2D; color: white;">
                   <li (click)="mostrarAutomatica()" id="black">{{Automaticas}}</li>
                     <li (click)="mostrarSelectiva()" id="black">{{Selectivas}}</li>
+                    <li (click)="mostrarTMEC()" id="black">{{TMEC}}</li>
                     <li (click)="mostrarPYME()" id="black">{{Contrato_PYME}}</li>
                     <li (click)="mostrarComexTMEC()" id="black">{{Comex_TMEC}}</li>
                     <li (click)="mostrarTurismo()" id="black">{{Turismo}}</li>
-                    <li (click)="mostrarTMEC()" id="black">{{TMEC}}</li>
                     <li (click)="mostrarReestructuras()" id="black">{{Reestructuras}}</li>
                 </ul>
               </li>
@@ -68,10 +62,10 @@
             <ul class="navbar-nav">
               <li class="nav-item dropdown">
                 <label data-bs-toggle="dropdown" style="color:white;"><b id="black">Programas</b></label>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#modalGarantias">Buscar Grantias de cliente</a></li>
-                  <li><a class="dropdown-item">Catalogo de Programas</a></li>
-                  <li><a class="dropdown-item" >Alta de Programas</a></li>
+                <ul class="dropdown-menu " aria-labelledby="navbarDropdownMenuLink" style="background-color: #2D2D2D; width: 240%;">
+                  <li style="color: white;" class="hoverBlack" data-bs-toggle="modal" data-bs-target="#modalGarantias">Buscar Grantias de cliente</li>
+                  <li style="color: white;" class="hoverBlack">Catalogo de Programas</li>
+                  <li style="color: white;" class="hoverBlack">Alta de Programas</li>
                 </ul>
               </li>
             </ul>
@@ -79,8 +73,8 @@
             <ul class="navbar-nav">
               <li class="nav-item dropdown">
                 <label data-bs-toggle="dropdown" style="color:white;"><b id="black">Reportes</b></label>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item"  (click)="mostrarReportes()">Solicitudes Realizadas</a></li>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color: #2D2D2D; color: white;">
+                  <li><a class="dropdown-item" style="color: white;"  (click)="mostrarReportes()">Solicitudes Realizadas</a></li>
 
                 </ul>
               </li>
@@ -105,355 +99,49 @@
 
       <div *ngIf="!mostrarSolicitudAutomatica && !mostrarSolicitudSelectiva && !mostrarContratoPyme && !mostrarSolicitudTMEC
       && !mostrarSolicitudComexTMEC && !mostrarSolicitudTurismo && !mostrarSolicitudReestructura">
-        <div class="row" style="width: 90%; text-align: center; margin-left:2%;">
-          <div class="col-sm-2">
-            <label>FOLIO:auto</label>
-          </div>
-          <div class="col-sm-2">
-            <label>SUCURSAL:</label>
-          </div>
-          <div class="col-sm-2">
-            <label>SOLICITADO:</label>
-          </div>
-          <div class="col-sm-2">
-            <label>ESTATUS FOLIO:Auto</label>
-          </div>
-          <div class="col-sm-2">
-            <label>ACREDITADO:</label>
-          </div>
-          <div class="col-sm-2">
-            <label>ACREDITADO:</label>
-          </div>
-        </div>
-        <div class="row" style="width: 90%; text-align: center; margin-left:2%;">
-          <div class="col-sm-2">
-            <input type="text">
-          </div>
-          <div class="col-sm-2">
-            <input type="text">
-          </div>
-          <div class="col-sm-2">
-            <input type="text">
-          </div>
-          <div class="col-sm-2">
-            <select style="width:100%;height:100%;">
-              <option id="black">{{CapturarSolicitud}}</option>
-              <option id="black">{{ProcesoPendienteAsesorC}}</option>
-              <option id="black">{{EspecialistaComexRech}}</option>
-              <option id="black">{{ProcesoPendienteContraloria}}</option>
-              <option id="black">{{FondosDeFomento}}</option>
-              <option id="black">{{EnviadaNafinet}}</option>
-              <option id="black">{{AprobadoNafinet}}</option>
-              <option id="black">{{RechaxoNafinet}}</option>
-              <option id="black">{{Reproceso}}</option>
-            </select>
-          </div>
-          <div class="col-sm-2">
-            <input type="text">
-          </div>
-          <div class="col-sm-2">
-            <input type="text">
-          </div>
-        </div>
-        <br>
-        <div class="row">
-          <div class="col-sm-12" style="margin-left: 78%">
-            <button id="efecto" (click)="mostrarTablasAutomaticas()" class="btn btn-primary">Buscar</button>
-            &nbsp;&nbsp;
-            <button id="efecto" class="btn btn-primary">Limpiar</button>
-          </div>
-        </div>
+        <app-filtro-automaticas></app-filtro-automaticas>
       </div>
 
       <div *ngIf="mostrarSolicitudAutomatica" class="content">
-        <div class="row" style="text-align: center">
-          <div class="col-sm-3">
-            <label>FOLIO:</label>&nbsp;
-            <input type="text" />
-          </div>
-          <div class="col-sm-3">
-            <label>SOLICITADO:</label>&nbsp;
-            <input type="text" />
-          </div>
-          <div class="col-sm-3">
-            <label >ESTATUS FOLIO:AUTOMATICA</label>&nbsp;
-            <select style="width: 60%; height: 60%">
-              <option>{{CapturarSolicitud}}</option>
-              <option>{{ProcesoPendienteAsesorC}}</option>
-              <option>{{EspecialistaComexRech}}</option>
-              <option>{{ProcesoPendienteContraloria}}</option>
-              <option>{{ProcesoPendienteCartera}}</option>
-              <option>{{FondosDeFomento}}</option>
-              <option>{{EnviadaNafinet}}</option>
-              <option>{{AprobadoNafinet}}</option>
-              <option>{{RechaxoNafinet}}</option>
-              <option>{{Reproceso}}</option>
-            </select>
-          </div>
-          <br />
-          <br />
-        </div>
-        <div class="row">
-          <div class="col-sm-12" style="margin-left: 78%">
-            <button id="efecto" (click)="mostrarTablasAutomaticas()" class="btn btn-primary">Buscar</button>
-            &nbsp;&nbsp;
-            <button id="efecto" class="btn btn-primary">Limpiar</button>
-          </div>
-        </div>
+        <app-filtro-automaticas></app-filtro-automaticas>
         <hr />
-
       </div>
 
       <div *ngIf="mostrarSolicitudSelectiva" class="content">
-        <div class="row" style="text-align: center">
-          <div class="col-sm-3">
-            <label>FOLIO:</label>&nbsp;
-            <input type="text" />
-          </div>
-          <div class="col-sm-3">
-            <label>SOLICITADO:</label>&nbsp;
-            <input type="text" />
-          </div>
-          <div class="col-sm-3">
-            <label>ESTATUS FOLIO:Selectiva</label>&nbsp;
-            <select style="width: 60%; height: 60%">
-              <option>{{CapturarSolicitud}}</option>
-              <option>{{ProcesoPendienteAsesorC}}</option>
-              <option>{{EspecialistaComexRech}}</option>
-              <option>{{ProcesoPendienteContraloria}}</option>
-              <option>{{ProcesoPendienteCartera}}</option>
-              <option>{{FondosDeFomento}}</option>
-              <option>{{EnviadaNafinet}}</option>
-              <option>{{AprobadoNafinet}}</option>
-              <option>{{RechaxoNafinet}}</option>
-              <option>{{Reproceso}}</option>
-            </select>
-          </div>
-          <br />
-          <br />
-        </div>
-        <div class="row">
-          <div class="col-sm-12" style="margin-left: 78%">
-            <button id="efecto" (click)="mostrarTablasSelectivas()" class="btn btn-primary">Buscar</button>
-            &nbsp;&nbsp;
-            <button id="efecto" class="btn btn-primary">Limpiar</button>
-          </div>
-        </div>
+        <app-filtro-selectivas></app-filtro-selectivas>
         <hr />
-
-
-
       </div>
       <!-- hasta aqui selectiva-->
       <!-- pyme desde aqui -->
       <div *ngIf="mostrarContratoPyme" class="content">
-        <div class="row" style="text-align: center">
-          <div class="col-sm-3">
-            <label>FOLIO:</label>&nbsp;
-            <input type="text" />
-          </div>
-          <div class="col-sm-3">
-            <label>SOLICITADO:</label>&nbsp;
-            <input type="text" />
-          </div>
-          <div class="col-sm-3">
-            <label>ESTATUS FOLIO:PYME</label>&nbsp;
-            <select style="width: 60%; height: 60%">
-              <option>{{CapturarSolicitud}}</option>
-              <option>{{ProcesoPendienteAsesorC}}</option>
-              <option>{{EspecialistaComexRech}}</option>
-              <option>{{ProcesoPendienteContraloria}}</option>
-              <option>{{ProcesoPendienteCartera}}</option>
-              <option>{{FondosDeFomento}}</option>
-              <option>{{EnviadaNafinet}}</option>
-              <option>{{AprobadoNafinet}}</option>
-              <option>{{RechaxoNafinet}}</option>
-              <option>{{Reproceso}}</option>
-            </select>
-          </div>
-          <br />
-          <br />
-        </div>
-        <div class="row">
-          <div class="col-sm-12" style="margin-left: 78%">
-            <button (click)="mostrarTablasContratoPyme()" id="efecto" class="btn btn-primary">Buscar</button>
-            &nbsp;&nbsp;
-            <button id="efecto" class="btn btn-primary">Limpiar</button>
-          </div>
-        </div>
+        <app-filtro-contro-pyme></app-filtro-contro-pyme>
         <hr />
-
-
-
       </div>
       <!-- hasta aqui -->
       <!-- desde aqui comextmec -->
       <div *ngIf="mostrarSolicitudComexTMEC" class="content">
-        <div class="row" style="text-align: center">
-          <div class="col-sm-3">
-            <label>FOLIO:</label>&nbsp;
-            <input type="text" />
-          </div>
-          <div class="col-sm-3">
-            <label>SOLICITADO:</label>&nbsp;
-            <input type="text" />
-          </div>
-          <div class="col-sm-3">
-            <label>ESTATUS FOLIO:comextmec</label>&nbsp;
-            <select style="width: 60%; height: 60%">
-              <option>{{CapturarSolicitud}}</option>
-              <option>{{ProcesoPendienteAsesorC}}</option>
-              <option>{{EspecialistaComexRech}}</option>
-              <option>{{ProcesoPendienteContraloria}}</option>
-              <option>{{ProcesoPendienteCartera}}</option>
-              <option>{{FondosDeFomento}}</option>
-              <option>{{EnviadaNafinet}}</option>
-              <option>{{AprobadoNafinet}}</option>
-              <option>{{RechaxoNafinet}}</option>
-              <option>{{Reproceso}}</option>
-            </select>
-          </div>
-          <br />
-          <br />
-        </div>
-        <div class="row">
-          <div class="col-sm-12" style="margin-left: 78%">
-            <button (click)="mostrarTablasComexTmec()" id="efecto" class="btn btn-primary">Buscar</button>
-            &nbsp;&nbsp;
-            <button id="efecto" class="btn btn-primary">Limpiar</button>
-          </div>
-        </div>
+        <app-filtro-comex-tmec></app-filtro-comex-tmec>
         <hr />
       </div>
       <!-- hasta aqui -->
        <!-- desde aqui tmec -->
        <div *ngIf="mostrarSolicitudTMEC" class="content">
-        <div class="row" style="text-align: center">
-          <div class="col-sm-3">
-            <label>FOLIO:</label>&nbsp;
-            <input type="text" />
-          </div>
-          <div class="col-sm-3">
-            <label>SOLICITADO:</label>&nbsp;
-            <input type="text" />
-          </div>
-          <div class="col-sm-3">
-            <label>ESTATUS FOLIO:tmec</label>&nbsp;
-            <select style="width: 60%; height: 60%">
-              <option>{{CapturarSolicitud}}</option>
-              <option>{{ProcesoPendienteAsesorC}}</option>
-              <option>{{EspecialistaComexRech}}</option>
-              <option>{{ProcesoPendienteContraloria}}</option>
-              <option>{{ProcesoPendienteCartera}}</option>
-              <option>{{FondosDeFomento}}</option>
-              <option>{{EnviadaNafinet}}</option>
-              <option>{{AprobadoNafinet}}</option>
-              <option>{{RechaxoNafinet}}</option>
-              <option>{{Reproceso}}</option>
-            </select>
-          </div>
-          <br />
-          <br />
-        </div>
-        <div class="row">
-          <div class="col-sm-12" style="margin-left: 78%">
-            <button (click)="mostrarTablasTmec()" id="efecto" class="btn btn-primary">Buscar</button>
-            &nbsp;&nbsp;
-            <button id="efecto" class="btn btn-primary">Limpiar</button>
-          </div>
-        </div>
+       <app-filtro-tmec></app-filtro-tmec>
         <hr />
       </div>
       <!-- hasta aqui -->
       <!-- desde aqui tmec -->
       <div *ngIf="mostrarSolicitudTurismo" class="content">
-        <div class="row" style="text-align: center">
-          <div class="col-sm-3">
-            <label>FOLIO:</label>&nbsp;
-            <input type="text" />
-          </div>
-          <div class="col-sm-3">
-            <label>SOLICITADO:</label>&nbsp;
-            <input type="text" />
-          </div>
-          <div class="col-sm-3">
-            <label>ESTATUS FOLIO:Turismo</label>&nbsp;
-            <select style="width: 60%; height: 60%">
-              <option>{{CapturarSolicitud}}</option>
-              <option>{{ProcesoPendienteAsesorC}}</option>
-              <option>{{EspecialistaComexRech}}</option>
-              <option>{{ProcesoPendienteContraloria}}</option>
-              <option>{{ProcesoPendienteCartera}}</option>
-              <option>{{FondosDeFomento}}</option>
-              <option>{{EnviadaNafinet}}</option>
-              <option>{{AprobadoNafinet}}</option>
-              <option>{{RechaxoNafinet}}</option>
-              <option>{{Reproceso}}</option>
-            </select>
-          </div>
-          <br />
-          <br />
-        </div>
-        <div class="row">
-          <div class="col-sm-12" style="margin-left: 78%">
-            <button (click)="mostrarTablasTurismo()" id="efecto" class="btn btn-primary">Buscar</button>
-            &nbsp;&nbsp;
-            <button id="efecto" class="btn btn-primary">Limpiar</button>
-          </div>
-        </div>
+        <app-filtro-turismo></app-filtro-turismo>
         <hr />
       </div>
       <!-- hasta aqui -->
       <div *ngIf="mostrarSolicitudReestructura" class="content">
-        <div class="row" style="text-align: center">
-          <div class="col-sm-3">
-            <label>FOLIO:</label>&nbsp;
-            <input type="text" />
-          </div>
-          <div class="col-sm-3">
-            <label>SOLICITADO:</label>&nbsp;
-            <input type="text" />
-          </div>
-          <div class="col-sm-3">
-            <label>ESTATUS FOLIO:Reestructuras</label>&nbsp;
-            <select style="width: 60%; height: 60%">
-              <option>{{CapturarSolicitud}}</option>
-              <option>{{ProcesoPendienteAsesorC}}</option>
-              <option>{{EspecialistaComexRech}}</option>
-              <option>{{ProcesoPendienteContraloria}}</option>
-              <option>{{ProcesoPendienteCartera}}</option>
-              <option>{{FondosDeFomento}}</option>
-              <option>{{EnviadaNafinet}}</option>
-              <option>{{AprobadoNafinet}}</option>
-              <option>{{RechaxoNafinet}}</option>
-              <option>{{Reproceso}}</option>
-            </select>
-          </div>
-          <br />
-          <br />
-        </div>
-        <div class="row">
-          <div class="col-sm-12" style="margin-left: 78%">
-            <button (click)="mostrarTablasReestructuras()" id="efecto" class="btn btn-primary">Buscar</button>
-            &nbsp;&nbsp;
-            <button id="efecto" class="btn btn-primary">Limpiar</button>
-          </div>
-        </div>
+       <app-filtro-reestructuras></app-filtro-reestructuras>
         <hr />
       </div>
 
       <br><br>
-
-      <div style="z-index:1;">
-
-        <app-table *ngIf="mostrarTablaAutomaticas"></app-table>
-        <app-table-comex-tmec *ngIf="mostrarTablaComextmec"></app-table-comex-tmec>
-        <app-table-pyme *ngIf="mostrarTablaPyme"></app-table-pyme>
-        <app-table-selectivas *ngIf="mostrarTablaSelectivas"></app-table-selectivas>
-        <app-table-tmec *ngIf="mostrarTablaTmec"></app-table-tmec>
-        <app-table-turismo *ngIf="mostrarTablaTurismo"></app-table-turismo>
-        <app-table-reestructuras *ngIf="mostrarTablaReestructura"></app-table-reestructuras>
-          </div>
     </form>
 
   </div>
@@ -461,14 +149,13 @@
   <div>
   </div>
 
-
-  <app-form></app-form>
-  <app-form-comex-tmec></app-form-comex-tmec>
-  <app-form-pyme></app-form-pyme>
-  <app-form-selectivas></app-form-selectivas>
-  <app-form-tmec></app-form-tmec>
-  <app-form-turismo></app-form-turismo>
-  <app-form-reestructuras></app-form-reestructuras>
+    <app-form></app-form>
+    <app-form-comex-tmec></app-form-comex-tmec>
+    <app-form-pyme></app-form-pyme>
+    <app-form-selectivas></app-form-selectivas>
+    <app-form-tmec></app-form-tmec>
+    <app-form-turismo></app-form-turismo>
+    <app-form-reestructuras></app-form-reestructuras>
 
 <app-consultagarantia></app-consultagarantia>
 <div>
