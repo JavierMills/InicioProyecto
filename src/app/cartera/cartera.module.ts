@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CarteraComponent } from './pages/cartera/cartera.component';
 import { NavComponent } from './components/nav/nav.component';
-import { TableComponent } from './components/table/table.component';
 import { SharedModule } from '../shared/shared.module';
+import { AsesorComexModule } from '../AsesorComex/asesor-comex.module';
 
 
 
@@ -11,11 +11,11 @@ import { SharedModule } from '../shared/shared.module';
   declarations: [
     CarteraComponent,
     NavComponent,
-    TableComponent
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    AsesorComexModule
   ],
   exports:[
     CarteraComponent

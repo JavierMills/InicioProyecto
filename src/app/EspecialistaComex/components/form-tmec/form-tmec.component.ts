@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class FormTMECComponent implements OnInit {
 
   show:boolean = false;
+  fecha : Date = new Date()
 
   esconder:boolean = false;
   esconderF:boolean = true;

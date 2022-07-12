@@ -50,56 +50,7 @@
 
     <div *ngIf="!mostrarSolicitudAutomatica && !mostrarSolicitudSelectiva && !mostrarSolicitudTMEC
     && !mostrarSolicitudComexTMEC && !mostrarSolicitudTurismo && !mostrarSolicitudReestructuras && !mostrarSolicitudHotelero">
-      <div class="row" style="width: 90%; text-align: center; margin-left:2%;">
-        <div class="col-sm-2">
-          <label>FOLIO:auto</label>
-        </div>
-        <div class="col-sm-2">
-          <label>SUCURSAL:</label>
-        </div>
-        <div class="col-sm-2">
-          <label>SOLICITADO:</label>
-        </div>
-        <div class="col-sm-2">
-          <label>ESTATUS FOLIO:Auto</label>
-        </div>
-        <div class="col-sm-2">
-          <label>ACREDITADO:</label>
-        </div>
-        <div class="col-sm-2">
-          <label>ACREDITADO:</label>
-        </div>
-      </div>
-      <div class="row" style="width: 90%; text-align: center; margin-left:2%;">
-        <div class="col-sm-2">
-          <input type="text">
-        </div>
-        <div class="col-sm-2">
-          <input type="text">
-        </div>
-        <div class="col-sm-2">
-          <input type="text">
-        </div>
-        <div class="col-sm-2">
-          <select style="width:100%;height:100%;">
-            <option id="black">{{CapturarSolicitud}}</option>
-            <option id="black">{{ProcesoPendienteAsesorC}}</option>
-            <option id="black">{{EspecialistaComexRech}}</option>
-            <option id="black">{{ProcesoPendienteContraloria}}</option>
-            <option id="black">{{FondosDeFomento}}</option>
-            <option id="black">{{EnviadaNafinet}}</option>
-            <option id="black">{{AprobadoNafinet}}</option>
-            <option id="black">{{RechaxoNafinet}}</option>
-            <option id="black">{{Reproceso}}</option>
-          </select>
-        </div>
-        <div class="col-sm-2">
-          <input type="text">
-        </div>
-        <div class="col-sm-2">
-          <input type="text">
-        </div>
-      </div>
+      <app-filtro-automaticas></app-filtro-automaticas>
       <br>
       <div class="row">
         <div class="col-sm-12" style="margin-left: 78%">
@@ -200,7 +151,6 @@
 </div>
 <app-form></app-form>
 <app-form-comex-tmec></app-form-comex-tmec>
-<!-- <app-form-pyme></app-form-pyme> -->
 <app-form-selectivas></app-form-selectivas>
 <app-form-tmec></app-form-tmec>
 <app-form-turismo></app-form-turismo>

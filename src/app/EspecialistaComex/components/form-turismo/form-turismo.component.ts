@@ -9,6 +9,8 @@ export class FormTURISMOComponent implements OnInit {
 
   show:boolean = false;
 
+  fecha: Date = new Date()
+
   esconder:boolean = false;
   esconderF:boolean = true;
   esconderT:boolean = false;

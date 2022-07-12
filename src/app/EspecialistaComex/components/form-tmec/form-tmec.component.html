@@ -26,7 +26,7 @@
          </div>
          <div class="col-sm-3">
            <label for="">Fecha Solicitud:</label>&nbsp;
-           <label for="" style="color: red"><u>23/05/22</u></label>
+           <label for="" style="color: red"><u>{{fecha | date: 'M/d/yyyy'  }}</u></label>
          </div>
        </div>
 
@@ -559,18 +559,15 @@
                    <div class="col-sm-3">
                      <input type="text" disabled />
                    </div>
+                   <div class="d-grid gap-2 col-6 mx-auto">
+                    <button class="btn btn-danger mt-3" type="button" *ngIf="show">Generar Solicitud</button>
+                 </div>
                  </div>
                </div>
              </div>
            </div>
          </div>
        </div>
-     </div>
-     <div class="modal-footer" *ngIf="show">
-       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-         Close
-       </button>
-       <button type="button" class="btn btn-primary" >Understood</button>
      </div>
    </div>
  </div>

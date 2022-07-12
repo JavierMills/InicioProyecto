@@ -8,6 +8,8 @@ import { FormsModule } from '@angular/forms';
 })
 export class FormComponent implements OnInit {
 
+  fecha: Date = new Date();
+
   show:boolean = false;
 
   esconder:boolean = false;
