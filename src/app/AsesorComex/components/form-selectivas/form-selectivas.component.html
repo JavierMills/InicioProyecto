@@ -530,6 +530,13 @@
                       <input type="text" disabled />
                     </div>
                   </div>
+                  <div class="row">
+                    <div class="input-group mb-12">
+                      <input type="text" [(ngModel)]="comentario" id="comentario" name="comentario" class="form-control" placeholder="Agregar Comentario" aria-label="Recipient's username" aria-describedby="button-addon2">
+                      <button class="btn btn-outline-secondary" type="button" id="agregar" (click)="agregarComentairo()"><b>+</b></button>
+                    </div>
+                    <label for="" *ngIf="mostrarComentario">{{fechacompleta}}{{comentario}}</label>
+                  </div>
                 </div>
               </div>
             </div>

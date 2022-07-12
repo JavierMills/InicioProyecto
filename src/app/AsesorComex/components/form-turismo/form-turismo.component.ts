@@ -7,6 +7,9 @@ import { SteperService } from '../steper/steper.service';
   styleUrls: ['./form-turismo.component.scss']
 })
 export class FormTurismoComponent implements OnInit {
+  mostrarComentario:boolean = false;
+  comentario:string = "";
+  fechacompleta:any = "";
   steper:any;
   alert:boolean = false;
   show: boolean = false;
@@ -250,5 +253,16 @@ export class FormTurismoComponent implements OnInit {
   MostrarAlert(){
     this.steper = this.steperService.setActive("paso4");
     this.alert = true;
+  }
+
+  agregarComentairo(){
+    this.mostrarComentario = true;
+    let fecha = new Date();
+
+    let fechaformato = `${fecha.getFullYear()}-${fecha.getMonth()+1}-${fecha.getDate()}`;
+    let hora = `${fecha.getHours()}-${fecha.getMinutes()+1}-${fecha.getSeconds()}`;
+
+    this.fechacompleta = fechaformato + " " + hora + " " + "Comentario" + " " + "Jose Rodriguez Arias" + " ";
+
   }
 }
