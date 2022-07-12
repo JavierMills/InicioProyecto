@@ -9,7 +9,7 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
          Solicitud de Credito- Reestructuras
        </h5>
        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-     </div>s
+     </div>
      <div class="modal-body">
        <div class="row" style="background-color: #e3e7ec">
          <div class="col-sm-3">
@@ -27,7 +27,7 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
          </div>
          <div class="col-sm-3">
            <label for="">Fecha Solicitud:</label>&nbsp;
-           <label for="" style="color: red"><u>23/05/22</u></label>
+           <label for="" style="color: red"><u>{{fecha | date: 'M/d/yyyy'  }}</u></label>
          </div>
        </div>
 
@@ -560,18 +560,15 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
                    <div class="col-sm-3">
                      <input type="text" disabled />
                    </div>
+                   <div class="d-grid gap-2 col-6 mx-auto">
+                    <button class="btn btn-danger mt-3" type="button" *ngIf="show">Generar Solicitud</button>
+                 </div>
                  </div>
                </div>
              </div>
            </div>
          </div>
        </div>
-     </div>
-     <div class="modal-footer" *ngIf="show">
-       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-         Close
-       </button>
-       <button type="button" class="btn btn-primary" >Understood</button>
      </div>
    </div>
  </div>

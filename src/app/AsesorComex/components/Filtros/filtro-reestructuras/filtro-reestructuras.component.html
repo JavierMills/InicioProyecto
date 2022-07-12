@@ -8,7 +8,7 @@
     <input type="text" />
   </div>
   <div class="col-sm-3">
-    <label>ESTATUS FOLIO:tur</label>&nbsp;
+    <label>ESTATUS FOLIO:Reestructuras</label>&nbsp;
     <select style="width: 60%; height: 60%">
       <option>{{CapturarSolicitud}}</option>
       <option>{{ProcesoPendienteAsesorC}}</option>
@@ -27,10 +27,10 @@
 </div>
 <div class="row">
   <div class="col-sm-12" style="margin-left: 78%">
-    <button (click)="mostrarTablasTurismo()" id="efecto" class="btn btn-primary">Buscar</button>
+    <button (click)="mostrarTablasReestructuras()" id="efecto" class="btn btn-primary">Buscar</button>
     &nbsp;&nbsp;
     <button id="efecto" class="btn btn-primary">Limpiar</button>
   </div>
 </div>
 <br>
-<app-table-turismo *ngIf="mostrarTablaTurismo"></app-table-turismo>
+<app-table-reestructuras *ngIf="mostrarTablaReestructura"></app-table-reestructuras>

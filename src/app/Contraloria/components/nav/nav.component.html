@@ -20,12 +20,11 @@
                 <div>
                   <li (click)="mostrarAutomatica()" id="black">{{Automaticas}}</li>
                   <li (click)="mostrarSelectiva()" id="black">{{Selectivas}}</li>
-                  <li (click)="mostrarPYME()" id="black">{{Contrato_PYME}}</li>
+                  <li (click)="mostrarTMEC()" id="black">{{TMEC}}</li>
+                  <li (click)="mostrarHotelero()" id="black">{{Hotel}}</li>
                   <li (click)="mostrarComexTMEC()" id="black">{{Comex_TMEC}}</li>
                   <li (click)="mostrarTurismo()" id="black">{{Turismo}}</li>
-                  <li (click)="mostrarTMEC()" id="black">{{TMEC}}</li>
                   <li (click)="mostrarReestructuras()" id="black">{{Rees}}</li>
-                  <li (click)="mostrarHotelero()" id="black">{{Hotel}}</li>
                 </div>
               </ul>
             </li>
@@ -49,58 +48,9 @@
     <br>
 
 
-    <div *ngIf="!mostrarSolicitudAutomatica && !mostrarSolicitudSelectiva && !mostrarContratoPyme && !mostrarSolicitudTMEC
+    <div *ngIf="!mostrarSolicitudAutomatica && !mostrarSolicitudSelectiva && !mostrarSolicitudTMEC
     && !mostrarSolicitudComexTMEC && !mostrarSolicitudTurismo && !mostrarSolicitudReestructuras && !mostrarSolicitudHotelero">
-      <div class="row" style="width: 90%; text-align: center; margin-left:2%;">
-        <div class="col-sm-2">
-          <label>FOLIO:auto</label>
-        </div>
-        <div class="col-sm-2">
-          <label>SUCURSAL:</label>
-        </div>
-        <div class="col-sm-2">
-          <label>SOLICITADO:</label>
-        </div>
-        <div class="col-sm-2">
-          <label>ESTATUS FOLIO:Auto</label>
-        </div>
-        <div class="col-sm-2">
-          <label>ACREDITADO:</label>
-        </div>
-        <div class="col-sm-2">
-          <label>ACREDITADO:</label>
-        </div>
-      </div>
-      <div class="row" style="width: 90%; text-align: center; margin-left:2%;">
-        <div class="col-sm-2">
-          <input type="text">
-        </div>
-        <div class="col-sm-2">
-          <input type="text">
-        </div>
-        <div class="col-sm-2">
-          <input type="text">
-        </div>
-        <div class="col-sm-2">
-          <select style="width:100%;height:100%;">
-            <option id="black">{{CapturarSolicitud}}</option>
-            <option id="black">{{ProcesoPendienteAsesorC}}</option>
-            <option id="black">{{EspecialistaComexRech}}</option>
-            <option id="black">{{ProcesoPendienteContraloria}}</option>
-            <option id="black">{{FondosDeFomento}}</option>
-            <option id="black">{{EnviadaNafinet}}</option>
-            <option id="black">{{AprobadoNafinet}}</option>
-            <option id="black">{{RechaxoNafinet}}</option>
-            <option id="black">{{Reproceso}}</option>
-          </select>
-        </div>
-        <div class="col-sm-2">
-          <input type="text">
-        </div>
-        <div class="col-sm-2">
-          <input type="text">
-        </div>
-      </div>
+      <app-filtro-automaticas></app-filtro-automaticas>
       <br>
       <div class="row">
         <div class="col-sm-12" style="margin-left: 78%">
@@ -112,77 +62,13 @@
     </div>
 
     <div *ngIf="mostrarSolicitudAutomatica" class="content">
-      <div class="row" style="text-align: center">
-        <div class="col-sm-3">
-          <label>FOLIO:</label>&nbsp;
-          <input type="text" />
-        </div>
-        <div class="col-sm-3">
-          <label>SOLICITADO:</label>&nbsp;
-          <input type="text" />
-        </div>
-        <div class="col-sm-3">
-          <label >ESTATUS FOLIO:AUTOMATICA</label>&nbsp;
-          <select style="width: 60%; height: 60%">
-            <option>{{CapturarSolicitud}}</option>
-            <option>{{ProcesoPendienteAsesorC}}</option>
-            <option>{{EspecialistaComexRech}}</option>
-            <option>{{ProcesoPendienteContraloria}}</option>
-            <option>{{FondosDeFomento}}</option>
-            <option>{{EnviadaNafinet}}</option>
-            <option>{{AprobadoNafinet}}</option>
-            <option>{{RechaxoNafinet}}</option>
-            <option>{{Reproceso}}</option>
-          </select>
-        </div>
-        <br />
-        <br />
-      </div>
-      <div class="row">
-        <div class="col-sm-12" style="margin-left: 78%">
-          <button id="efecto" (click)="mostrarTablasAutomaticas()" class="btn btn-primary">Buscar</button>
-          &nbsp;&nbsp;
-          <button id="efecto" class="btn btn-primary">Limpiar</button>
-        </div>
-      </div>
+      <app-filtro-automaticas></app-filtro-automaticas>
       <hr />
 
     </div>
 
     <div *ngIf="mostrarSolicitudSelectiva" class="content">
-      <div class="row" style="text-align: center">
-        <div class="col-sm-3">
-          <label>FOLIO:</label>&nbsp;
-          <input type="text" />
-        </div>
-        <div class="col-sm-3">
-          <label>SOLICITADO:</label>&nbsp;
-          <input type="text" />
-        </div>
-        <div class="col-sm-3">
-          <label>ESTATUS FOLIO:Selectiva</label>&nbsp;
-          <select style="width: 60%; height: 60%">
-            <option>{{CapturarSolicitud}}</option>
-            <option>{{ProcesoPendienteAsesorC}}</option>
-            <option>{{EspecialistaComexRech}}</option>
-            <option>{{ProcesoPendienteContraloria}}</option>
-            <option>{{FondosDeFomento}}</option>
-            <option>{{EnviadaNafinet}}</option>
-            <option>{{AprobadoNafinet}}</option>
-            <option>{{RechaxoNafinet}}</option>
-            <option>{{Reproceso}}</option>
-          </select>
-        </div>
-        <br />
-        <br />
-      </div>
-      <div class="row">
-        <div class="col-sm-12" style="margin-left: 78%">
-          <button id="efecto" (click)="mostrarTablasSelectivas()" class="btn btn-primary">Buscar</button>
-          &nbsp;&nbsp;
-          <button id="efecto" class="btn btn-primary">Limpiar</button>
-        </div>
-      </div>
+      <app-filtro-selectivas></app-filtro-selectivas>
       <hr />
 
 
@@ -191,39 +77,7 @@
     <!-- hasta aqui selectiva-->
     <!-- pyme desde aqui -->
     <div *ngIf="mostrarContratoPyme" class="content">
-      <div class="row" style="text-align: center">
-        <div class="col-sm-3">
-          <label>FOLIO:</label>&nbsp;
-          <input type="text" />
-        </div>
-        <div class="col-sm-3">
-          <label>SOLICITADO:</label>&nbsp;
-          <input type="text" />
-        </div>
-        <div class="col-sm-3">
-          <label>ESTATUS FOLIO:PYME</label>&nbsp;
-          <select style="width: 60%; height: 60%">
-            <option>{{CapturarSolicitud}}</option>
-            <option>{{ProcesoPendienteAsesorC}}</option>
-            <option>{{EspecialistaComexRech}}</option>
-            <option>{{ProcesoPendienteContraloria}}</option>
-            <option>{{FondosDeFomento}}</option>
-            <option>{{EnviadaNafinet}}</option>
-            <option>{{AprobadoNafinet}}</option>
-            <option>{{RechaxoNafinet}}</option>
-            <option>{{Reproceso}}</option>
-          </select>
-        </div>
-        <br />
-        <br />
-      </div>
-      <div class="row">
-        <div class="col-sm-12" style="margin-left: 78%">
-          <button (click)="mostrarTablasContratoPyme()" id="efecto" class="btn btn-primary">Buscar</button>
-          &nbsp;&nbsp;
-          <button id="efecto" class="btn btn-primary">Limpiar</button>
-        </div>
-      </div>
+      <app-filtro-contro-pyme></app-filtro-contro-pyme>
       <hr />
 
 
@@ -232,115 +86,19 @@
     <!-- hasta aqui -->
     <!-- desde aqui comextmec -->
     <div *ngIf="mostrarSolicitudComexTMEC" class="content">
-      <div class="row" style="text-align: center">
-        <div class="col-sm-3">
-          <label>FOLIO:</label>&nbsp;
-          <input type="text" />
-        </div>
-        <div class="col-sm-3">
-          <label>SOLICITADO:</label>&nbsp;
-          <input type="text" />
-        </div>
-        <div class="col-sm-3">
-          <label>ESTATUS FOLIO:comextmec</label>&nbsp;
-          <select style="width: 60%; height: 60%">
-            <option>{{CapturarSolicitud}}</option>
-            <option>{{ProcesoPendienteAsesorC}}</option>
-            <option>{{EspecialistaComexRech}}</option>
-            <option>{{ProcesoPendienteContraloria}}</option>
-            <option>{{FondosDeFomento}}</option>
-            <option>{{EnviadaNafinet}}</option>
-            <option>{{AprobadoNafinet}}</option>
-            <option>{{RechaxoNafinet}}</option>
-            <option>{{Reproceso}}</option>
-          </select>
-        </div>
-        <br />
-        <br />
-      </div>
-      <div class="row">
-        <div class="col-sm-12" style="margin-left: 78%">
-          <button (click)="mostrarTablasComexTmec()" id="efecto" class="btn btn-primary">Buscar</button>
-          &nbsp;&nbsp;
-          <button id="efecto" class="btn btn-primary">Limpiar</button>
-        </div>
-      </div>
+      <app-filtro-comex-tmec></app-filtro-comex-tmec>
       <hr />
     </div>
     <!-- hasta aqui -->
      <!-- desde aqui tmec -->
      <div *ngIf="mostrarSolicitudTMEC" class="content">
-      <div class="row" style="text-align: center">
-        <div class="col-sm-3">
-          <label>FOLIO:</label>&nbsp;
-          <input type="text" />
-        </div>
-        <div class="col-sm-3">
-          <label>SOLICITADO:</label>&nbsp;
-          <input type="text" />
-        </div>
-        <div class="col-sm-3">
-          <label>ESTATUS FOLIO:tmec</label>&nbsp;
-          <select style="width: 60%; height: 60%">
-            <option>{{CapturarSolicitud}}</option>
-            <option>{{ProcesoPendienteAsesorC}}</option>
-            <option>{{EspecialistaComexRech}}</option>
-            <option>{{ProcesoPendienteContraloria}}</option>
-            <option>{{FondosDeFomento}}</option>
-            <option>{{EnviadaNafinet}}</option>
-            <option>{{AprobadoNafinet}}</option>
-            <option>{{RechaxoNafinet}}</option>
-            <option>{{Reproceso}}</option>
-          </select>
-        </div>
-        <br />
-        <br />
-      </div>
-      <div class="row">
-        <div class="col-sm-12" style="margin-left: 78%">
-          <button (click)="mostrarTablasTmec()" id="efecto" class="btn btn-primary">Buscar</button>
-          &nbsp;&nbsp;
-          <button id="efecto" class="btn btn-primary">Limpiar</button>
-        </div>
-      </div>
+      <app-filtro-tmec></app-filtro-tmec>
       <hr />
     </div>
     <!-- hasta aqui -->
     <!-- desde aqui tmec -->
     <div *ngIf="mostrarSolicitudTurismo" class="content">
-      <div class="row" style="text-align: center">
-        <div class="col-sm-3">
-          <label>FOLIO:</label>&nbsp;
-          <input type="text" />
-        </div>
-        <div class="col-sm-3">
-          <label>SOLICITADO:</label>&nbsp;
-          <input type="text" />
-        </div>
-        <div class="col-sm-3">
-          <label>ESTATUS FOLIO:Turismo</label>&nbsp;
-          <select style="width: 60%; height: 60%">
-            <option>{{CapturarSolicitud}}</option>
-            <option>{{ProcesoPendienteAsesorC}}</option>
-            <option>{{EspecialistaComexRech}}</option>
-            <option>{{ProcesoPendienteContraloria}}</option>
-            <option>{{FondosDeFomento}}</option>
-            <option>{{EnviadaNafinet}}</option>
-            <option>{{AprobadoNafinet}}</option>
-            <option>{{RechaxoNafinet}}</option>
-            <option>{{Reproceso}}</option>
-          </select>
-        </div>
-        <br />
-        <br />
-      </div>
-      <div class="row">
-        <div class="col-sm-12" style="margin-left: 78%">
-          <button (click)="mostrarTablasTurismo()" id="efecto" class="btn btn-primary">Buscar</button>
-          &nbsp;&nbsp;
-          <button id="efecto" class="btn btn-primary">Limpiar</button>
-        </div>
-      </div>
+      <app-filtro-turismo></app-filtro-turismo>
       <hr />
     </div>
     <!-- hasta aqui -->
@@ -382,57 +140,10 @@
     </div>
 
     <div *ngIf="mostrarSolicitudReestructuras" class="content">
-      <div class="row" style="text-align: center">
-        <div class="col-sm-3">
-          <label>FOLIO:</label>&nbsp;
-          <input type="text" />
-        </div>
-        <div class="col-sm-3">
-          <label>SOLICITADO:</label>&nbsp;
-          <input type="text" />
-        </div>
-        <div class="col-sm-3">
-          <label>ESTATUS FOLIO:Rees</label>&nbsp;
-          <select style="width: 60%; height: 60%">
-            <option>{{CapturarSolicitud}}</option>
-            <option>{{ProcesoPendienteAsesorC}}</option>
-            <option>{{EspecialistaComexRech}}</option>
-            <option>{{ProcesoPendienteContraloria}}</option>
-            <option>{{FondosDeFomento}}</option>
-            <option>{{EnviadaNafinet}}</option>
-            <option>{{AprobadoNafinet}}</option>
-            <option>{{RechaxoNafinet}}</option>
-            <option>{{Reproceso}}</option>
-          </select>
-        </div>
-        <br />
-        <br />
-      </div>
-      <div class="row">
-        <div class="col-sm-12" style="margin-left: 78%">
-          <button (click)="mostrarTablasReestructuras()" id="efecto" class="btn btn-primary">Buscar</button>
-          &nbsp;&nbsp;
-          <button id="efecto" class="btn btn-primary">Limpiar</button>
-        </div>
-      </div>
+      <app-filtro-reestructuras></app-filtro-reestructuras>
       <hr />
     </div>
     <br><br>
-
-    <app-table *ngIf="mostrarTablaAutomaticas"></app-table>
-    <app-table-comex-tmec *ngIf="mostrarTablaComextmec"></app-table-comex-tmec>
-    <app-table-pyme *ngIf="mostrarTablaPyme"></app-table-pyme>
-    <app-table-selectivas *ngIf="mostrarTablaSelectivas"></app-table-selectivas>
-    <app-table-tmec *ngIf="mostrarTablaTmec"></app-table-tmec>
-    <app-table-turismo *ngIf="mostrarTablaTurismo"></app-table-turismo>
-    <app-table-hotelero *ngIf="mostrarTablaHotelero"></app-table-hotelero>
-    <app-table-reestructurtas *ngIf="mostrarTablaReestructuras"></app-table-reestructurtas>
-
-
-
-
-
-
   </form>
 
 </div>
@@ -440,7 +151,6 @@
 </div>
 <app-form></app-form>
 <app-form-comex-tmec></app-form-comex-tmec>
-<app-form-pyme></app-form-pyme>
 <app-form-selectivas></app-form-selectivas>
 <app-form-tmec></app-form-tmec>
 <app-form-turismo></app-form-turismo>

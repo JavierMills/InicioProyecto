@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormSelectivasComponent implements OnInit {
 
+  fecha : Date = new Date()
+
   show:boolean = false;
 
   esconder:boolean = false;

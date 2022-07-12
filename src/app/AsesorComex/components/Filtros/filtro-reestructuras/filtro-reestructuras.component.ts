@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-filtro-turismo',
-  templateUrl: './filtro-turismo.component.html',
-  styleUrls: ['./filtro-turismo.component.scss']
+  selector: 'app-filtro-reestructuras',
+  templateUrl: './filtro-reestructuras.component.html',
+  styleUrls: ['./filtro-reestructuras.component.scss']
 })
-export class FiltroTurismoComponent implements OnInit {
+export class FiltroReestructurasComponent implements OnInit {
 
-  public mostrarTablaTurismo : boolean =false;
-
+  public mostrarTablaReestructura : boolean = false;
 
   public CapturarSolicitud: string = 'Capturar Solcitud';
   public ProcesoPendienteAsesorC: string = 'Proceso Pendiente Asesor Comex';
@@ -21,13 +20,13 @@ export class FiltroTurismoComponent implements OnInit {
   public RechaxoNafinet: string = 'Rechazo Nafinet';
   public Reproceso: string = 'Reproceso';
 
+  mostrarTablasReestructuras() {
+    this.mostrarTablaReestructura = true;
+  }
+
   constructor() { }
 
   ngOnInit(): void {
-  }
-  mostrarTablasTurismo() {
-    this.mostrarTablaTurismo = true;
-
   }
 
 }
