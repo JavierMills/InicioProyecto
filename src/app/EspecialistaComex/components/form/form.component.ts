@@ -22,7 +22,7 @@ export class FormComponent implements OnInit {
   steper:any;
 
   constructor(private steperService:SteperService) {
-    this.steper = this.steperService.setActive("paso1");
+    this.steperService.setActive("paso1");
   }
 
   ngOnInit(): void {
