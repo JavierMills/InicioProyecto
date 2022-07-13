@@ -52,7 +52,8 @@ export class FormSelectivasComponent implements OnInit {
   entidadFinanciera:string = "Seleccionar";
   moneda:string ="Seleccionar";
 
-  constructor(private steperService:SteperService) { }
+  constructor(private steperService:SteperService) { 
+  }
 
   ngOnInit(): void {
     this.esconder;
@@ -253,7 +254,7 @@ export class FormSelectivasComponent implements OnInit {
   }
 
   MostrarAlert(){
-    this.steper = this.steperService.setActive("paso4");
+    this.steper = this.steperService.setActive("paso2");
     this.alert = true;
   }
 

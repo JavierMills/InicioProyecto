@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
+import { SteperService } from '../steper/steper.service';
 
 @Component({
   selector: 'app-table',
@@ -14,7 +15,7 @@ export class TableComponent implements OnInit, OnDestroy {
 
   allUsers: any = [];
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private steperService:SteperService) { }
 
   ngOnInit(): void {
     this.dtOptions = {
@@ -32,6 +33,10 @@ export class TableComponent implements OnInit, OnDestroy {
 
 ngOnDestroy(): void {
   this.dtTrigger.unsubscribe();
+}
+
+setMenu(){
+  this.steperService.setMenuOrigen("TablaAutomaticas");
 }
 
 }

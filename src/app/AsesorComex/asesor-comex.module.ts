@@ -60,11 +60,7 @@ registerLocaleData(localEs);
     FiltroControPymeComponent,
     FiltroTMECComponent,
     FiltroTurismoComponent,
-<<<<<<< HEAD
-    FiltroAutomaticasComponent
-=======
     FiltroReestructurasComponent
->>>>>>> 2d8a91e15a00703c9caf163e1352059c1de70630
 
   ],
   imports: [

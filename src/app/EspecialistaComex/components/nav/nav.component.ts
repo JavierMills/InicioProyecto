@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ThisReceiver } from '@angular/compiler';
+import { SteperService } from 'src/app/AsesorComex/components/steper/steper.service';
 
 interface tabla {
   value: string;
@@ -44,7 +45,7 @@ export class NavComponent implements OnInit {
   public hora: string = '';
 
   allUsers: any = [];
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private steperService:SteperService) {}
   esconder: boolean = false;
   esconderF: boolean = true;
   mostrarNavbar: boolean = true;
@@ -143,7 +144,6 @@ export class NavComponent implements OnInit {
 
   }
 
-
   mostrarTablasTmec() {
     this.mostrarTablaAutomaticas = false;
     this.mostrarTablaComextmec = false;
@@ -164,8 +164,6 @@ export class NavComponent implements OnInit {
     this.mostrarTablaReestructura = true;
   }
 
-
-
   mostrarAutomatica() {
     this.mostrarSolicitudAutomatica = true;
     this.mostrarSolicitudSelectiva = false;
@@ -176,6 +174,7 @@ export class NavComponent implements OnInit {
     this.mostrarSolicitudReestructura= false;
 
   }
+
   mostrarSelectiva() {
     this.mostrarSolicitudSelectiva = true;
     this.mostrarSolicitudAutomatica = false;
@@ -186,6 +185,7 @@ export class NavComponent implements OnInit {
     this.mostrarSolicitudReestructura= false;
 
   }
+
   mostrarComexTMEC() {
     this.mostrarSolicitudComexTMEC = true;
     this.mostrarContratoPyme = false;
@@ -228,6 +228,7 @@ export class NavComponent implements OnInit {
     this.mostrarSolicitudReestructura= false;
 
   }
+
   mostrarTMEC() {
     this.mostrarSolicitudTMEC = true;
     this.mostrarContratoPyme = false;
@@ -238,6 +239,7 @@ export class NavComponent implements OnInit {
     this.mostrarSolicitudReestructura= false;
 
   }
+
   mostrarTurismo() {
     this.mostrarSolicitudTurismo = true;
     this.mostrarSolicitudTMEC = false;
@@ -248,6 +250,7 @@ export class NavComponent implements OnInit {
     this.mostrarSolicitudReestructura= false;
 
   }
+  
   mostrarReestructuras() {
     this.mostrarSolicitudReestructura= true;
     this.mostrarSolicitudTurismo = false;
@@ -261,4 +264,9 @@ export class NavComponent implements OnInit {
   mostrarReportes(){
     this.reporte = true;
   }
+
+  setMenu(menu:string){
+    this.steperService.setMenuOrigen(menu);
+  }
+
 }

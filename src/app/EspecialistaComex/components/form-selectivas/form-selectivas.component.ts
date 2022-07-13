@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SteperService } from 'src/app/AsesorComex/components/steper/steper.service';
 
 @Component({
   selector: 'app-form-selectivas',
@@ -10,14 +11,17 @@ export class FormSelectivasComponent implements OnInit {
   fecha : Date = new Date()
 
   show:boolean = false;
-
+  alert:boolean = false;
   esconder:boolean = false;
   esconderF:boolean = true;
   esconderT:boolean = false;
   showModal:boolean = false;
 
+  steper:any;
 
-  constructor() { }
+  constructor(private steperService:SteperService) {
+    this.steper = this.steperService.setActive("paso1");
+  }
 
   ngOnInit(): void {
     this.esconder;
@@ -44,5 +48,13 @@ export class FormSelectivasComponent implements OnInit {
     this.show = true;
   }
 
+  closeAlert(){
+    this.alert = false;
+  }
+
+  MostrarAlert(){
+    this.steper = this.steperService.setActive("paso2");
+    this.alert = true;
+  }
 
 }
