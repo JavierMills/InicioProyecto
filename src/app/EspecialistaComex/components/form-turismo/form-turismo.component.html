@@ -31,51 +31,7 @@
        </div>
 
        <br />
-
-       <div class="row" *ngIf="show">
-        <div class="col-sm-1"></div>
-         <div class="col-sm-1" style="border: 1px solid #A9A9A9; font-size: 90%; background-color: #2184BE; cursor: pointer;">
-           <label for="" style="cursor: pointer;">Capturar Solicitud</label>
-         </div>
-         &nbsp;
-         <div class="col-sm-1" style="border: 1px solid #A9A9A9; font-size: 90%; background-color: #EEEEEE; cursor: not-allowed;">
-           <label for="" style="cursor: not-allowed;">Proceso Pendiente Asesor Comex</label>
-         </div>
-         &nbsp;
-         <div class="col-sm-1" style="border: 1px solid #A9A9A9; font-size: 90%; background-color: #EEEEEE; cursor: not-allowed;">
-           <label for="" style="cursor: not-allowed;">Especialista Comex</label>
-         </div>
-         &nbsp;
-         <div class="col-sm-1" style="border: 1px solid #A9A9A9; font-size: 90%; background-color: #EEEEEE; cursor: not-allowed;">
-           <label for=""style="cursor: not-allowed;">Proceso Pendiente Contraloria</label>
-         </div>
-         &nbsp;
-         <div class="col-sm-1" style="border: 1px solid #A9A9A9; font-size: 90%; background-color: #EEEEEE; cursor: not-allowed;">
-           <label for="" style="cursor: not-allowed;">Proceso Pendiente Cartera</label>
-         </div>
-         &nbsp;
-         <div class="col-sm-1" style="border: 1px solid #A9A9A9; font-size: 90%; background-color: #EEEEEE; cursor: not-allowed;">
-           <label for="" style="cursor: not-allowed;">Fondos de Fomento</label>
-         </div>
-         &nbsp;
-         <div class="col-sm-1" style="border: 1px solid #A9A9A9; font-size: 90%; background-color: #EEEEEE; cursor: not-allowed;">
-           <label for="" style="cursor: not-allowed;">Enviada Nafinet</label>
-         </div>
-         &nbsp;
-         <div class="col-sm-1" style="border: 1px solid #A9A9A9; font-size: 90%; background-color: #EEEEEE; cursor: not-allowed;">
-           <label for="" style="cursor: not-allowed;">Aprobado Nafinet</label>
-         </div>
-         &nbsp;
-         <div class="col-sm-1" style="border: 1px solid #A9A9A9; font-size: 90%; background-color: #EEEEEE; cursor: not-allowed;">
-           <label for="" style="cursor: not-allowed;">Rechazado Nafinet</label>
-         </div>
-         &nbsp;
-         <div class="col-sm-1" style="border: 1px solid #A9A9A9; font-size: 90%; background-color: #EEEEEE; cursor: not-allowed;">
-           <label for="" style="cursor: not-allowed;">Reproceso</label>
-         </div>
-         <div class="col-sm-1"></div>
-       </div>
-
+       <app-steper *ngIf="show"></app-steper>
        <br />
 
        <div class="accordion" id="accordionExample" *ngIf="show">
@@ -559,8 +515,12 @@
                    <div class="col-sm-3">
                      <input type="text" disabled />
                    </div>
+                   <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert" id="myAlert">
+                    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                    <button (click)="closeAlert()" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
                    <div class="d-grid gap-2 col-6 mx-auto">
-                    <button class="btn btn-danger mt-3" type="button" *ngIf="show">Generar Solicitud</button>
+                    <button class="btn btn-danger mt-3" type="button" *ngIf="show" (click)="MostrarAlert()">Generar Solicitud</button>
                  </div>
                  </div>
                </div>

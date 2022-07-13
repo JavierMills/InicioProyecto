@@ -37,6 +37,7 @@ import { RouterModule } from '@angular/router';
     SharedModule,
     AsesorComexModule,
     RouterModule
+
   ],
   exports:[
     ContraloriaComponent

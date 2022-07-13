@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SteperService {
+
+  menuOrigen$ = new BehaviorSubject(null);
 
   steper = [
     {paso:"paso1", status:"completo"},
@@ -15,7 +18,10 @@ export class SteperService {
     {paso:"paso7", status:"incompleto"},
     {paso:"paso8", status:"incompleto"},
     {paso:"paso9", status:"incompleto"},
-    {paso:"paso10", status:"incompleto"}
+    {paso:"paso10", status:"incompleto"},
+    {paso:"paso11", status:"incompleto"},
+    {paso:"paso12", status:"incompleto"},
+    {paso:"paso13", status:"incompleto"}
   ]
 
   
@@ -49,5 +55,13 @@ export class SteperService {
       }
     });
     return status;
+   }
+
+   setMenuOrigen(menu:any){
+    this.menuOrigen$.next(menu);
+   }
+
+   getMenuOrigen():Observable<any>{
+    return this.menuOrigen$;
    }
 }
