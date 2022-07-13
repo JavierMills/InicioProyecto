@@ -515,8 +515,12 @@
                    <div class="col-sm-3">
                      <input type="text" disabled />
                    </div>
+                   <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert" id="myAlert">
+                    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                    <button (click)="closeAlert()" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
                    <div class="d-grid gap-2 col-6 mx-auto">
-                    <button class="btn btn-danger mt-3" type="button" *ngIf="show">Generar Solicitud Selectivas</button>
+                    <button class="btn btn-danger mt-3" type="button" *ngIf="show" (click)="MostrarAlert()">Generar Solicitud</button>
                  </div>
                  </div>
                </div>
