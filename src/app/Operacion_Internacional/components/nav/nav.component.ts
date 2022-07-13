@@ -81,85 +81,6 @@ export class NavComponent implements OnInit {
     this.esconderF = false;
   }
 
-  mostrarTablasAutomaticas() {
-    this.mostrarTablaAutomaticas = true;
-    this.mostrarTablaComextmec = false;
-    this.mostrarTablaPyme = false;
-    this.mostrarTablaSelectivas = false;
-    this.mostrarTablaTmec = false;
-    this.mostrarTablaTurismo = false;
-    this.mostrarTablaReestructura = false;
-
-  }
-
-  mostrarTablasSelectivas() {
-    this.mostrarTablaAutomaticas = false;
-    this.mostrarTablaComextmec = false;
-    this.mostrarTablaPyme = false;
-    this.mostrarTablaSelectivas = true;
-    this.mostrarTablaTmec = false;
-    this.mostrarTablaTurismo = false;
-    this.mostrarTablaReestructura = false;
-
-  }
-
-  mostrarTablasContratoPyme() {
-    this.mostrarTablaAutomaticas = false;
-    this.mostrarTablaComextmec = false;
-    this.mostrarTablaPyme = true;
-    this.mostrarTablaSelectivas = false;
-    this.mostrarTablaTmec = false;
-    this.mostrarTablaTurismo = false;
-    this.mostrarTablaReestructura = false;
-
-  }
-
-  mostrarTablasComexTmec() {
-    this.mostrarTablaAutomaticas = false;
-    this.mostrarTablaComextmec = true;
-    this.mostrarTablaPyme = false;
-    this.mostrarTablaSelectivas = false;
-    this.mostrarTablaTmec = false;
-    this.mostrarTablaTurismo = false;
-    this.mostrarTablaReestructura = false;
-
-  }
-
-  mostrarTablasTurismo() {
-    this.mostrarTablaAutomaticas = false;
-    this.mostrarTablaComextmec = false;
-    this.mostrarTablaPyme = false;
-    this.mostrarTablaSelectivas = false;
-    this.mostrarTablaTmec = false;
-    this.mostrarTablaTurismo = true;
-    this.mostrarTablaReestructura = false;
-
-  }
-
-
-
-  mostrarTablasTmec() {
-    this.mostrarTablaAutomaticas = false;
-    this.mostrarTablaComextmec = false;
-    this.mostrarTablaPyme = false;
-    this.mostrarTablaSelectivas = false;
-    this.mostrarTablaTmec = true;
-    this.mostrarTablaTurismo = false;
-    this.mostrarTablaReestructura = false;
-
-  }
-  mostrarTablasReestructuras() {
-    this.mostrarTablaAutomaticas = false;
-    this.mostrarTablaComextmec = false;
-    this.mostrarTablaPyme = false;
-    this.mostrarTablaSelectivas = false;
-    this.mostrarTablaTmec = false;
-    this.mostrarTablaTurismo = false;
-    this.mostrarTablaReestructura = true;
-  }
-
-
-
   mostrarAutomatica() {
     this.mostrarSolicitudAutomatica = true;
     this.mostrarSolicitudSelectiva = false;
@@ -206,9 +127,6 @@ export class NavComponent implements OnInit {
     this.mostrarTablaTurismo = false;
     this.mostrarSolicitudReestructura= false;
     this.mostrarTablaReestructura = false;
-
-
-
   }
 
   mostrarPYME() {
@@ -250,5 +168,7 @@ export class NavComponent implements OnInit {
     this.mostrarSolicitudSelectiva = false;
     this.mostrarSolicitudComexTMEC = false;
   }
-
 }
+
+
+

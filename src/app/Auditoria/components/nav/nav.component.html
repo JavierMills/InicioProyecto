@@ -1,0 +1,70 @@
+<app-header></app-header>
+<div class="content">
+  <form action="" style="overflow-x: hidden; overflow-y: hidden">
+    <div class="row">
+      <div class="col-sm-6" style="margin-left: 5%">
+        <label><b>Auditoria:</b></label
+        >&nbsp;<label>Jose Rodriguez Arias (Z396773)</label>
+      </div>
+      <div class="col-sm-2"></div>
+      <div class="col-sm-3" style="margin-left: 3%">
+        <label>{{ fecha | date: "EEEE d De MMMM Del y" }}</label>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg" style="background-color: red">
+      <div class="container-fluid" style="margin-left: 5%">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <label data-bs-toggle="dropdown" style="color: white"
+                ><b id="black" class="formato">Descargar Formato</b></label
+              >
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <label style="color: white"
+                ><b id="black">Reportes</b></label
+              >
+            </li>
+          </ul>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              &nbsp;&nbsp;
+              <img
+                src="../../../assets/img/candado.png"
+                alt="cerrar sesion..."
+                style="width: 20px"
+                height="20px"
+              />
+              <label style="color: white"
+                ><b id="black"
+                  ><a class="cerrar" routerLink="">Cerrar Sesion</a></b
+                ></label
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br />
+    <div
+      *ngIf="
+        !mostrarSolicitudAutomatica
+      "
+    >
+    <app-filtro-automaticas></app-filtro-automaticas>
+
+    </div>
+    <br /><br />
+  </form>
+</div>
+<div></div>
+
+<app-form></app-form>
+
+
+

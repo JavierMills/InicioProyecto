@@ -32,6 +32,7 @@ import { FiltroComexTmecComponent } from './components/Filtros/filtro-comex-tmec
 import { FiltroTMECComponent } from './components/Filtros/filtro-tmec/filtro-tmec.component';
 import { FiltroTurismoComponent } from './components/Filtros/filtro-turismo/filtro-turismo.component';
 import { FiltroReestructurasComponent } from './components/Filtros/filtro-reestructuras/filtro-reestructuras.component';
+import { RouterModule } from '@angular/router';
 
 
 registerLocaleData(localEs);
@@ -60,6 +61,7 @@ registerLocaleData(localEs);
     FiltroControPymeComponent,
     FiltroTMECComponent,
     FiltroTurismoComponent,
+    FiltroAutomaticasComponent,
     FiltroReestructurasComponent
 
   ],
@@ -68,7 +70,8 @@ registerLocaleData(localEs);
     DataTablesModule,
     HttpClientModule,
     FormsModule,
-    SharedModule
+    SharedModule,
+    RouterModule
   ],
   exports:[
     FiltroAutomaticasComponent,
@@ -77,7 +80,8 @@ registerLocaleData(localEs);
     FiltroControPymeComponent,
     FiltroTMECComponent,
     FiltroTurismoComponent,
-    FiltroReestructurasComponent
+    FiltroReestructurasComponent,
+    TableComponent
   ],
   providers:[
     {

@@ -13,6 +13,10 @@ import { OperacionesInternacionalesComponent } from './Operacion_Internacional/p
 import { HoteleroComponent } from './Hotelero/pages/hotelero/hotelero.component';
 import { ValidadorComponent } from './Validador/pages/validador/validador.component';
 import { OperacionInternacionalModule } from './Operacion_Internacional/operacion-internacional.module';
+import { RiesgosComponent } from './Riesgos/pages/riesgos/riesgos.component';
+import { AuditoriaComponent } from './Auditoria/pages/auditoria/auditoria.component';
+import { GarantiasComponent } from './Garantias/pages/garantias/garantias.component';
+import { ConsultaComponent } from './Consulta/pages/consulta/consulta.component';
 
 
 
@@ -60,7 +64,25 @@ const routes: Routes = [
 
   },
   {
-    path: 'operaciones', component: OperacionInternacionalModule
+    path: 'operaciones', component: OperacionesInternacionalesComponent
+
+  },
+
+  {
+    path: 'riesgos', component: RiesgosComponent
+
+  },
+  {
+    path: 'auditoria', component: AuditoriaComponent
+
+  },
+  {
+    path: 'garantias', component: GarantiasComponent
+
+  },
+
+  {
+    path: 'consulta', component: ConsultaComponent
 
   },
 

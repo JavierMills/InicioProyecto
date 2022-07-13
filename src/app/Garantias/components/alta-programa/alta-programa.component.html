@@ -1,0 +1,146 @@
+<!-- Modal -->
+<div class="modal fade" id="modalAlta" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: red">
+                <h5 class="modal-title" id="staticBackdropLabel" style="color: white">
+                    Registro nuevo programa
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <label for="">Ingresa los valores para el registro de nueva bolsa o sustitucion de existente</label>
+                <hr>
+                <div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label for=""><b>NUMERO DE PROGRAMA</b>:</label>&nbsp;
+                            <input type="number">
+                            <br>
+                            <br>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <label for=""><b>SELECCIONA EL PROGRAMA:</b></label>&nbsp;
+                        <select>
+                          <option id="black"></option>
+                          <option id="black">{{EmpresasComex}}</option>
+                          <option id="black">{{PymeComex}}</option>
+                          <option id="black">{{GrandesEmpresas}}</option>
+                          <option id="black">{{Automotriz}}</option>
+                          <option id="black">{{Capex}}</option>
+                          <option id="black">{{CEPyme}}</option>
+                          <option id="black">{{CEGrandes}}</option>
+                          <option id="black">{{Reactivacion}}</option>
+                        </select>
+                        <br>
+                        <br>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-3">
+                          <label for=""><b>PORCENTAJE GARANTIZADO:</b></label>&nbsp;
+                          <input type="number" style="background-color: #EEEEEE; cursor: not-allowed;" disabled>
+                          <br>
+                          <br>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-sm-3">
+                          <label for=""><b>PORCENTAJE GARANTIZADO:</b></label>&nbsp;
+                          <input type="number" style="background-color: #EEEEEE; cursor: not-allowed;" disabled>
+                          <br>
+                          <br>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-3">
+                          <label for=""><b>COMISION:</b></label>&nbsp;
+                          <input type="number" style="background-color: #EEEEEE; cursor: not-allowed;" disabled>
+                          <br>
+                          <br>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-3">
+                          <label for=""><b>ETIQUETA ASIGNADA:</b></label>&nbsp;
+                          <input type="number" style="background-color: #EEEEEE; cursor: not-allowed;" disabled>
+                          <br>
+                          <br>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <label for=""><b>SECTORES:</b></label>&nbsp;
+                        <div class="col-sm-3 input-group input-group-sm mb-3">
+                          <input class="form-control" type="number" style="background-color: #EEEEEE; cursor: not-allowed;" disabled>
+                          <br>
+                          <br>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-3">
+                          <label for=""><b>MONEDA:</b></label>&nbsp;
+                          <input type="number" style="background-color: #EEEEEE; cursor: not-allowed;" disabled>
+                          <br>
+                          <br>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-3">
+                          <label for=""><b>MONTO DE BOLSA $:</b></label>&nbsp;
+                          <input type="number" style="background-color: #EEEEEE; cursor: not-allowed;">
+                          <br>
+                          <br>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-3">
+                          <label for=""><b>CONFIRMAR BOLSA $:</b></label>&nbsp;
+                          <input type="number" style="background-color: #EEEEEE; cursor: not-allowed;">
+                          <br>
+                          <br>
+                        </div>
+                      </div>
+                      <div class="row" style="background-color: #FFFFC9;">
+                        <div class="col-sm-3">
+                          <label for=""><b>GARANTIA ALTAIR PESOS:</b></label>&nbsp;
+                          <input type="number" style="background-color: #EEEEEE; cursor: not-allowed;">
+                          <br>
+                          <br>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-3">
+                          <label for=""><b>GARANTIA ALTAIR DOLARES:</b></label>&nbsp;
+                          <input type="number" style="background-color: #EEEEEE; cursor: not-allowed;">
+                          <br>
+                          <br>
+                          <br>
+                          <br>
+                        </div>
+                      </div>
+                      <app-table-seleccion></app-table-seleccion>
+                      <div class="row">
+                        <div class="col-sm-4">
+                          <div class="form-group">
+                            <label for="ejemplo_archivo_1"><b>ADJUNTA EVIDENCIA DE LA ALTA:</b></label>
+                            <input type="file" id="ejemplo_archivo_1">
+                          </div>
+                          <br>
+                          <br>
+                        </div>
+                      </div>
+
+                </div>
+                <br>
+
+            </div>
+            <div class="col-sm-12">
+              <div id="saveCambios">Guardar</div>
+            </div>
+        </div>
+    </div>
+</div>
