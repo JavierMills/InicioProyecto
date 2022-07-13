@@ -263,8 +263,8 @@ export class NavComponent implements OnInit {
     this.reporte = true;
   }
 
-  setMenu(){
-    this.steperService.setMenuOrigen("Automaticas");
+  setMenu(menu:string){
+    this.steperService.setMenuOrigen(menu);
   }
 
 }

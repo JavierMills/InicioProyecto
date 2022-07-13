@@ -18,7 +18,10 @@ export class SteperService {
     {paso:"paso7", status:"incompleto"},
     {paso:"paso8", status:"incompleto"},
     {paso:"paso9", status:"incompleto"},
-    {paso:"paso10", status:"incompleto"}
+    {paso:"paso10", status:"incompleto"},
+    {paso:"paso11", status:"incompleto"},
+    {paso:"paso12", status:"incompleto"},
+    {paso:"paso13", status:"incompleto"}
   ]
 
   
