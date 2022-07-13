@@ -1,0 +1,26 @@
+#saveCambios{
+  cursor: pointer;
+  background: linear-gradient(
+    180deg,
+    rgb(148, 7, 7) 0%,
+    rgb(133, 5, 5) 18.23%,
+    rgb(143, 6, 6) 34.37%,
+    rgb(128, 3, 3) 48.96%,
+    rgb(105, 3, 3) 66.15%,
+    rgb(80, 2, 2) 82.29%,
+    rgb(53, 2, 2) 100%
+  );
+  border-radius: 6px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: 17px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  width: 180px;
+  margin: 15px auto;
+}
+
+#saveCambios:hover {
+  background-color: rgb(53, 2, 2);
+  color: white;
+}

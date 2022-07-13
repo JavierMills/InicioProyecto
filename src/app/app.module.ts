@@ -18,11 +18,14 @@ import { FormsModule } from '@angular/forms';
 import { HoteleroModule } from './Hotelero/hotelero.module';
 import { ValidadorModule } from './Validador/validador.module';
 import { OperacionInternacionalModule } from './Operacion_Internacional/operacion-internacional.module';
-
+import { RiesgosModule } from './Riesgos/riesgos.module';
+import { AuditoriaModule } from './Auditoria/auditoria.module';
+import { GarantiasModule } from './Garantias/garantias.module';
+import { ConsultaModule } from './Consulta/consulta.module';
 
 @NgModule({
   declarations: [
-    AppComponent    
+    AppComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -40,8 +43,11 @@ import { OperacionInternacionalModule } from './Operacion_Internacional/operacio
     HoteleroModule,
     ValidadorModule,
     SharedModule,
-    OperacionInternacionalModule
-
+    OperacionInternacionalModule,
+    RiesgosModule,
+    AuditoriaModule,
+    GarantiasModule,
+    ConsultaModule
 
   ],
   providers: [],

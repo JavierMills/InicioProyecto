@@ -1,0 +1,123 @@
+<app-header></app-header>
+<div class="content">
+  <form action="" style="overflow-x: hidden; overflow-y: hidden">
+    <div class="row">
+      <div class="col-sm-6" style="margin-left: 5%">
+        <label><b>Garantias:</b></label
+        >&nbsp;<label>Jose Rodriguez Arias (Z396773)</label>
+      </div>
+      <div class="col-sm-2"></div>
+      <div class="col-sm-3" style="margin-left: 3%">
+        <label>{{ fecha | date: "EEEE d De MMMM Del y" }}</label>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg" style="background-color: red">
+      <div class="container-fluid" style="margin-left: 5%">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <img
+                src="../../../../assets/img/piz.png"
+                alt="buscar..."
+                style="width: 20px"
+                height="20px"
+              />
+              <label
+                data-bs-toggle="dropdown"
+                style="color: white"
+                (click)="inicio()"
+                ><b id="black">Solicitudes</b></label
+              >
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+                style="width: 240%"
+              >
+                <div>
+                  <li id="black" data-bs-toggle="modal" data-bs-target="#modalGarantias">
+                    Buscar Gtias de cliente
+                  </li>
+                  <li (click)="mostrarGarantias()" id="black">
+                   Catalogo de Programas
+                  </li>
+                  <li data-bs-toggle="modal" data-bs-target="#modalAlta" id="black">
+                   Alta de Programas
+                  </li>
+                </div>
+              </ul>
+            </li>
+          </ul>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <img
+                src="../../../../assets/img/piz.png"
+                alt="buscar..."
+                style="width: 20px"
+                height="20px"
+              />
+              <label
+                data-bs-toggle="dropdown"
+                style="color: white"
+                (click)="inicio()"
+                ><b id="black">Garantias</b></label
+              >
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+                style="width: 240%"
+              >
+                <div>
+                  <li id="black" (click)="mostrarCredito()">
+                    Buscar Gtias de cliente
+                  </li>
+                </div>
+              </ul>
+            </li>
+          </ul>
+          &nbsp;&nbsp;
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              &nbsp;&nbsp;
+              <img
+                src="../../../assets/img/candado.png"
+                alt="cerrar sesion..."
+                style="width: 20px"
+                height="20px"
+              />
+              <label style="color: white"
+                ><b id="black"
+                  ><a class="cerrar" routerLink="">Cerrar Sesion</a></b
+                ></label
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br />
+    <div
+      *ngIf="
+        !mostrarSolicitudGarantias && !mostrarSolicitudCredito
+      "
+    >
+        <app-filtro-automaticas></app-filtro-automaticas>
+
+
+    </div>
+    <div *ngIf="mostrarSolicitudGarantias">
+      <app-catalogo-programas></app-catalogo-programas>
+      </div>
+
+      <div *ngIf="mostrarSolicitudCredito">
+        <app-creditogtia></app-creditogtia>
+        </div>
+
+    <br /><br />
+  </form>
+</div>
+<app-gtia-cliente></app-gtia-cliente>
+<app-alta-programa></app-alta-programa>
+
+
+

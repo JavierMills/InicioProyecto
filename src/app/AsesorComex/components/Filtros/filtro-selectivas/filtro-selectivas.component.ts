@@ -11,17 +11,18 @@ export class FiltroSelectivasComponent implements OnInit {
 
 
   public CapturarSolicitud: string = 'Capturar Solcitud';
-  public ProcesoPendienteAsesorC: string = 'Proceso Pendiente Asesor Comex';
-  public EspecialistaComexRech: string = 'Especialista Comex (Rechazos)';
-  public ProcesoPendienteContraloria: string = 'Proceso Pendiente Contraloría';
-  public ProcesoPendienteCartera: string = 'Proceso Pendiente Cartera';
-  public FondosDeFomento: string = 'Fondos de Fomento';
-  public EnviadaNafinet: string = 'Enviada a Nafinet';
-  public AprobadoNafinet: string = 'Aprobado Nafinet';
-  public RechaxoNafinet: string = 'Rechazo Nafinet';
-  public Reproceso: string = 'Reproceso';
-
-
+  public NegocioInternacional: string = 'Negocio Internacional'
+  public EnvBancomext: string = 'Enviado Bancomext'
+  public EspecialistaComex: string = 'Especialista Comex (Rechazo Docs)'
+  public Observaciones: string = 'Observaciones'
+  public Formalizacion: string = 'Formalizacion Bancomext'
+  public FormalizacionEspecialista: string = 'Formalizacion Especialista'
+  public PPAsesor: string = 'Proceso Pendiente Asesor Comex'
+  public RechazoEspecialista: string = 'Rechazo Especialista Comex'
+  public PPContraliria: string = 'Proceso Pendiente Contraloria'
+  public PPCartera: string = 'Proceso Pendiente Cartera'
+  public FF: string = 'Fondos de Fomento'
+  public Resumen: string = 'Resumen'
 
   constructor() { }
 
