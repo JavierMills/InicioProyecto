@@ -18,7 +18,7 @@
                 <label data-bs-toggle="dropdown" style="color:white;"><b id="black">Solicitar Credito</b></label>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="width: 180%; background-color: #2D2D2D; color: white;">
                   <div >
-                    <li class="hoverBlack" *ngIf="garantiaA === garantiaA" data-bs-toggle="modal" data-bs-target="#garantiaA">{{garantiaA}}</li>
+                    <li class="hoverBlack" *ngIf="garantiaA === garantiaA" data-bs-toggle="modal" data-bs-target="#garantiaA" (click)="setMenu()">{{garantiaA}}</li>
 
                     <li class="hoverBlack" *ngIf="garantiaS === garantiaS" data-bs-toggle="modal" data-bs-target="#garantiaS">{{garantiaS}}</li>
 

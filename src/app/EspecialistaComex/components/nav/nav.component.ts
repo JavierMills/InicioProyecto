@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ThisReceiver } from '@angular/compiler';
+import { SteperService } from 'src/app/AsesorComex/components/steper/steper.service';
 
 interface tabla {
   value: string;
@@ -44,7 +45,7 @@ export class NavComponent implements OnInit {
   public hora: string = '';
 
   allUsers: any = [];
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private steperService:SteperService) {}
   esconder: boolean = false;
   esconderF: boolean = true;
   mostrarNavbar: boolean = true;
@@ -261,4 +262,9 @@ export class NavComponent implements OnInit {
   mostrarReportes(){
     this.reporte = true;
   }
+
+  setMenu(){
+    this.steperService.setMenuOrigen("Automaticas");
+  }
+
 }
