@@ -29,8 +29,8 @@
                 style="width: 240%"
               >
                 <div>
-                  <li  id="black">{{ Stock }}</li>
-                  <li  id="black">{{ Creditos_Gtias }}</li>
+                  <li (click)='mostrarStock()' id="black">{{ Stock }}</li>
+                  <li (click)='mostrarCreditoGarantias()' id="black">{{ Creditos_Gtias }}</li>
 
                   <li (click)="mostrarAutomatica()" id="black">
                     {{ Automaticas }}
@@ -39,18 +39,10 @@
                   <li (click)="mostrarTMEC()" id="black">{{ TMEC }}</li>
 
 
-                  <li (click)="mostrarTurismo()" id="black">{{ Hotelero }}</li>
+                  <li (click)="mostrarHotelero()" id="black">{{ Hotelero }}</li>
 
                 </div>
               </ul>
-            </li>
-          </ul>
-          <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-              &nbsp;&nbsp;&nbsp;&nbsp;
-              <label style="color: white"
-                ><b id="black">Reportes</b></label
-              >
             </li>
           </ul>
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -76,14 +68,34 @@
     <br />
     <div
       *ngIf="
-        !mostrarSolicitudAutomatica
+        !mostrarSolicitudAutomatica && !mostrarSolicitudHotelero && !mostrarSolicitudTMEC &&
+        !mostrarSolicitudGarantias && !mostrarSolicitudStock
       "
     >
     <app-filtro-automaticas></app-filtro-automaticas>
-
     </div>
+
+    <div *ngIf="mostrarSolicitudAutomatica" class="content">
+      <app-filtro-automaticas></app-filtro-automaticas>
+    </div>
+
+    <div *ngIf="mostrarSolicitudHotelero">
+      <app-filtro-hotelero></app-filtro-hotelero>
+    </div>
+
+    <div *ngIf="mostrarSolicitudTMEC" class="content">
+      <app-filtro-tmec></app-filtro-tmec>
+    </div>
+
+    <div *ngIf="mostrarSolicitudGarantias" class="content">
+      <app-creditos-gtia></app-creditos-gtia>
+    </div>
+
+    <div *ngIf="mostrarSolicitudStock" class="content">
+      <app-stock-bancomext></app-stock-bancomext>
+    </div>
+
     <br /><br />
   </form>
 </div>
 <div></div>
-<app-stock-bancomext></app-stock-bancomext>
