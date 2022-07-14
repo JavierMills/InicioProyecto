@@ -14,6 +14,7 @@ import { SharedModule } from '../shared/shared.module';
 import { FormReestructurasComponent } from './components/form-reestructuras/form-reestructuras.component';
 import { FormHoteleroComponent } from './components/form-hotelero/form-hotelero.component';
 import { AsesorComexModule } from '../AsesorComex/asesor-comex.module';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -35,6 +36,8 @@ import { AsesorComexModule } from '../AsesorComex/asesor-comex.module';
     FormsModule,
     SharedModule,
     AsesorComexModule,
+    RouterModule
+
   ],
   exports:[
     ContraloriaComponent

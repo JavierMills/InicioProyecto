@@ -1,0 +1,67 @@
+<div class="row" style="width: 90%; text-align: center; margin-left:2%;">
+  <div class="col-sm-3">
+    <label>GARANTIA:</label>
+    <input type="text">
+  </div>
+  <div class="col-sm-3">
+    <label>BUC:</label>
+    <input type="text">
+  </div>
+  <div class="col-sm-3">
+    <label>RAZON SOCIAL:</label>
+    <input type="text">
+  </div>
+  <div class="col-sm-3">
+    <label>RFC:</label>
+    <input type="text">
+  </div>
+</div>
+<br>
+<br>
+<div class="row" style="width: 90%; text-align: center; margin-left:2%;">
+  <div class="col-sm-3">
+    <label>PROGRAMA:</label>
+    <input type="text">
+  </div>
+  <div class="col-sm-3">
+    <label>ESTATUS:</label>
+    <select style="width:73%;height:73%;">
+      <option id="black"></option>
+      <option id="black">ACTIVA</option>
+      <option id="black">INACTIVA</option>
+    </select>
+  </div>
+  <div class="col-sm-3">
+    <label>SITUACION:</label>
+    <select style="width:73%;height:73%;">
+      <option id="black"></option>
+      <option id="black">RENOVAR</option>
+      <option id="black">VENCIDA</option>
+      <option id="black">INACTIVA</option>
+      <option id="black">ACTIVA</option>
+    </select>
+  </div>
+  <div class="col-sm-3">
+    <label>SIT COVID:</label>
+    <select style="width:73%;height:73%;">
+      <option id="black"></option>
+      <option id="black">SI</option>
+      <option id="black">NO</option>
+    </select>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div class="row">
+  <div class="col-sm-12" style="margin-left: 78%">
+    <button id="efecto" (click)="mostrarTablasAutomaticas()" class="btn btn-primary">Buscar</button>
+    &nbsp;&nbsp;
+    <button id="efecto" class="btn btn-primary">Limpiar</button>
+  </div>
+</div>
+<br>
+<app-table *ngIf="mostrarTablaAutomaticas"></app-table>
+
+
