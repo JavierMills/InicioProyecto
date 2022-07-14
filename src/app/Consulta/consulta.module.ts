@@ -7,6 +7,7 @@ import { SharedModule } from '../shared/shared.module';
 import { AsesorComexModule } from '../AsesorComex/asesor-comex.module';
 import { ConsultaComponent } from './pages/consulta/consulta.component';
 import { RouterModule } from '@angular/router';
+import { DataTablesModule } from 'angular-datatables';
 
 
 
@@ -21,7 +22,8 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     SharedModule,
     RouterModule,
-    AsesorComexModule
+    AsesorComexModule,
+    DataTablesModule
   ]
 })
 export class ConsultaModule { }

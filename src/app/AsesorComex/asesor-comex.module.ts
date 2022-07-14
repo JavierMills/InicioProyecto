@@ -33,6 +33,7 @@ import { FiltroTMECComponent } from './components/Filtros/filtro-tmec/filtro-tme
 import { FiltroTurismoComponent } from './components/Filtros/filtro-turismo/filtro-turismo.component';
 import { FiltroReestructurasComponent } from './components/Filtros/filtro-reestructuras/filtro-reestructuras.component';
 import { RouterModule } from '@angular/router';
+import { FiltroHoteleroComponent } from './components/Filtros/filtro-hotelero/filtro-hotelero.component';
 
 
 registerLocaleData(localEs);
@@ -62,7 +63,8 @@ registerLocaleData(localEs);
     FiltroTMECComponent,
     FiltroTurismoComponent,
     FiltroAutomaticasComponent,
-    FiltroReestructurasComponent
+    FiltroReestructurasComponent,
+    FiltroHoteleroComponent
 
   ],
   imports: [
@@ -81,7 +83,14 @@ registerLocaleData(localEs);
     FiltroTMECComponent,
     FiltroTurismoComponent,
     FiltroReestructurasComponent,
-    TableComponent
+    TableComponent,
+    FiltroHoteleroComponent,
+    TableComexTmecComponent,
+    TablePymeComponent,
+    TableTurismoComponent,
+    TableReestructurasComponent,
+    TableSelectivasComponent,
+    TableTmecComponent
   ],
   providers:[
     {

@@ -18,24 +18,18 @@ export class NavComponent implements OnInit {
 
   constructor() {}
 
-
-  //
-
-  mostrarSelectivas: boolean = false;
-
   mostrarSolicitudAutomatica: boolean = false;
-
-  mostrarSolicitudSelectiva: boolean = false;
-
-  mostrarSolicitudComexTMEC: boolean = false;
-
-  mostrarContratoPyme: boolean = false;
 
   mostrarSolicitudTMEC: boolean = false;
 
-  mostrarSolicitudTurismo: boolean = false;
+  mostrarSolicitudHotelero: boolean = false;
 
-  mostrarSolicitudReestructura : boolean = false;
+  mostrarSolicitudStock: boolean = false;
+
+  mostrarSolicitudGarantias: boolean = false;
+
+
+
 
   ngOnInit(): void {
 
@@ -43,45 +37,52 @@ export class NavComponent implements OnInit {
 
   mostrarAutomatica() {
     this.mostrarSolicitudAutomatica = true;
-    this.mostrarSolicitudSelectiva = false;
-    this.mostrarContratoPyme = false;
-    this.mostrarSolicitudComexTMEC = false;
-    this.mostrarSolicitudTurismo = false;
     this.mostrarSolicitudTMEC = false;
-    this.mostrarSolicitudReestructura= false;
+    this.mostrarSolicitudHotelero= false;
+    this.mostrarSolicitudGarantias= false;
+    this.mostrarSolicitudStock= false;
 
   }
 
   inicio() {
     this.mostrarSolicitudAutomatica = false;
-    this.mostrarSolicitudSelectiva = false;
-    this.mostrarContratoPyme = false;
-    this.mostrarSolicitudComexTMEC = false;
     this.mostrarSolicitudTMEC = false;
-    this.mostrarSolicitudTurismo = false;
-
-
-
+    this.mostrarSolicitudHotelero = false;
+    this.mostrarSolicitudGarantias= false;
+    this.mostrarSolicitudStock= false;
   }
 
   mostrarTMEC() {
     this.mostrarSolicitudTMEC = true;
-    this.mostrarContratoPyme = false;
     this.mostrarSolicitudAutomatica = false;
-    this.mostrarSolicitudSelectiva = false;
-    this.mostrarSolicitudComexTMEC = false;
-    this.mostrarSolicitudTurismo = false;
-    this.mostrarSolicitudReestructura= false;
+    this.mostrarSolicitudHotelero = false;
+    this.mostrarSolicitudGarantias= false;
+    this.mostrarSolicitudStock= false;
 
   }
-  mostrarTurismo() {
-    this.mostrarSolicitudTurismo = true;
+  mostrarHotelero() {
+    this.mostrarSolicitudHotelero = true;
     this.mostrarSolicitudTMEC = false;
-    this.mostrarContratoPyme = false;
+    this.mostrarSolicitudAutomatica = false
+    this.mostrarSolicitudGarantias= false;
+    this.mostrarSolicitudStock= false;
+;
+
+  }
+  mostrarStock() {
+    this.mostrarSolicitudHotelero = false;
+    this.mostrarSolicitudTMEC = false;
     this.mostrarSolicitudAutomatica = false;
-    this.mostrarSolicitudSelectiva = false;
-    this.mostrarSolicitudComexTMEC = false;
-    this.mostrarSolicitudReestructura= false;
+    this.mostrarSolicitudGarantias= false;
+    this.mostrarSolicitudStock= true;
+
+  }
+  mostrarCreditoGarantias() {
+    this.mostrarSolicitudHotelero = false;
+    this.mostrarSolicitudTMEC = false;
+    this.mostrarSolicitudAutomatica = false;
+    this.mostrarSolicitudGarantias= true;
+    this.mostrarSolicitudStock= false;
 
   }
 }
