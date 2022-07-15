@@ -9,19 +9,20 @@ export class SteperService {
   menuOrigen$ = new BehaviorSubject(null);
 
   steper = [
-    {paso:"paso1", status:"completo"},
-    {paso:"paso2", status:"activo"},
-    {paso:"paso3", status:"incompleto"},
-    {paso:"paso4", status:"incompleto"},
-    {paso:"paso5", status:"incompleto"},
-    {paso:"paso6", status:"incompleto"},
-    {paso:"paso7", status:"incompleto"},
-    {paso:"paso8", status:"incompleto"},
-    {paso:"paso9", status:"incompleto"},
-    {paso:"paso10", status:"incompleto"},
-    {paso:"paso11", status:"incompleto"},
-    {paso:"paso12", status:"incompleto"},
-    {paso:"paso13", status:"incompleto"}
+    {paso:"paso1", status:"completo", description:"CapturarSolicitud"},
+    {paso:"paso2", status:"activo", description:"ProcesoPendienteAsesorC"},
+    {paso:"paso3", status:"incompleto", description:"EspecialistaComexRech"},
+    {paso:"paso4", status:"incompleto", description:"ProcesoPendienteContraloria"},
+    {paso:"paso5", status:"incompleto", description:""},
+    {paso:"paso6", status:"incompleto", description:"FondosDeFomento"},
+    {paso:"paso7", status:"incompleto", description:"EnviadaNafinet"},
+    {paso:"paso8", status:"incompleto", description:"AprobadoNafinet"},
+    {paso:"paso9", status:"incompleto", description:"RechazadoNafinet"},
+    {paso:"paso10", status:"incompleto", description:"CapturarSolicitud"},
+    {paso:"paso11", status:"incompleto", description:"Reproceso"},
+    {paso:"paso12", status:"incompleto", description:"Reproceso1"},
+    {paso:"paso13", status:"incompleto", description:"Reproceso2"},
+    {paso:"paso14", status:"incompleto", description:"Reproceso3"}
   ]
 
   
@@ -63,5 +64,9 @@ export class SteperService {
 
    getMenuOrigen():Observable<any>{
     return this.menuOrigen$;
+   }
+
+   getDescripcion(paso:string){
+    return this.steper.find(item => item.paso == paso)?.description;
    }
 }

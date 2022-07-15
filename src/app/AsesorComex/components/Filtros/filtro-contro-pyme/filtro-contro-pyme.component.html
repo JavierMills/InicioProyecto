@@ -28,16 +28,16 @@
 
   </div>
   <div class="col-sm-2">
-    <select style="width:100%;height:100%;">
-      <option id="black">{{CapturarSolicitud}}</option>
-      <option id="black">{{ProcesoPendienteAsesorC}}</option>
-      <option id="black">{{EspecialistaComexRech}}</option>
-      <option id="black">{{ProcesoPendienteContraloria}}</option>
-      <option id="black">{{FondosDeFomento}}</option>
-      <option id="black">{{EnviadaNafinet}}</option>
-      <option id="black">{{AprobadoNafinet}}</option>
-      <option id="black">{{RechaxoNafinet}}</option>
-      <option id="black">{{Reproceso}}</option>
+    <select style="width:100%;height:100%;" (change)="setPaso($event)" [(ngModel)]='pasoDEfault'>
+      <option id="black" value="paso1">{{CapturarSolicitud}}</option>
+      <option id="black" value="paso2">{{ProcesoPendienteAsesorC}}</option>
+      <option id="black" value="paso3">{{EspecialistaComexRech}}</option>
+      <option id="black" value="paso4">{{ProcesoPendienteContraloria}}</option>
+      <option id="black" value="paso6">{{FondosDeFomento}}</option>
+      <option id="black" value="paso7">{{EnviadaNafinet}}</option>
+      <option id="black" value="paso8">{{AprobadoNafinet}}</option>
+      <option id="black" value="paso9">{{RechaxoNafinet}}</option>
+      <option id="black" value="paso10">{{Reproceso}}</option>
     </select>
   </div>
   <div class="col-sm-2">
@@ -53,5 +53,4 @@
   </div>
 </div>
 <br>
-    <app-table-pyme *ngIf="mostrarTablaPyme"></app-table-pyme>
-
+<app-table-pyme *ngIf="mostrarTablaPyme"></app-table-pyme>

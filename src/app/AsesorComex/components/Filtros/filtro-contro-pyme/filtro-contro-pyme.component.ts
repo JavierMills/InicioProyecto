@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SteperService } from '../../steper/steper.service';
 
 @Component({
   selector: 'app-filtro-contro-pyme',
@@ -21,13 +22,19 @@ export class FiltroControPymeComponent implements OnInit {
   public RechaxoNafinet: string = 'Rechazo Nafinet';
   public Reproceso: string = 'Reproceso';
 
-  constructor() { }
+  pasoDEfault = "paso1";
+
+  constructor(private steperService:SteperService) { }
 
   ngOnInit(): void {
+    this.steperService.setActive(this.pasoDEfault);
   }
 
   mostrarTablasContratoPyme() {
     this.mostrarTablaPyme = true;
   }
 
+  setPaso(paso:any){
+    this.steperService.setActive(paso.target.value);    
+  }
 }

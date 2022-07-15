@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SteperService } from '../../steper/steper.service';
 
 @Component({
   selector: 'app-filtro-comex-tmec',
@@ -20,18 +21,19 @@ export class FiltroComexTmecComponent implements OnInit {
   public AprobadoNafinet: string = 'Aprobado Nafinet';
   public RechaxoNafinet: string = 'Rechazo Nafinet';
   public Reproceso: string = 'Reproceso';
-  constructor() { }
+
+  pasoDEfault = "paso1";
+  constructor(private steperService:SteperService) { }
 
   ngOnInit(): void {
+    this.steperService.setActive(this.pasoDEfault);
   }
+  
   mostrarTablasComexTmec() {
-    // this.mostrarTablaAutomaticas = false;
-    this.mostrarTablaComextmec = true;
-    // this.mostrarTablaPyme = false;
-    // this.mostrarTablaSelectivas = false;
-    // this.mostrarTablaTmec = false;
-    // this.mostrarTablaTurismo = false;
-    // this.mostrarTablaReestructura = false;
-
+            this.mostrarTablaComextmec = true;
+  }
+  
+  setPaso(paso:any){
+    this.steperService.setActive(paso.target.value);    
   }
 }
