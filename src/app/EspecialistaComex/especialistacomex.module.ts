@@ -4,7 +4,6 @@ import { EspecialistacomexComponent } from './pages/especialistacomex/especialis
 import { NavComponent } from './components/nav/nav.component';
 import { AsesorComexModule } from '../AsesorComex/asesor-comex.module';
 import { DataTablesModule } from 'angular-datatables';
-import { FormComponent } from './components/form/form.component';
 import { FormSelectivasComponent } from './components/form-selectivas/form-selectivas.component';
 import { FormTMECComponent } from './components/form-tmec/form-tmec.component';
 import { FormPYMEComponent } from './components/form-pyme/form-pyme.component';
@@ -26,7 +25,6 @@ import { SharedModule } from '../shared/shared.module';
   declarations: [
     EspecialistacomexComponent,
     NavComponent,
-    FormComponent,
     FormSelectivasComponent,
     FormTMECComponent,
     FormPYMEComponent,

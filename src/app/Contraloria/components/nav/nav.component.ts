@@ -63,6 +63,9 @@ export class NavComponent implements OnInit {
   mostrarTablaHotelero: boolean = false;
   mostrarTablaReestructuras: boolean = false;
 
+
+  
+
   //
 
   mostrarSolicitudAutomatica: boolean = false;

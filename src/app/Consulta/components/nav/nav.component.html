@@ -77,6 +77,7 @@
 
     <div *ngIf="mostrarSolicitudAutomatica" class="content">
       <app-filtro-automaticas></app-filtro-automaticas>
+
     </div>
 
     <div *ngIf="mostrarSolicitudHotelero">
@@ -98,4 +99,7 @@
     <br /><br />
   </form>
 </div>
+<app-table *ngIf="mostrarTablaAutomaticas"></app-table>
+
 <div></div>
+

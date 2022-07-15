@@ -35,6 +35,6 @@ export class FiltroControPymeComponent implements OnInit {
   }
 
   setPaso(paso:any){
-    this.steperService.setActive(paso.target.value);    
+    this.steperService.setActive(paso.target.value);
   }
 }
