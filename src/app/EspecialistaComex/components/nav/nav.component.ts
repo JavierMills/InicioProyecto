@@ -269,4 +269,15 @@ export class NavComponent implements OnInit {
     this.steperService.setMenuOrigen(menu);
   }
 
+  setPaso(paso:string){
+    if (paso == "selectiva") {
+      this.steperService.setMenuOrigen('Selectivas');
+      this.steperService.setActive('paso1');
+    }
+    else{
+      this.steperService.setMenuOrigen('');
+      this.steperService.setActive(paso);
+    }    
+  }
+
 }

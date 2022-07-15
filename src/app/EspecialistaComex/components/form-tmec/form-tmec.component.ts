@@ -22,7 +22,16 @@ export class FormTMECComponent implements OnInit {
     this.steper = this.steperService.setActive("paso1");
   }
   ngOnInit(): void {
-    this.esconder;
+    this.steperService.getMenuOrigen().subscribe((data) => {
+      if (data === "Automaticas") {
+        this.show = false;
+      }
+      else{
+        this.show = true;
+      }
+      });
+      
+      this.esconder;
   }
 
   mostrar(){

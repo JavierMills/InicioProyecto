@@ -8,8 +8,11 @@ import { SteperService } from './steper.service';
 })
 export class SteperComponent implements OnInit {
   showSelectivas:boolean = false;
+  steperSelectiva:any;
+  steper:any;
   constructor(private steperService:SteperService) { 
-  
+    this.steperSelectiva = this.steperService.getsteperSelectiva();
+    this.steper = this.steperService.getsteper();
   }
   ngOnInit(): void {
     let menu = this.steperService.getMenuOrigen().subscribe((data) => {
@@ -24,5 +27,9 @@ export class SteperComponent implements OnInit {
 
   getStatus(paso:string){
     return this.steperService.getStatus(paso);
+  }
+
+  getStatusSelectiva(paso:string){
+    return this.steperService.getStatusSelectiva(paso);
   }
 }

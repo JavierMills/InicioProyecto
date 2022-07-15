@@ -2,15 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { SteperService } from 'src/app/AsesorComex/components/steper/steper.service';
 
 @Component({
-  selector: 'app-form-comex-tmec',
-  templateUrl: './form-comex-tmec.component.html',
-  styleUrls: ['./form-comex-tmec.component.scss']
+  selector: 'app-form',
+  templateUrl: './form.component.html',
+  styleUrls: ['./form.component.scss']
 })
-export class FormComexTMECComponent implements OnInit {
+export class FormComponent implements OnInit {
 
-  fecha: Date = new Date()
-  show:boolean = false;
+  fecha: Date = new Date();
   alert:boolean = false;
+  show:boolean = false;
+
   esconder:boolean = false;
   esconderF:boolean = true;
   esconderT:boolean = false;
@@ -19,20 +20,20 @@ export class FormComexTMECComponent implements OnInit {
   steper:any;
 
   constructor(private steperService:SteperService) {
-    this.steper = this.steperService.setActive("paso1");
+    this.steperService.setActive("paso1");
   }
 
   ngOnInit(): void {
     this.steperService.getMenuOrigen().subscribe((data) => {
-      if (data === "Automaticas") {
-        this.show = false;
-      }
-      else{
-        this.show = true;
-      }
-      });
-      
-      this.esconder;
+    if (data === "Automaticas") {
+      this.show = false;
+    }
+    else{
+      this.show = true;
+    }
+    });
+    
+    this.esconder;
   }
 
   mostrar(){
@@ -46,13 +47,7 @@ export class FormComexTMECComponent implements OnInit {
 
   }
 
-  modal(){
-    console.log("Llego aqui");
-
-  }
-
   mostrarContenido(){
-    console.log("llego aqui");
     this.show = true;
   }
 
@@ -65,4 +60,3 @@ export class FormComexTMECComponent implements OnInit {
     this.alert = true;
   }
 }
-
