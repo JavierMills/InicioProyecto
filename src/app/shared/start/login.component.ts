@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -7,20 +8,42 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent{
-
+  
+  myForm: FormGroup;
+  errorUser:boolean = false;
+  errorPass:boolean = false;
 
   title = 'Bootstrap';
     
   closeResult: string = '';
      
-  constructor(private modalService: NgbModal) {}
+  constructor(private modalService: NgbModal, private fb:FormBuilder) {
+      this.myForm = this.fb.group({
+        user: ['', Validators.required],
+        password: ['', Validators.required]
+      });
+  }
     
   open(content:any) {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
-      this.closeResult = `Closed with: ${result}`;
-    }, (reason) => {
-      this.closeResult = `${this.getDismissReason(reason)}`;
-    });
+        
+    this.errorUser = this.myForm.controls["user"].status != "VALID" ? true : false;
+
+    this.errorPass = this.myForm.controls["password"].status != "VALID" ? true : false;
+
+    if (!this.errorUser && !this.errorPass) {
+      this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+        this.closeResult = `Closed with: ${result}`;
+      }, (reason) => {
+        this.closeResult = `${this.getDismissReason(reason)}`;
+      });
+
+      this.myForm.reset();
+    }
+
+    
+    
+
+
   } 
      
   private getDismissReason(reason: any): string {
@@ -40,6 +63,8 @@ export class LoginComponent{
       this.closeResult = `${this.getDismissReason(reason)}`;
     });
   } 
+
+
 }
 
 

@@ -5,6 +5,7 @@ import { ModalComponent } from './modal/modal.component';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { SteperComponent } from '../AsesorComex/components/steper/steper.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -18,7 +19,8 @@ import { SteperComponent } from '../AsesorComex/components/steper/steper.compone
   ],
   imports: [
     RouterModule,
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule
   ],
   exports:[
     LoginComponent,
