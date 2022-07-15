@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SteperService } from '../../steper/steper.service';
 
 @Component({
   selector: 'app-filtro-tmec',
@@ -21,20 +22,20 @@ export class FiltroTMECComponent implements OnInit {
   public RechaxoNafinet: string = 'Rechazo Nafinet';
   public Reproceso: string = 'Reproceso';
 
-  mostrarTablasTmec() {
-    // this.mostrarTablaAutomaticas = false;
-    // this.mostrarTablaComextmec = false;
-    // this.mostrarTablaPyme = false;
-    // this.mostrarTablaSelectivas = false;
-    this.mostrarTablaTmec = true;
-    // this.mostrarTablaTurismo = false;
-    // this.mostrarTablaReestructura = false;
+  pasoDEfault = "paso1";
 
+  mostrarTablasTmec() {
+    this.mostrarTablaTmec = true;
   }
 
-  constructor() { }
+  constructor(private steperService:SteperService) { }
 
   ngOnInit(): void {
+    this.steperService.setActive(this.pasoDEfault);
+  }
+
+  setPaso(paso:any){
+    this.steperService.setActive(paso.target.value);    
   }
 
 }

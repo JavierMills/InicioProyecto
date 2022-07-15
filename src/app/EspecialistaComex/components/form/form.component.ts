@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { data } from 'jquery';
 import { SteperService } from 'src/app/AsesorComex/components/steper/steper.service';
 
 @Component({
@@ -26,7 +24,7 @@ export class FormComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const menu = this.steperService.getMenuOrigen().subscribe((data) => {
+    this.steperService.getMenuOrigen().subscribe((data) => {
     if (data === "Automaticas") {
       this.show = false;
     }
@@ -49,13 +47,7 @@ export class FormComponent implements OnInit {
 
   }
 
-  modal(){
-    console.log("Llego aqui");
-
-  }
-
   mostrarContenido(){
-    console.log("llego aqui");
     this.show = true;
   }
 

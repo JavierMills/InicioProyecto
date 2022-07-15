@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SteperService } from '../../steper/steper.service';
+import { TableService } from '../../table/table.service';
 
 @Component({
   selector: 'app-filtro-automaticas',
@@ -24,19 +25,19 @@ export class FiltroAutomaticasComponent implements OnInit {
   public RechaxoNafinet: string = 'Rechazo Nafinet';
   public Reproceso: string = 'Reproceso';
   
-  steper:any;
 
-  constructor(private steperService:SteperService) {
+  pasoDEfault = "paso1";
+
+  constructor(private steperService:SteperService, private tableService:TableService) {
     
   }
   ngOnInit(): void {
-  }
-  mostrarTablasAutomaticas() {
-    this.mostrarTablaAutomaticas = true;
+    this.steperService.setActive(this.pasoDEfault);
   }
 
-  setPaso(paso:any){
-    this.steperService.setActive(paso.target.value);    
+  mostrarTablasAutomaticas() {
+    this.tableService.setFiltroStatus(this.steperService.getDescripcion(this.pasoDEfault));
+    this.mostrarTablaAutomaticas = true;
   }
 
 }

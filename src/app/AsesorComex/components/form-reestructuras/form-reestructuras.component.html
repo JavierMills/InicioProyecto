@@ -29,51 +29,7 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
        </div>
 
        <br />
-
-       <div class="row">
-         <div class="col-sm-1"></div>
-         <div class="col-sm-1" style="border: solid; font-size: 90%">
-           <label for="">Capturar Solicitud</label>
-         </div>
-         &nbsp;
-         <div class="col-sm-1" style="border: solid; font-size: 90%">
-           <label for="">Proceso Pendiente Asesor Comex</label>
-         </div>
-         &nbsp;
-         <div class="col-sm-1" style="border: solid; font-size: 90%">
-           <label for="">Especialista Comex</label>
-         </div>
-         &nbsp;
-         <div class="col-sm-1" style="border: solid; font-size: 90%">
-           <label for="">Proceso Pendiente Contraloria</label>
-         </div>
-         &nbsp;
-         <div class="col-sm-1" style="border: solid; font-size: 90%">
-           <label for="">Proceso Pendiente Cartera</label>
-         </div>
-         &nbsp;
-         <div class="col-sm-1" style="border: solid; font-size: 90%">
-           <label for="">Fondos de Fomento</label>
-         </div>
-         &nbsp;
-         <div class="col-sm-1" style="border: solid; font-size: 90%">
-           <label for="">Enviada Nafinet</label>
-         </div>
-         &nbsp;
-         <div class="col-sm-1" style="border: solid; font-size: 90%">
-           <label for="">Aprobado Nafinet</label>
-         </div>
-         &nbsp;
-         <div class="col-sm-1" style="border: solid; font-size: 90%">
-           <label for="">Rechazado Nafinet</label>
-         </div>
-         &nbsp;
-         <div class="col-sm-1" style="border: solid; font-size: 90%">
-           <label for="">Reproceso</label>
-         </div>
-         <div class="col-sm-1"></div>
-       </div>
-
+       <app-steper *ngIf="show"></app-steper>
        <br />
 
        <div class="accordion" id="accordionExample">

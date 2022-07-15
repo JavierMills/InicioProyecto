@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SteperService } from '../../steper/steper.service';
 
 @Component({
   selector: 'app-filtro-selectivas',
@@ -24,18 +25,20 @@ export class FiltroSelectivasComponent implements OnInit {
   public FF: string = 'Fondos de Fomento'
   public Resumen: string = 'Resumen'
 
-  constructor() { }
+  pasoDEfault = "paso1";
+
+  constructor(private steperService:SteperService) { }
 
   ngOnInit(): void {
+    this.steperService.setActive(this.pasoDEfault);
   }
   mostrarTablasSelectivas() {
-    // this.mostrarTablaAutomaticas = false;
-    // this.mostrarTablaComextmec = false;
-    // this.mostrarTablaPyme = false;
     this.mostrarTablaSelectivas = true;
-    // this.mostrarTablaTmec = false;
-    // this.mostrarTablaTurismo = false;
-    // this.mostrarTablaReestructura = false;
-
   }
+
+  setPaso(paso:any){
+    this.steperService.setActive(paso.target.value);    
+  }
+
+
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SteperService } from '../../steper/steper.service';
 
 @Component({
   selector: 'app-filtro-turismo',
@@ -21,13 +22,20 @@ export class FiltroTurismoComponent implements OnInit {
   public RechaxoNafinet: string = 'Rechazo Nafinet';
   public Reproceso: string = 'Reproceso';
 
-  constructor() { }
+  pasoDEfault = "paso1";
+
+  constructor(private steperService:SteperService) { }
 
   ngOnInit(): void {
+    this.steperService.setActive(this.pasoDEfault);
   }
+  
   mostrarTablasTurismo() {
     this.mostrarTablaTurismo = true;
+  }
 
+  setPaso(paso:any){
+    this.steperService.setActive(paso.target.value);    
   }
 
 }

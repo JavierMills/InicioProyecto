@@ -73,7 +73,16 @@ export class FormReestructurasComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.esconder;
+    this.steperService.getMenuOrigen().subscribe((data) => {
+      if (data === "Automaticas") {
+        this.show = false;
+      }
+      else{
+        this.show = true;
+      }
+      });
+      
+      this.esconder;
   }
 
 
