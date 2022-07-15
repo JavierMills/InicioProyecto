@@ -1,0 +1,105 @@
+<app-header></app-header>
+<div class="content">
+  <form action="" style="overflow-x: hidden; overflow-y: hidden">
+    <div class="row">
+      <div class="col-sm-6" style="margin-left: 5%">
+        <label><b>Consulta:</b></label
+        >&nbsp;<label>Jose Rodriguez Arias (Z396773)</label>
+      </div>
+      <div class="col-sm-2"></div>
+      <div class="col-sm-3" style="margin-left: 3%">
+        <label>{{ fecha | date: "EEEE d De MMMM Del y" }}</label>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg" style="background-color: red">
+      <div class="container-fluid" style="margin-left: 5%">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <label
+                data-bs-toggle="dropdown"
+                style="color: white"
+                (click)="inicio()"
+                ><b id="black">Solicitudes</b></label
+              >
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+                style="width: 240%"
+              >
+                <div>
+                  <li (click)='mostrarStock()' id="black">{{ Stock }}</li>
+                  <li (click)='mostrarCreditoGarantias()' id="black">{{ Creditos_Gtias }}</li>
+
+                  <li (click)="mostrarAutomatica()" id="black">
+                    {{ Automaticas }}
+                  </li>
+
+                  <li (click)="mostrarTMEC()" id="black">{{ TMEC }}</li>
+
+
+                  <li (click)="mostrarHotelero()" id="black">{{ Hotelero }}</li>
+
+                </div>
+              </ul>
+            </li>
+          </ul>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              &nbsp;&nbsp;
+              <img
+                src="../../../assets/img/candado.png"
+                alt="cerrar sesion..."
+                style="width: 20px"
+                height="20px"
+              />
+              <label style="color: white"
+                ><b id="black"
+                  ><a class="cerrar" routerLink="">Cerrar Sesion</a></b
+                ></label
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br />
+    <div
+      *ngIf="
+        !mostrarSolicitudAutomatica && !mostrarSolicitudHotelero && !mostrarSolicitudTMEC &&
+        !mostrarSolicitudGarantias && !mostrarSolicitudStock
+      "
+    >
+    <app-filtro-automaticas></app-filtro-automaticas>
+    </div>
+
+    <div *ngIf="mostrarSolicitudAutomatica" class="content">
+      <app-filtro-automaticas></app-filtro-automaticas>
+
+    </div>
+
+    <div *ngIf="mostrarSolicitudHotelero">
+      <app-filtro-hotelero></app-filtro-hotelero>
+    </div>
+
+    <div *ngIf="mostrarSolicitudTMEC" class="content">
+      <app-filtro-tmec></app-filtro-tmec>
+    </div>
+
+    <div *ngIf="mostrarSolicitudGarantias" class="content">
+      <app-creditos-gtia></app-creditos-gtia>
+    </div>
+
+    <div *ngIf="mostrarSolicitudStock" class="content">
+      <app-stock-bancomext></app-stock-bancomext>
+    </div>
+
+    <br /><br />
+  </form>
+</div>
+<app-table *ngIf="mostrarTablaAutomaticas"></app-table>
+
+<div></div>
+

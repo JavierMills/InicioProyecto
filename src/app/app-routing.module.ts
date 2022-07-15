@@ -12,6 +12,12 @@ import { FondosdefomentoComponent } from './FondosDeFomento/pages/fondosdefoment
 import { OperacionesInternacionalesComponent } from './Operacion_Internacional/pages/operaciones-internacionales/operaciones-internacionales.component';
 import { HoteleroComponent } from './Hotelero/pages/hotelero/hotelero.component';
 import { ValidadorComponent } from './Validador/pages/validador/validador.component';
+import { OperacionInternacionalModule } from './Operacion_Internacional/operacion-internacional.module';
+import { RiesgosComponent } from './Riesgos/pages/riesgos/riesgos.component';
+import { AuditoriaComponent } from './Auditoria/pages/auditoria/auditoria.component';
+import { GarantiasComponent } from './Garantias/pages/garantias/garantias.component';
+import { ConsultaComponent } from './Consulta/pages/consulta/consulta.component';
+
 
 
 
@@ -57,9 +63,33 @@ const routes: Routes = [
     path: 'validador', component: ValidadorComponent
 
   },
+  {
+    path: 'operaciones', component: OperacionesInternacionalesComponent
+
+  },
 
   {
-    path: '**', component: LoginComponent
+    path: 'riesgos', component: RiesgosComponent
+
+  },
+  {
+    path: 'auditoria', component: AuditoriaComponent
+
+  },
+  {
+    path: 'garantias', component: GarantiasComponent
+
+  },
+
+  {
+    path: 'consulta', component: ConsultaComponent
+
+  },
+
+
+  {
+    path: '**',
+    redirectTo: ''
   },
 
 

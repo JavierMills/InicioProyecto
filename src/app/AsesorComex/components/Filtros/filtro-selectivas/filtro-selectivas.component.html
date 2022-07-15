@@ -1,0 +1,61 @@
+<div class="row" style="width: 90%; text-align: center; margin-left:2%;">
+  <div class="col-sm-2">
+    <label>FOLIO:auto</label>
+  </div>
+  <div class="col-sm-2">
+    <label>SUCURSAL:</label>
+  </div>
+  <div class="col-sm-2">
+    <label>SOLICITADO:</label>
+  </div>
+  <div class="col-sm-2">
+    <label>ESTATUS FOLIO:SEL</label>
+  </div>
+  <div class="col-sm-2">
+    <label>ACREDITADO:</label>
+  </div>
+
+</div>
+<div class="row" style="width: 90%; text-align: center; margin-left:2%;">
+  <div class="col-sm-2">
+    <input type="text">
+  </div>
+  <div class="col-sm-2">
+    <input type="text">
+  </div>
+  <div class="col-sm-2">
+    <input type="text">
+
+  </div>
+  <div class="col-sm-2">
+    <select style="width:100%;height:100%;" (change)="setPaso($event)" [(ngModel)]='pasoDEfault'>
+      <option id="black" value="paso1">{{CapturarSolicitud}}</option>
+      <option id="black" value="paso2">{{NegocioInternacional}}</option>
+      <option id="black" value="paso3">{{EnvBancomext}}</option>
+      <option id="black" value="paso4">{{EspecialistaComex}}</option>
+      <option id="black" value="paso5">{{Observaciones}}</option>
+      <option id="black" value="paso6">{{Formalizacion}}</option>
+      <option id="black" value="paso7">{{FormalizacionEspecialista}}</option>
+      <option id="black" value="paso8">{{PPAsesor}}</option>
+      <option id="black" value="paso9">{{RechazoEspecialista}}</option>
+      <option id="black" value="paso10">{{PPContraliria}}</option>
+      <option id="black" value="paso11">{{PPCartera}}</option>
+      <option id="black" value="paso12">{{FF}}</option>
+      <option id="black" value="paso13">{{Resumen}}</option>
+
+    </select>
+  </div>
+  <div class="col-sm-2">
+    <input type="text">
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-sm-12" style="margin-left: 78%">
+    <button id="efecto" (click)="mostrarTablasSelectivas()" class="btn btn-primary">Buscar</button>
+    &nbsp;&nbsp;
+    <button id="efecto" class="btn btn-primary">Limpiar</button>
+  </div>
+</div>
+<br>
+<app-table-selectivas *ngIf="mostrarTablaSelectivas"></app-table-selectivas>

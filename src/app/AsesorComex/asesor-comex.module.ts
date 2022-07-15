@@ -10,8 +10,8 @@ import  { HttpClientModule } from "@angular/common/http";
 import { TableComponent } from './components/table/table.component';
 import { registerLocaleData } from '@angular/common';
 import localEs from '@angular/common/locales/es';
-import { FormComexTmecComponent } from './components/form-comex-tmec/form-comex-tmec.component'
 import { FormComponent } from './components/form/form.component';
+import { FormComexTmecComponent } from './components/form-comex-tmec/form-comex-tmec.component'
 import { FormPymeComponent } from './components/form-pyme/form-pyme.component';
 import { FormSelectivasComponent } from './components/form-selectivas/form-selectivas.component';
 import { FormTmecComponent } from './components/form-tmec/form-tmec.component';
@@ -22,9 +22,19 @@ import { TablePymeComponent } from './components/table-pyme/table-pyme.component
 import { TableSelectivasComponent } from './components/table-selectivas/table-selectivas.component';
 import { TableTmecComponent } from './components/table-tmec/table-tmec.component';
 import { TableTurismoComponent } from './components/table-turismo/table-turismo.component';
-import { SharedModule } from '../shared/shared.module';
 import { FormReestructurasComponent } from './components/form-reestructuras/form-reestructuras.component';
 import { TableReestructurasComponent } from './components/table-reestructuras/table-reestructuras.component';
+import { SharedModule } from '../shared/shared.module';
+import { FiltroAutomaticasComponent } from './components/Filtros/filtro-automaticas/filtro-automaticas.component';
+import { FiltroSelectivasComponent } from './components/Filtros/filtro-selectivas/filtro-selectivas.component';
+import { FiltroControPymeComponent } from './components/Filtros/filtro-contro-pyme/filtro-contro-pyme.component';
+import { FiltroComexTmecComponent } from './components/Filtros/filtro-comex-tmec/filtro-comex-tmec.component';
+import { FiltroTMECComponent } from './components/Filtros/filtro-tmec/filtro-tmec.component';
+import { FiltroTurismoComponent } from './components/Filtros/filtro-turismo/filtro-turismo.component';
+import { FiltroReestructurasComponent } from './components/Filtros/filtro-reestructuras/filtro-reestructuras.component';
+import { RouterModule } from '@angular/router';
+import { FiltroHoteleroComponent } from './components/Filtros/filtro-hotelero/filtro-hotelero.component';
+
 
 registerLocaleData(localEs);
 
@@ -45,17 +55,43 @@ registerLocaleData(localEs);
     TableTmecComponent,
     TableTurismoComponent,
     TableReestructurasComponent,
-    FormReestructurasComponent
+    FormReestructurasComponent,
+    FiltroAutomaticasComponent,
+    FiltroSelectivasComponent,
+    FiltroComexTmecComponent,
+    FiltroControPymeComponent,
+    FiltroTMECComponent,
+    FiltroTurismoComponent,
+    FiltroAutomaticasComponent,
+    FiltroReestructurasComponent,
+    FiltroHoteleroComponent
 
   ],
   imports: [
-    SharedModule,
     CommonModule,
     DataTablesModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    SharedModule,
+    RouterModule
   ],
-
+  exports:[
+    FiltroAutomaticasComponent,
+    FiltroSelectivasComponent,
+    FiltroComexTmecComponent,
+    FiltroControPymeComponent,
+    FiltroTMECComponent,
+    FiltroTurismoComponent,
+    FiltroReestructurasComponent,
+    TableComponent,
+    FiltroHoteleroComponent,
+    TableComexTmecComponent,
+    TablePymeComponent,
+    TableTurismoComponent,
+    TableReestructurasComponent,
+    TableSelectivasComponent,
+    TableTmecComponent
+  ],
   providers:[
     {
       provide: LOCALE_ID,

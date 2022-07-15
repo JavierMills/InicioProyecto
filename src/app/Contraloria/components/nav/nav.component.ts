@@ -43,6 +43,8 @@ export class NavComponent implements OnInit {
   public Contrato_PYME: string = 'Solicitud Contrato Pyme';
   public Comex_TMEC: string = 'Solicitudes Comex-TMEC';
   public Turismo: string = 'Solicitudes Turismo';
+  public Rees: string = 'Solicitudes Reestructuras';
+  public Hotel: string = 'Solicitudes Hotelero';
   public hora: string = '';
 
   allUsers: any = [];
@@ -58,10 +60,13 @@ export class NavComponent implements OnInit {
   mostrarTablaSelectivas: boolean = false;
   mostrarTablaTmec: boolean = false;
   mostrarTablaTurismo: boolean = false;
+  mostrarTablaHotelero: boolean = false;
+  mostrarTablaReestructuras: boolean = false;
+
+
+  
 
   //
-
-  mostrarSelectivas: boolean = false;
 
   mostrarSolicitudAutomatica: boolean = false;
 
@@ -74,6 +79,11 @@ export class NavComponent implements OnInit {
   mostrarSolicitudTMEC: boolean = false;
 
   mostrarSolicitudTurismo: boolean = false;
+
+  mostrarSolicitudHotelero: boolean = false;
+
+  mostrarSolicitudReestructuras: boolean = false;
+
 
   ngOnInit(): void {
     this.esconder;
@@ -91,6 +101,8 @@ export class NavComponent implements OnInit {
     this.mostrarTablaSelectivas = false;
     this.mostrarTablaTmec = false;
     this.mostrarTablaTurismo = false;
+    this.mostrarTablaReestructuras = false;
+    this.mostrarTablaHotelero = false;
   }
 
   mostrarTablasSelectivas() {
@@ -100,6 +112,8 @@ export class NavComponent implements OnInit {
     this.mostrarTablaSelectivas = true;
     this.mostrarTablaTmec = false;
     this.mostrarTablaTurismo = false;
+    this.mostrarTablaReestructuras = false;
+    this.mostrarTablaHotelero = false;
   }
 
   mostrarTablasContratoPyme() {
@@ -109,6 +123,8 @@ export class NavComponent implements OnInit {
     this.mostrarTablaSelectivas = false;
     this.mostrarTablaTmec = false;
     this.mostrarTablaTurismo = false;
+    this.mostrarTablaReestructuras = false;
+    this.mostrarTablaHotelero = false;
   }
 
   mostrarTablasComexTmec() {
@@ -118,6 +134,8 @@ export class NavComponent implements OnInit {
     this.mostrarTablaSelectivas = false;
     this.mostrarTablaTmec = false;
     this.mostrarTablaTurismo = false;
+    this.mostrarTablaReestructuras = false;
+    this.mostrarTablaHotelero = false;
   }
 
   mostrarTablasTurismo() {
@@ -127,6 +145,8 @@ export class NavComponent implements OnInit {
     this.mostrarTablaSelectivas = false;
     this.mostrarTablaTmec = false;
     this.mostrarTablaTurismo = true;
+    this.mostrarTablaReestructuras = false;
+    this.mostrarTablaHotelero = false;
   }
 
 
@@ -137,9 +157,33 @@ export class NavComponent implements OnInit {
     this.mostrarTablaSelectivas = false;
     this.mostrarTablaTmec = true;
     this.mostrarTablaTurismo = false;
+    this.mostrarTablaReestructuras = false;
+    this.mostrarTablaHotelero = false;
   }
 
+  mostrarTablasHotelero() {
+    this.mostrarTablaHotelero = true;
+    this.mostrarTablaAutomaticas = false;
+    this.mostrarTablaComextmec = false;
+    this.mostrarTablaPyme = false;
+    this.mostrarTablaSelectivas = false;
+    this.mostrarTablaTmec = false;
+    this.mostrarTablaTurismo = false;
+    this.mostrarTablaReestructuras = false;
+  }
 
+  mostrarTablasReestructuras() {
+    this.mostrarTablaHotelero = false;
+    this.mostrarTablaAutomaticas = false;
+    this.mostrarTablaComextmec = false;
+    this.mostrarTablaPyme = false;
+    this.mostrarTablaSelectivas = false;
+    this.mostrarTablaTmec = false;
+    this.mostrarTablaTurismo = false;
+    this.mostrarTablaReestructuras = true;
+  }
+
+// fin tablas
 
   mostrarAutomatica() {
     this.mostrarSolicitudAutomatica = true;
@@ -148,6 +192,8 @@ export class NavComponent implements OnInit {
     this.mostrarSolicitudComexTMEC = false;
     this.mostrarSolicitudTurismo = false;
     this.mostrarSolicitudTMEC = false;
+    this.mostrarSolicitudReestructuras = false;
+    this.mostrarSolicitudHotelero = false;
   }
   mostrarSelectiva() {
     this.mostrarSolicitudSelectiva = true;
@@ -156,6 +202,8 @@ export class NavComponent implements OnInit {
     this.mostrarSolicitudComexTMEC = false;
     this.mostrarSolicitudTurismo = false;
     this.mostrarSolicitudTMEC = false;
+    this.mostrarSolicitudReestructuras = false;
+    this.mostrarSolicitudHotelero = false;
   }
   mostrarComexTMEC() {
     this.mostrarSolicitudComexTMEC = true;
@@ -164,6 +212,8 @@ export class NavComponent implements OnInit {
     this.mostrarSolicitudSelectiva = false;
     this.mostrarSolicitudTurismo = false;
     this.mostrarSolicitudTMEC = false;
+    this.mostrarSolicitudReestructuras = false;
+    this.mostrarSolicitudHotelero = false;
   }
 
   inicio() {
@@ -179,6 +229,10 @@ export class NavComponent implements OnInit {
     this.mostrarTablaSelectivas = false;
     this.mostrarTablaTmec = false;
     this.mostrarTablaTurismo = false;
+    this.mostrarTablaReestructuras = false;
+    this.mostrarTablaHotelero = false;
+    this.mostrarSolicitudHotelero = false;
+    this.mostrarSolicitudReestructuras = false;
   }
 
   mostrarPYME() {
@@ -188,6 +242,8 @@ export class NavComponent implements OnInit {
     this.mostrarSolicitudComexTMEC = false;
     this.mostrarSolicitudTurismo = false;
     this.mostrarSolicitudTMEC = false;
+    this.mostrarSolicitudReestructuras = false;
+    this.mostrarSolicitudHotelero = false;
   }
   mostrarTMEC() {
     this.mostrarSolicitudTMEC = true;
@@ -196,6 +252,8 @@ export class NavComponent implements OnInit {
     this.mostrarSolicitudSelectiva = false;
     this.mostrarSolicitudComexTMEC = false;
     this.mostrarSolicitudTurismo = false;
+    this.mostrarSolicitudReestructuras = false;
+    this.mostrarSolicitudHotelero = false;
   }
   mostrarTurismo() {
     this.mostrarSolicitudTurismo = true;
@@ -204,5 +262,27 @@ export class NavComponent implements OnInit {
     this.mostrarSolicitudAutomatica = false;
     this.mostrarSolicitudSelectiva = false;
     this.mostrarSolicitudComexTMEC = false;
+    this.mostrarSolicitudReestructuras = false;
+    this.mostrarSolicitudHotelero = false;
+  }
+  mostrarHotelero() {
+    this.mostrarSolicitudTurismo = false;
+    this.mostrarSolicitudTMEC = false;
+    this.mostrarContratoPyme = false;
+    this.mostrarSolicitudAutomatica = false;
+    this.mostrarSolicitudSelectiva = false;
+    this.mostrarSolicitudComexTMEC = false;
+    this.mostrarSolicitudReestructuras = false;
+    this.mostrarSolicitudHotelero = true;
+  }
+  mostrarReestructuras() {
+    this.mostrarSolicitudTurismo = false;
+    this.mostrarSolicitudTMEC = false;
+    this.mostrarContratoPyme = false;
+    this.mostrarSolicitudAutomatica = false;
+    this.mostrarSolicitudSelectiva = false;
+    this.mostrarSolicitudComexTMEC = false;
+    this.mostrarSolicitudReestructuras = true;
+    this.mostrarSolicitudHotelero = false;
   }
 }

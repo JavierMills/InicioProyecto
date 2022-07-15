@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SteperService } from 'src/app/AsesorComex/components/steper/steper.service';
 
 @Component({
   selector: 'app-form-selectivas',
@@ -7,18 +8,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormSelectivasComponent implements OnInit {
 
-  show:boolean = false;
+  fecha : Date = new Date()
 
+  show:boolean = false;
+  alert:boolean = false;
   esconder:boolean = false;
   esconderF:boolean = true;
   esconderT:boolean = false;
   showModal:boolean = false;
 
+  steper:any;
 
-  constructor() { }
+  constructor(private steperService:SteperService) {
+    this.steper = this.steperService.setActive("paso1");
+  }
 
   ngOnInit(): void {
-    this.esconder;
+    this.steperService.getMenuOrigen().subscribe((data) => {
+      if (data === "Automaticas") {
+        this.show = false;
+      }
+      else{
+        this.show = true;
+      }
+      });
+      
+      this.esconder;
   }
 
   mostrar(){
@@ -42,5 +57,13 @@ export class FormSelectivasComponent implements OnInit {
     this.show = true;
   }
 
+  closeAlert(){
+    this.alert = false;
+  }
+
+  MostrarAlert(){
+    this.steper = this.steperService.setActive("paso2");
+    this.alert = true;
+  }
 
 }

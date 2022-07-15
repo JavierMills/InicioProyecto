@@ -1,0 +1,148 @@
+<div class="content">
+  <form action="" style="overflow-x:hidden; overflow-y:hidden">
+
+    <app-header></app-header>
+
+
+    <div class="row">
+      <div class="col-sm-6" style="margin-left:5%;">
+        <label><b>Operacion Internacion:</b></label>&nbsp;<label>Jose Rodriguez Arias (Z396773)</label>
+      </div>
+      <div class="col-sm-2"></div>
+      <div class="col-sm-3" style="margin-left: 3%;">
+        <label>{{fecha | date: 'EEEE d De MMMM Del y'}}</label>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg" style="background-color: red;">
+      <div class="container-fluid" style="margin-left:5%;">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <label data-bs-toggle="dropdown" style="color:white;" (click)="inicio()"><b id="black">Solicitudes</b></label>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <div>
+                  <li (click)="mostrarComexTMEC()" id="black">{{Comex_TMEC}}</li>
+                  <li (click)="mostrarTurismo()" id="black">{{Turismo}}</li>
+                  <li (click)="mostrarTMEC()" id="black">{{TMEC}}</li>
+                  <li (click)="mostrarReestructuras()" id="black">{{Reestructuras}}</li>
+                </div>
+              </ul>
+            </li>
+          </ul>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <label data-bs-toggle="dropdown" style="color:white;"><b id="black">Reportes</b></label>
+
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <div>
+                <li id="black">Folio Nafinet</li>
+                <li id="black">Reportes Solicitudes Recibidas</li>
+                <li id="black">Reporte Gtias Aprob/Activas</li>
+              </div>
+            </ul>
+          </li>
+          </ul>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <label data-bs-toggle="dropdown" style="color:white;"><b id="black">Programas</b></label>
+
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <div>
+                <li id="black">Bolsas en Tramite</li>
+                <li id="black">Bitacoras en Bolsas</li>
+              </div>
+            </ul>
+          </li>
+          </ul>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <label data-bs-toggle="dropdown" style="color:white;"><b id="black">Grupos de Correo</b></label>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <div>
+                <li id="black">Control Grupo de Correos</li>
+                <li id="black">Consulta Bitacora de Correos</li>
+                <li id="black">Alta de Usuarios en Grupo</li>
+              </div>
+            </ul>
+          </li>
+          </ul>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <label data-bs-toggle="dropdown" style="color:white;"><b id="black">Procesos conciliacion</b></label>
+
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <div>
+                <li id="black">Sobregiros</li>
+              </div>
+            </ul>
+          </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">&nbsp;&nbsp;
+              <img src="../../../assets/img/candado.png" alt="cerrar sesion..." style="width: 20px;" height="20px">
+              <label style="color:white;"><b id="black"><a class="cerrar" href="#">Cerrar Sesion</a></b></label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br>
+
+
+
+    <div *ngIf="!mostrarSolicitudAutomatica && !mostrarSolicitudSelectiva && !mostrarSolicitudTurismo && !mostrarContratoPyme && !mostrarSolicitudComexTMEC && !mostrarSolicitudTMEC">
+      <app-filtro-automaticas></app-filtro-automaticas>
+    </div>
+
+    <div *ngIf="mostrarSolicitudAutomatica" class="content">
+      <app-filtro-automaticas></app-filtro-automaticas>
+      <hr />
+    </div>
+    <div *ngIf="mostrarSolicitudSelectiva" class="content">
+     <app-filtro-selectivas></app-filtro-selectivas>
+      <hr />
+    </div>
+    <div *ngIf="mostrarContratoPyme" class="content">
+    <app-filtro-contro-pyme></app-filtro-contro-pyme>
+      <hr />
+    </div>
+    <!-- hasta aqui -->
+    <!-- desde aqui comextmec -->
+    <div *ngIf="mostrarSolicitudComexTMEC" class="content">
+      <app-filtro-comex-tmec></app-filtro-comex-tmec>
+      <hr />
+    </div>
+    <!-- hasta aqui -->
+     <!-- desde aqui tmec -->
+     <div *ngIf="mostrarSolicitudTMEC" class="content">
+      <app-filtro-tmec></app-filtro-tmec>
+      <hr />
+    </div>
+    <!-- hasta aqui -->
+    <!-- desde aqui tmec -->
+    <div *ngIf="mostrarSolicitudTurismo" class="content">
+      <app-filtro-turismo></app-filtro-turismo>
+      <hr />
+    </div>
+    <br><br>
+
+    <!-- <app-table *ngIf="mostrarTablaAutomaticas"></app-table>
+    <app-table-comex-tmec *ngIf="mostrarTablaComextmec"></app-table-comex-tmec>
+    <app-table-pyme *ngIf="mostrarTablaPyme"></app-table-pyme>
+    <app-table-selectivas *ngIf="mostrarTablaSelectivas"></app-table-selectivas>
+    <app-table-tmec *ngIf="mostrarTablaTmec"></app-table-tmec>
+    <app-table-turismo *ngIf="mostrarTablaTurismo"></app-table-turismo>
+    <app-table-reestructuras *ngIf="mostrarTablaReestructura"></app-table-reestructuras>
+
+ -->
+
+
+
+  </form>
+
+</div>

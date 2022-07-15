@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { SteperService } from '../steper/steper.service';
+// import { LOADIPHLPAPI } from 'dns';
+
 
 @Component({
   selector: 'app-form',
@@ -7,6 +10,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
+  mostrarComentario:boolean = false;
+  comentario:string = "";
+  fechacompleta:any = "";
+  alert:boolean = false;
   show: boolean = false;
   public CapturarSolicitud : string = "Capturar Solcitud"
   public ProcesoPendienteAsesorC : string = "Proceso Pendiente Asesor Comex"
@@ -65,7 +72,11 @@ export class FormComponent implements OnInit {
   entidadFinanciera:string = "Seleccionar";
   moneda:string ="Seleccionar";
 
-  constructor() { }
+  steper:any;
+
+  constructor(private steperService:SteperService) {
+
+  }
 
   ngOnInit(): void {
     this.esconder;
@@ -290,5 +301,23 @@ export class FormComponent implements OnInit {
     alert(`Tu comentario es: ${com}.`)
   }
 
+  closeAlert(){
+    this.alert = false;
+  }
 
+  MostrarAlert(){
+    this.steper = this.steperService.setActive("paso4");
+    this.alert = true;
+  }
+
+  agregarComentairo(){
+    this.mostrarComentario = true;
+    let fecha = new Date();
+
+    let fechaformato = `${fecha.getFullYear()}-${fecha.getMonth()+1}-${fecha.getDate()}`;
+    let hora = `${fecha.getHours()}-${fecha.getMinutes()+1}-${fecha.getSeconds()}`;
+
+    this.fechacompleta = fechaformato + " " + hora + " " + "Comentario" + " " + "Jose Rodriguez Arias" + " ";
+
+  }
 }

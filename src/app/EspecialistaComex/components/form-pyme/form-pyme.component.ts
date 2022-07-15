@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SteperService } from 'src/app/AsesorComex/components/steper/steper.service';
 
 @Component({
   selector: 'app-form-pyme',
@@ -7,18 +8,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormPYMEComponent implements OnInit {
 
+  fecha: Date = new Date();
   show:boolean = false;
-
+  alert:boolean = false;
   esconder:boolean = false;
   esconderF:boolean = true;
   esconderT:boolean = false;
   showModal:boolean = false;
 
+  steper:any;
 
-  constructor() { }
+  constructor(private steperService:SteperService) {
+    this.steper = this.steperService.setActive("paso1");
+  }
 
   ngOnInit(): void {
-    this.esconder;
+    this.steperService.getMenuOrigen().subscribe((data) => {
+      if (data === "Automaticas") {
+        this.show = false;
+      }
+      else{
+        this.show = true;
+      }
+      });
+      
+      this.esconder;
   }
 
   mostrar(){
@@ -32,13 +46,16 @@ export class FormPYMEComponent implements OnInit {
 
   }
 
-  modal(){
-    console.log("Llego aqui");
-
+  mostrarContenido(){
+    this.show = true;
   }
 
-  mostrarContenido(){
-    console.log("llego aqui");
-    this.show = true;
+  closeAlert(){
+    this.alert = false;
+  }
+
+  MostrarAlert(){
+    this.steper = this.steperService.setActive("paso2");
+    this.alert = true;
   }
 }

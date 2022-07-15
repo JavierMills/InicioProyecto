@@ -6,7 +6,7 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
    <div class="modal-content">
      <div class="modal-header" style="background-color: red">
        <h5 class="modal-title" id="staticBackdropLabel" style="color: white">
-         Solicitud de Credito- Rees
+         Solicitud de Credito- Rees asesor
        </h5>
        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
      </div>s
@@ -16,13 +16,10 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
            <label for="">Crear Folio:</label>&nbsp;
            <button class="btn btn-outline-dark" (click)="mostrarContenido()">Crear Folio</button>
          </div>
-         <div class="col-sm-4" *ngIf="show">
+         <div class="col-sm-4">
            <label for=""><b style="text-decoration:underline; "><u>Folio: 20220523-153</u></b></label>&nbsp;&nbsp;&nbsp;&nbsp;
-           <label for=""><b style="text-decoration:underline; "><u>Folio: HPP</u></b> &nbsp;&nbsp;<button class="btn btn-danger btn-sm" style="color: white" *ngIf="show">
-            Cancelar Folio
-          </button></label>
          </div>
-         <div class="col-sm-2" *ngIf="show">
+         <div class="col-sm-2">
            <a href="">Subir Documento</a>
          </div>
          <div class="col-sm-3">
@@ -32,54 +29,10 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
        </div>
 
        <br />
-
-       <div class="row" *ngIf="show">
-         <div class="col-sm-1"></div>
-         <div class="col-sm-1" style="border: solid; font-size: 90%">
-           <label for="">Capturar Solicitud</label>
-         </div>
-         &nbsp;
-         <div class="col-sm-1" style="border: solid; font-size: 90%">
-           <label for="">Proceso Pendiente Asesor Comex</label>
-         </div>
-         &nbsp;
-         <div class="col-sm-1" style="border: solid; font-size: 90%">
-           <label for="">Especialista Comex</label>
-         </div>
-         &nbsp;
-         <div class="col-sm-1" style="border: solid; font-size: 90%">
-           <label for="">Proceso Pendiente Contraloria</label>
-         </div>
-         &nbsp;
-         <div class="col-sm-1" style="border: solid; font-size: 90%">
-           <label for="">Proceso Pendiente Cartera</label>
-         </div>
-         &nbsp;
-         <div class="col-sm-1" style="border: solid; font-size: 90%">
-           <label for="">Fondos de Fomento</label>
-         </div>
-         &nbsp;
-         <div class="col-sm-1" style="border: solid; font-size: 90%">
-           <label for="">Enviada Nafinet</label>
-         </div>
-         &nbsp;
-         <div class="col-sm-1" style="border: solid; font-size: 90%">
-           <label for="">Aprobado Nafinet</label>
-         </div>
-         &nbsp;
-         <div class="col-sm-1" style="border: solid; font-size: 90%">
-           <label for="">Rechazado Nafinet</label>
-         </div>
-         &nbsp;
-         <div class="col-sm-1" style="border: solid; font-size: 90%">
-           <label for="">Reproceso</label>
-         </div>
-         <div class="col-sm-1"></div>
-       </div>
-
+       <app-steper *ngIf="show"></app-steper>
        <br />
 
-       <div class="accordion" id="accordionExample" *ngIf="show">
+       <div class="accordion" id="accordionExample">
          <div class="accordion-item">
            <h2 class="accordion-header" id="headingOne">
              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
@@ -561,13 +514,21 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
                      <input type="text" disabled />
                    </div>
                  </div>
+                 <br>
+                 <div class="row">
+                  <div class="input-group mb-12">
+                    <input type="text" [(ngModel)]="comentario" id="comentario" name="comentario" class="form-control" placeholder="Agregar Comentario" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary" type="button" id="agregar" (click)="agregarComentairo()"><b>+</b></button>
+                  </div>
+                  <label for="" *ngIf="mostrarComentario">{{fechacompleta}}{{comentario}}</label>
+                </div>
                </div>
              </div>
            </div>
          </div>
        </div>
      </div>
-     <div class="modal-footer" *ngIf="show">
+     <div class="modal-footer">
        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
          Close
        </button>

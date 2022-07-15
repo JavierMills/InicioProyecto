@@ -1,0 +1,37 @@
+<div class="row" style="text-align: center">
+  <div class="col-sm-3">
+    <label>FOLIO:</label>&nbsp;
+    <input type="text" />
+  </div>
+  <div class="col-sm-3">
+    <label>SOLICITADO:</label>&nbsp;
+    <input type="text" />
+  </div>
+  <div class="col-sm-3">
+    <label>ESTATUS FOLIO:CT</label>&nbsp;
+    <select style="width: 60%; height: 60%" (change)="setPaso($event)" [(ngModel)]='pasoDEfault'>
+      <option id="black" value="paso1">{{CapturarSolicitud}}</option>
+      <option id="black" value="paso2">{{ProcesoPendienteAsesorC}}</option>
+      <option id="black" value="paso3">{{EspecialistaComexRech}}</option>
+      <option id="black" value="paso4">{{ProcesoPendienteContraloria}}</option>
+      <option id="black" value="paso5">{{ProcesoPendienteCartera}}</option>
+      <option id="black" value="paso6">{{FondosDeFomento}}</option>
+      <option id="black" value="paso7">{{EnviadaNafinet}}</option>
+      <option id="black" value="paso8">{{AprobadoNafinet}}</option>
+      <option id="black" value="paso9">{{RechaxoNafinet}}</option>
+      <option id="black" value="paso10">{{Reproceso}}</option>
+    </select>
+  </div>
+  <br />
+  <br />
+</div>
+<div class="row">
+  <div class="col-sm-12" style="margin-left: 78%">
+    <button (click)="mostrarTablasComexTmec()" id="efecto" class="btn btn-primary">Buscar</button>
+    &nbsp;&nbsp;
+    <button id="efecto" class="btn btn-primary">Limpiar</button>
+  </div>
+</div>
+<br>
+<app-table-comex-tmec *ngIf="mostrarTablaComextmec"></app-table-comex-tmec>
+<app-form-comex-tmec></app-form-comex-tmec>

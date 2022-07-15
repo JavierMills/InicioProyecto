@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SteperService } from '../steper/steper.service';
 
 @Component({
   selector: 'app-form-comex-tmec',
@@ -6,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form-comex-tmec.component.scss']
 })
 export class FormComexTmecComponent implements OnInit {
+  mostrarComentario:boolean = false;
+  comentario:string = "";
+  fechacompleta:any = "";
+
+  alert:boolean = false;
+  steper:any;
+
   fecha: Date = new Date();
   show: boolean = false;
 
@@ -45,7 +53,7 @@ export class FormComexTmecComponent implements OnInit {
   entidadFinanciera:string = "Seleccionar";
   moneda:string ="Seleccionar";
 
-  constructor() { }
+  constructor(private steperService:SteperService) { }
 
   ngOnInit(): void {
     this.esconder;
@@ -239,5 +247,25 @@ export class FormComexTmecComponent implements OnInit {
     this.moneda = "Seleccionar";
     let com = prompt ('Ingresa un comentario por el rechazo de Moneda', "");
     alert(`Tu comentario es: ${com}.`)
+  }
+
+  closeAlert(){
+    this.alert = false;
+  }
+
+  MostrarAlert(){
+    this.steper = this.steperService.setActive("paso4");
+    this.alert = true;
+  }
+
+  agregarComentairo(){
+    this.mostrarComentario = true;
+    let fecha = new Date();
+
+    let fechaformato = `${fecha.getFullYear()}-${fecha.getMonth()+1}-${fecha.getDate()}`;
+    let hora = `${fecha.getHours()}-${fecha.getMinutes()+1}-${fecha.getSeconds()}`;
+
+    this.fechacompleta = fechaformato + " " + hora + " " + "Comentario" + " " + "Jose Rodriguez Arias" + " ";
+
   }
 }

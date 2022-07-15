@@ -18,7 +18,7 @@
                   <th>R</th>
                   <th>I</th>
                   <th>Email</th>
-                  <th>Folio</th>
+                  <th>Estatus</th>
                   <th>Firma_Contrato</th>
               </tr>
               </thead>
@@ -28,8 +28,8 @@
                   <td>{{ user.name }}</td>
                   <td>{{ user.username }}</td>
                   <td>{{ user.email }}</td>
-                  <td>{{ user.phone }}</td>
-                  <td > <img  src="../../../../assets/img/lupa con papel.jpg" style="width: 20px; height: 20px;" data-bs-toggle="modal" data-bs-target="#garantiaA"> {{ user.address.street }}, {{ user.address.city }}</td>
+                  <td>{{ user.status }}</td>
+                  <td > <img  src="../../../../assets/img/lupa con papel.jpg" style="width: 20px; height: 20px;" data-bs-toggle="modal" data-bs-target="#garantiaA" (click)="setMenu(user.status)"> {{ user.address.street }}, {{ user.address.city }}</td>
               </tr>
               </tbody>
           </table>
