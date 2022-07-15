@@ -40,7 +40,4 @@ export class FiltroAutomaticasComponent implements OnInit {
     this.mostrarTablaAutomaticas = true;
   }
 
-  setPaso(paso:any){
-    this.steperService.setActive(paso.target.value);    
-  }
 }

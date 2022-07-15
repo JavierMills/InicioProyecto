@@ -281,6 +281,7 @@ getDataTable(){
   this.http.get("https://jsonplaceholder.typicode.com/users")
     .subscribe( resp => {      
       this.allUsersComplete = this.data;   
+      this.allUsers = this.data;
       this.dtTrigger.next(0);
     });
 }
@@ -289,8 +290,8 @@ ngOnDestroy(): void {
   this.dtTrigger.unsubscribe();
 }
 
-setMenu(){
-
+setMenu(status:any){
+  this.steperService.setActive(this.steperService.getPasoByDescripcion(status) ?? "");
   this.steperService.setMenuOrigen("TablaAutomaticas");
 }
 
