@@ -269,4 +269,8 @@ export class NavComponent implements OnInit {
     this.steperService.setMenuOrigen(menu);
   }
 
+  setPaso(paso:string){
+    this.steperService.setActive(paso);
+  }
+
 }

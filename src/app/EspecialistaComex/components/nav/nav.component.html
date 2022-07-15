@@ -18,19 +18,19 @@
                 <label data-bs-toggle="dropdown" style="color:white;"><b id="black">Solicitar Credito</b></label>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="width: 180%; background-color: #2D2D2D; color: white;">
                   <div >
-                    <li class="hoverBlack" *ngIf="garantiaA === garantiaA" data-bs-toggle="modal" data-bs-target="#garantiaA">{{garantiaA}}</li>
+                    <li class="hoverBlack" *ngIf="garantiaA === garantiaA" data-bs-toggle="modal" data-bs-target="#garantiaA" (click)="setPaso('paso1')">{{garantiaA}}1</li>
 
-                    <li class="hoverBlack" *ngIf="garantiaS === garantiaS" data-bs-toggle="modal" data-bs-target="#garantiaS">{{garantiaS}}</li>
+                    <li class="hoverBlack" *ngIf="garantiaS === garantiaS" data-bs-toggle="modal" data-bs-target="#garantiaS" (click)="setPaso('paso1')">{{garantiaS}}</li>
 
-                    <li class="hoverBlack" *ngIf="garantiaTMEC === garantiaTMEC" data-bs-toggle="modal" data-bs-target="#garantiaTMEC">{{garantiaTMEC}}</li>
+                    <li class="hoverBlack" *ngIf="garantiaTMEC === garantiaTMEC" data-bs-toggle="modal" data-bs-target="#garantiaTMEC" (click)="setPaso('paso1')">{{garantiaTMEC}}</li>
 
-                    <li class="hoverBlack" *ngIf="contratoPYME === contratoPYME" data-bs-toggle="modal" data-bs-target="#contratoPYME">{{contratoPYME}}</li>
+                    <li class="hoverBlack" *ngIf="contratoPYME === contratoPYME" data-bs-toggle="modal" data-bs-target="#contratoPYME" (click)="setPaso('paso1')">{{contratoPYME}}</li>
 
-                    <li class="hoverBlack" *ngIf="garantiaCOMEXTMEC === garantiaCOMEXTMEC" data-bs-toggle="modal" data-bs-target="#garantiaCOMEXTMEC">{{garantiaCOMEXTMEC}}</li>
+                    <li class="hoverBlack" *ngIf="garantiaCOMEXTMEC === garantiaCOMEXTMEC" data-bs-toggle="modal" data-bs-target="#garantiaCOMEXTMEC" (click)="setPaso('paso1')">{{garantiaCOMEXTMEC}}</li>
 
-                    <li  class="hoverBlack"  *ngIf="garantiaT === garantiaT" data-bs-toggle="modal" data-bs-target="#garantiaT">{{garantiaT}}</li>
+                    <li  class="hoverBlack"  *ngIf="garantiaT === garantiaT" data-bs-toggle="modal" data-bs-target="#garantiaT" (click)="setPaso('paso1')">{{garantiaT}}</li>
 
-                    <li class="hoverBlack" *ngIf="res === res" data-bs-toggle="modal" data-bs-target="#garantiaR">{{res}}</li>
+                    <li class="hoverBlack" *ngIf="res === res" data-bs-toggle="modal" data-bs-target="#garantiaR" (click)="setPaso('paso1')">{{res}}</li>
                   </div>
                 </ul>
               </li>
