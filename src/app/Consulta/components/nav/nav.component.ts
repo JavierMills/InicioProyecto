@@ -28,7 +28,7 @@ export class NavComponent implements OnInit {
 
   mostrarSolicitudGarantias: boolean = false;
 
-
+  mostrarTablaAutomaticas = false;
 
 
   ngOnInit(): void {
@@ -84,5 +84,8 @@ export class NavComponent implements OnInit {
     this.mostrarSolicitudGarantias= true;
     this.mostrarSolicitudStock= false;
 
+  }
+  mostrarTablasAutomaticas() {
+    this.mostrarTablaAutomaticas = true;
   }
 }

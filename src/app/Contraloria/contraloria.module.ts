@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ContraloriaComponent } from './pages/contraloria/contraloria.component';
-import { FormComponent } from './components/form/form.component';
 import { NavComponent } from './components/nav/nav.component';
 import { DataTablesModule } from 'angular-datatables';
 import { FormsModule } from '@angular/forms';
@@ -20,7 +19,6 @@ import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     ContraloriaComponent,
-    FormComponent,
     NavComponent,
     FormComexTmecComponent,
     FormPymeComponent,
@@ -36,7 +34,7 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     SharedModule,
     AsesorComexModule,
-    RouterModule
+    RouterModule,
 
   ],
   exports:[
